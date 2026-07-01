@@ -14,7 +14,7 @@
     仓库名，默认 immigration-tracker。
 
 .PARAMETER Owner
-    GitHub 用户名，默认 MrWang202606。
+    GitHub 用户名，默认 JRWang2026。
 
 .EXAMPLE
     $env:GITHUB_TOKEN = "ghp_xxxxxxxxxxxxxxxxxxxx"
@@ -22,7 +22,7 @@
 #>
 param(
     [string]$RepoName = "immigration-tracker",
-    [string]$Owner = "MrWang202606"
+    [string]$Owner = "JRWang2026"
 )
 
 $ErrorActionPreference = "Stop"
