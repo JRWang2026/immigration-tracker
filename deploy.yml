@@ -1,0 +1,60 @@
+name: Deploy KOS to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: kos/package-lock.json
+
+      - name: Sync data feeds to KOS
+        run: |
+          mkdir -p kos/public/data/seek-nz
+          mkdir -p kos/public/data/policy-tracker
+          mkdir -p kos/public/data/german-phd
+          [ -f data/seek-nz/latest.json ] && cp -f data/seek-nz/latest.json kos/public/data/seek-nz/latest.json || true
+          [ -f data/policy-tracker/latest.json ] && cp -f data/policy-tracker/latest.json kos/public/data/policy-tracker/latest.json || true
+          [ -f data/german-phd/latest.json ] && cp -f data/german-phd/latest.json kos/public/data/german-phd/latest.json || true
+
+      - name: Build KOS
+        run: |
+          cd kos
+          npm ci
+          npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: kos/out
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
