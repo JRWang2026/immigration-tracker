@@ -280,7 +280,7 @@ def main():
         repo_root = Path(__file__).resolve().parent.parent
         pushed = push_to_github(
             repo_root=repo_root,
-            owner=gh_cfg.get("owner", "MrWang202606"),
+            owner=gh_cfg.get("owner", "JRWang2026"),
             repo=gh_cfg.get("repo", "immigration-tracker"),
             commit_message=f"Auto: SEEK NZ scan {date_str} ({tier1_count} Tier1 matches)",
         )
