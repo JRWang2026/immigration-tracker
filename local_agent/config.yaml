@@ -1,0 +1,87 @@
+# 本地私人 Agent 配置
+# 安全原则：所有密码/令牌通过环境变量或系统密钥库注入，本文件只放配置名。
+
+# Agent 元数据
+agent:
+  name: "Wang_Private_Agent"
+  version: "0.1.0"
+  owner: "Wang Jirui"
+  timezone: "Asia/Shanghai"
+
+# 输出目录（相对于本配置文件，或绝对路径）
+# 与 GitHub 闭环对齐：数据进入 repo 根目录 data/，可被 GitHub Actions 同步到 KOS public/data
+output:
+  base_dir: "../data"
+  reports_dir: "../data/reports"
+  data_dir: "../data/raw"
+  kos_data_dir: "../data/seek-nz"                 # 供 KOS 学术网站读取的数据 -> /data/seek-nz/latest.json
+  logs_dir: "../data/logs"
+
+# QQ Mail IMAP 配置
+email:
+  provider: "qq"
+  imap_server: "imap.qq.com"
+  imap_port: 993
+  imap_ssl: true
+  smtp_server: "smtp.qq.com"
+  smtp_port: 465
+  smtp_ssl: true
+  username_env: "QQ_MAIL_USER"          # 环境变量名，如 349376374@qq.com
+  password_env: "QQ_MAIL_APP_PASSWORD"  # 环境变量名：QQ 应用专用密码
+  # 或者使用 Windows Credential Manager
+  # credential_target: "WangPrivateAgent.QQMail"
+
+# SEEK 邮件扫描配置
+seek:
+  search_keyword: "SEEK"
+  search_folder: "INBOX"
+  unread_only: false
+  lookback_days: 7
+  max_emails: 50
+  green_list_tier1_anzsco:
+    261313: "Software Engineer / Software Developer"
+    262111: "Database Administrator"
+    262113: "Systems Administrator"
+    261311: "Analyst Programmer"
+    261312: "Developer Programmer"
+    135112: "ICT Project Manager"
+    262112: "ICT Security Specialist"
+    135111: "Chief Information Officer (CIO)"
+  score_threshold: 35
+
+# 调度配置
+schedule:
+  enabled: false  # true 时使用 schedule 循环；false 时单次运行
+  cron: "0 8 * * *"  # 每天 8:00（或 Windows 任务计划接管）
+
+# GitHub 自动闭环
+# 需要设置环境变量 GITHUB_TOKEN=ghp_xxx（Personal Access Token，classic，repo 权限）
+github:
+  enabled: true
+  owner: "MrWang202606"
+  repo: "immigration-tracker"
+  branch: "main"
+  auto_push: true
+
+# KOS 集成
+kos:
+  enabled: true
+  site_name: "KOS"
+  project_url: "https://mrwang202606.github.io/immigration-tracker"
+  sections:
+    - id: "seek-nz"
+      title: "SEEK NZ 绿名单岗位追踪"
+      output: "seek_nz_latest.json"
+    - id: "policy-tracker"
+      title: "全球移民政策追踪"
+      output: "policy_tracker_latest.json"
+    - id: "german-phd"
+      title: "德国博士岗位扫描"
+      output: "german_phd_latest.json"
+
+# 日志
+logging:
+  level: "INFO"
+  file: "../local_agent_output/logs/agent.log"
+  max_bytes: 10485760
+  backup_count: 5
