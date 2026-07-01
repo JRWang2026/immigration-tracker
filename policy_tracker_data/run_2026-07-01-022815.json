@@ -1,0 +1,120 @@
+[
+  {
+    "country": "New Zealand",
+    "pathway": "Green List Straight to Residence",
+    "url": "https://www.immigration.govt.nz/live/resident-visas-to-live-in-new-zealand/skilled-residence-pathways-in-new-zealand/green-list-pathway-to-residence/",
+    "domain": "www.immigration.govt.nz",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:27:31.113523+00:00"
+  },
+  {
+    "country": "New Zealand",
+    "pathway": "Green List Straight to Residence",
+    "url": "https://www.immigration.govt.nz/visas/straight-to-residence-visa/",
+    "domain": "www.immigration.govt.nz",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:27:33.353824+00:00"
+  },
+  {
+    "country": "Germany",
+    "pathway": "EU Blue Card",
+    "url": "https://www.make-it-in-germany.com/en/visa-residence/types/eu-blue-card",
+    "domain": "www.make-it-in-germany.com",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:27:35.220322+00:00"
+  },
+  {
+    "country": "Germany",
+    "pathway": "EU Blue Card",
+    "url": "https://www.bamf.de/EN/Themen/Statistik/BlaueKarteEU/blauekarteeu-node.html",
+    "domain": "www.bamf.de",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:27:37.541477+00:00"
+  },
+  {
+    "country": "Germany",
+    "pathway": "Opportunity Card (Chancenkarte)",
+    "url": "https://www.make-it-in-germany.com/en/visa-residence/types/opportunity-card",
+    "domain": "www.make-it-in-germany.com",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:27:39.197888+00:00"
+  },
+  {
+    "country": "Netherlands",
+    "pathway": "Highly Skilled Migrant",
+    "url": "https://ind.nl/en/required-amounts-income-requirements",
+    "domain": "ind.nl",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:27:40.231176+00:00"
+  },
+  {
+    "country": "Sweden",
+    "pathway": "Work Permit",
+    "url": "https://www.migrationsverket.se/English/Private-individuals/Working-in-Sweden.html",
+    "domain": "www.migrationsverket.se",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:27:41.669948+00:00"
+  },
+  {
+    "country": "Finland",
+    "pathway": "Specialist Permit",
+    "url": "https://migri.fi/en/information-bank/specialists",
+    "domain": "migri.fi",
+    "ok": false,
+    "changed": false,
+    "error": "403 Client Error: Forbidden for url: https://migri.fi/en/information-bank/specialists",
+    "checked_at": "2026-07-01T02:27:42.705786+00:00"
+  },
+  {
+    "country": "Australia",
+    "pathway": "Skills in Demand (subclass 482)",
+    "url": "https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/sponsoring-workers/nominating-a-position/salary-requirements",
+    "domain": "immi.homeaffairs.gov.au",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:27:44.109234+00:00"
+  },
+  {
+    "country": "Canada",
+    "pathway": "Express Entry",
+    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html",
+    "domain": "www.canada.ca",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:27:47.958826+00:00"
+  },
+  {
+    "country": "Ireland",
+    "pathway": "Critical Skills Employment Permit",
+    "url": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/permit-types/critical-skills-employment-permit/",
+    "domain": "enterprise.gov.ie",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:27:48.743607+00:00"
+  },
+  {
+    "country": "United Kingdom",
+    "pathway": "Skilled Worker Visa",
+    "url": "https://www.gov.uk/skilled-worker-visa",
+    "domain": "www.gov.uk",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:28:14.148316+00:00"
+  },
+  {
+    "country": "Singapore",
+    "pathway": "Employment Pass",
+    "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass",
+    "domain": "www.mom.gov.sg",
+    "ok": true,
+    "changed": true,
+    "checked_at": "2026-07-01T02:28:15.760637+00:00"
+  }
+]
