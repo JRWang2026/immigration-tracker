@@ -27,7 +27,7 @@ export default function Footer({ t }: FooterProps) {
           ORCID: {identity.orcid}
         </a>
         <a
-          href="https://github.com/MrWang202606"
+          href="https://github.com/JRWang2026"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-link"
