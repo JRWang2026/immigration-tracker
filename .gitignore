@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Next.js build outputs
+.next/
+out/
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.pytest_cache/
+*.egg-info/
+
+# Virtual environments
+venv/
+.env/
+.env
+
+# Logs
+*.log
+logs/
+
+# WorkBuddy internal
+.workbuddy/
+.tmp/
+local_agent_output/
+local_agent_output_test/
+
+# Credentials & secrets
+*.pem
+*.key
+credentials.json
+tokens/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
