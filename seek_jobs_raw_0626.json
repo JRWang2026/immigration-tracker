@@ -1,0 +1,706 @@
+[
+  {
+    "title": "Senior Business Analyst - ICT",
+    "company": "New Zealand Police",
+    "location": "Wellington",
+    "salary": "$110,425",
+    "source": "ICT_2147",
+    "score": 66,
+    "reasons": [
+      "数据分析+ERP经验匹配BA角色",
+      "高级岗位,薪资更高",
+      "ICT类别,技术移民加分",
+      "惠灵顿(首都,政府机构集中)",
+      "高薪($110,425+)有利于签证申请",
+      "政府/公共部门雇主-稳定性+AEWV支持"
+    ],
+    "skills_needed": [
+      "NZ本地工作经验(可通过初级岗位积累)",
+      "NZ业务环境理解",
+      "可能需NZ学历认证(NZQA IQA)"
+    ],
+    "visa_path": "AEWV雇主担保→居留路径",
+    "salary_num": 110425
+  },
+  {
+    "title": "IT Support & AI Business Analyst",
+    "company": "Miles Construction Ltd",
+    "location": "Christchurch Central, Canterbury",
+    "salary": "",
+    "source": "ICT_2147_missed",
+    "score": 60,
+    "reasons": [
+      "数据分析+ERP经验匹配BA角色",
+      "IT支持可作为新西兰入境过渡岗位",
+      "AI方向有加分,结合Python技能"
+    ],
+    "skills_needed": [
+      "NZ业务环境理解",
+      "可能需NZ学历认证(NZQA IQA)"
+    ],
+    "visa_path": "AEWV→入境后再转目标岗位",
+    "salary_num": 0
+  },
+  {
+    "title": "Data Analyst/Kaitātari Hoahoa",
+    "company": "Stats NZ",
+    "location": "Christchurch Central, Canterbury",
+    "salary": "",
+    "source": "ICT_2025",
+    "score": 51,
+    "reasons": [
+      "Python+Power BI经验匹配数据分析岗",
+      "政府机构Stats NZ-稳定性高",
+      "政府/公共部门雇主-稳定性+AEWV支持"
+    ],
+    "skills_needed": [
+      "NZ数据合规/隐私法规"
+    ],
+    "visa_path": "AEWV雇主担保→居留路径",
+    "salary_num": 0
+  },
+  {
+    "title": "Senior Technical Business Analyst",
+    "company": "Techspace Consulting Limited",
+    "location": "Te Puke, Bay of Plenty",
+    "salary": "$125,000-$145,000",
+    "source": "ICT_2147",
+    "score": 50,
+    "reasons": [
+      "数据分析+ERP经验匹配BA角色",
+      "高级岗位,薪资更高",
+      "高薪($125,000+)有利于签证申请"
+    ],
+    "skills_needed": [
+      "NZ本地工作经验(可通过初级岗位积累)",
+      "NZ业务环境理解",
+      "可能需NZ学历认证(NZQA IQA)"
+    ],
+    "visa_path": "AEWV雇主担保→居留路径",
+    "salary_num": 125000
+  },
+  {
+    "title": "Business Systems Analyst - ERP",
+    "company": "Windsor Engineering Group Ltd",
+    "location": "Mount Wellington, Auckland",
+    "salary": "Competitive annual salary + employee benefits",
+    "source": "ICT_2147_missed",
+    "score": 50,
+    "reasons": [
+      "ERP/SAP经验直接匹配BSA角色",
+      "明确标注ERP经验需求",
+      "惠灵顿(首都,政府机构集中)",
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [
+      "NZ本地ERP系统经验(如MYOB/Xero)"
+    ],
+    "visa_path": "需雇主担保AEWV→2年后申请居留",
+    "salary_num": 0
+  },
+  {
+    "title": "Business Analyst",
+    "company": "Rotorua Lakes Council",
+    "location": "Rotorua Central, Bay of Plenty",
+    "salary": "$92,000 – $102,000 per year",
+    "source": "ICT_2147",
+    "score": 43,
+    "reasons": [
+      "数据分析+ERP经验匹配BA角色",
+      "中等偏上薪资($92,000)",
+      "政府/公共部门雇主-稳定性+AEWV支持"
+    ],
+    "skills_needed": [
+      "NZ业务环境理解",
+      "可能需NZ学历认证(NZQA IQA)"
+    ],
+    "visa_path": "AEWV雇主担保→居留路径",
+    "salary_num": 92000
+  },
+  {
+    "title": "Business Analyst (ICT)",
+    "company": "Whangarei District Council",
+    "location": "Whangarei Central, Northland",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 43,
+    "reasons": [
+      "数据分析+ERP经验匹配BA角色",
+      "ICT类别,技术移民加分",
+      "政府/公共部门雇主-稳定性+AEWV支持"
+    ],
+    "skills_needed": [
+      "NZ业务环境理解",
+      "可能需NZ学历认证(NZQA IQA)"
+    ],
+    "visa_path": "AEWV雇主担保→居留路径",
+    "salary_num": 0
+  },
+  {
+    "title": "Data Engineer",
+    "company": "REINZ",
+    "location": "Auckland CBD, Auckland",
+    "salary": "$90,000 – $115,000 per year",
+    "source": "ICT_2147",
+    "score": 42,
+    "reasons": [
+      "绿名单Tier2-工作转居留路径(Data Engineer)",
+      "奥克兰(最大城市,机会多)",
+      "中等偏上薪资($90,000)"
+    ],
+    "skills_needed": [
+      "NZ数据合规/隐私法规"
+    ],
+    "visa_path": "Green List Tier2 Work to Residence (2年后转)",
+    "salary_num": 90000
+  },
+  {
+    "title": "Data & Reporting Officer",
+    "company": "Rotorua Lakes Council",
+    "location": "Rotorua Central, Bay of Plenty",
+    "salary": "$92,000 – $102,000 per year",
+    "source": "ICT_2147",
+    "score": 41,
+    "reasons": [
+      "Python+Power BI经验匹配数据分析岗",
+      "中等偏上薪资($92,000)",
+      "政府/公共部门雇主-稳定性+AEWV支持"
+    ],
+    "skills_needed": [
+      "NZ数据合规/隐私法规"
+    ],
+    "visa_path": "AEWV雇主担保→居留路径",
+    "salary_num": 92000
+  },
+  {
+    "title": "Data Engineer",
+    "company": "Mr Apple NZ Ltd",
+    "location": "Whakatu, Hawkes Bay",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 35,
+    "reasons": [
+      "绿名单Tier2-工作转居留路径(Data Engineer)"
+    ],
+    "skills_needed": [
+      "NZ数据合规/隐私法规"
+    ],
+    "visa_path": "Green List Tier2 Work to Residence (2年后转)",
+    "salary_num": 0
+  },
+  {
+    "title": "Intermediate Business Analyst",
+    "company": "New Zealand Qualifications Authority",
+    "location": "Wellington Central, Wellington",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 33,
+    "reasons": [
+      "数据分析+ERP经验匹配BA角色",
+      "惠灵顿(首都,政府机构集中)"
+    ],
+    "skills_needed": [
+      "NZ业务环境理解",
+      "可能需NZ学历认证(NZQA IQA)"
+    ],
+    "visa_path": "AEWV雇主担保→居留路径",
+    "salary_num": 0
+  },
+  {
+    "title": "Application Support Analyst",
+    "company": "Ministry of Justice",
+    "location": "Wellington Central, Wellington",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 33,
+    "reasons": [
+      "ERP/SAP应用支持经验匹配",
+      "惠灵顿(首都,政府机构集中)",
+      "政府/公共部门雇主-稳定性+AEWV支持"
+    ],
+    "skills_needed": [],
+    "visa_path": "AEWV雇主担保→居留路径",
+    "salary_num": 0
+  },
+  {
+    "title": "Technical Business Analyst",
+    "company": "Maori Television",
+    "location": "East Tamaki, Auckland",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 32,
+    "reasons": [
+      "数据分析+ERP经验匹配BA角色",
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [
+      "NZ业务环境理解",
+      "可能需NZ学历认证(NZQA IQA)"
+    ],
+    "visa_path": "AEWV雇主担保→居留路径",
+    "salary_num": 0
+  },
+  {
+    "title": "Service Desk Administrator",
+    "company": "The Audit Office",
+    "location": "Wellington Central, Wellington",
+    "salary": "$66,000-$77,000",
+    "source": "Admin_2358",
+    "score": 26,
+    "reasons": [
+      "IT支持可作为新西兰入境过渡岗位",
+      "惠灵顿(首都,政府机构集中)",
+      "政府/公共部门雇主-稳定性+AEWV支持"
+    ],
+    "skills_needed": [],
+    "visa_path": "AEWV→入境后再转目标岗位",
+    "salary_num": 66000
+  },
+  {
+    "title": "Service Desk Support",
+    "company": "Rotorua Lakes Council",
+    "location": "Rotorua Central, Bay of Plenty",
+    "salary": "$65,000 – $75,000 per year",
+    "source": "Admin_2358",
+    "score": 23,
+    "reasons": [
+      "IT支持可作为新西兰入境过渡岗位",
+      "政府/公共部门雇主-稳定性+AEWV支持"
+    ],
+    "skills_needed": [],
+    "visa_path": "AEWV→入境后再转目标岗位",
+    "salary_num": 65000
+  },
+  {
+    "title": "Process + Systems Manager",
+    "company": "CDB Media Limited",
+    "location": "Albany, Auckland",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 22,
+    "reasons": [
+      "质量工程+ERP经验匹配流程/系统管理",
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "AEWV雇主担保→居留路径",
+    "salary_num": 0
+  },
+  {
+    "title": "Help Desk Analyst – Stibo",
+    "company": "Duco Consultancy Limited",
+    "location": "Auckland CBD, Auckland",
+    "salary": "$75,000 per year",
+    "source": "Admin_2358",
+    "score": 22,
+    "reasons": [
+      "IT支持可作为新西兰入境过渡岗位",
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "AEWV→入境后再转目标岗位",
+    "salary_num": 75000
+  },
+  {
+    "title": "Helpdesk Analyst",
+    "company": "Halter",
+    "location": "Auckland CBD, Auckland",
+    "salary": "",
+    "source": "Admin_2358",
+    "score": 22,
+    "reasons": [
+      "IT支持可作为新西兰入境过渡岗位",
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "AEWV→入境后再转目标岗位",
+    "salary_num": 0
+  },
+  {
+    "title": "IT Support Coordinator",
+    "company": "Momentum Consulting Group",
+    "location": "Auckland",
+    "salary": "Training & upskilling provided",
+    "source": "Admin_2358",
+    "score": 17,
+    "reasons": [
+      "IT支持可作为新西兰入境过渡岗位",
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "AEWV→入境后再转目标岗位",
+    "salary_num": 0
+  },
+  {
+    "title": "IT Helpdesk Technician",
+    "company": "Tonkin & Taylor Ltd",
+    "location": "Auckland CBD, Auckland",
+    "salary": "",
+    "source": "Admin_2358",
+    "score": 17,
+    "reasons": [
+      "IT支持可作为新西兰入境过渡岗位",
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "AEWV→入境后再转目标岗位",
+    "salary_num": 0
+  },
+  {
+    "title": "IT Support Engineer",
+    "company": "Morgan Furniture Int Ltd",
+    "location": "Christchurch Central, Canterbury",
+    "salary": "",
+    "source": "Admin_2358",
+    "score": 15,
+    "reasons": [
+      "IT支持可作为新西兰入境过渡岗位"
+    ],
+    "skills_needed": [],
+    "visa_path": "AEWV→入境后再转目标岗位",
+    "salary_num": 0
+  },
+  {
+    "title": "IT Senior Co-ordinator (ops & support)",
+    "company": "Bright Teams",
+    "location": "Parnell, Auckland",
+    "salary": "",
+    "source": "Admin_2358",
+    "score": 12,
+    "reasons": [
+      "高级岗位,薪资更高",
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [
+      "NZ本地工作经验(可通过初级岗位积累)"
+    ],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Business Operations Analyst",
+    "company": "Cultivate – SEEK",
+    "location": "Te Rapa, Waikato",
+    "salary": "$90,000 - $110,000 based on experience",
+    "source": "ICT_2025",
+    "score": 5,
+    "reasons": [
+      "中等偏上薪资($90,000)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 90000
+  },
+  {
+    "title": "Research and Development Scientist",
+    "company": "Sanitarium Health Food Company",
+    "location": "Epsom, Auckland",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 2,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Entry Level Support Engineer",
+    "company": "New Era Technology",
+    "location": "Henderson, Auckland",
+    "salary": "$51,000 per year",
+    "source": "Admin_2358_missed",
+    "score": 2,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 51000
+  },
+  {
+    "title": "Jr R&D Technologist",
+    "company": "KraftHeinz",
+    "location": "Hastings Central, Hawkes Bay",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 0,
+    "reasons": [],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Trainee or Phlebotomist - Patient Services",
+    "company": "Awanui Group",
+    "location": "Hastings Central, Hawkes Bay",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 0,
+    "reasons": [],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "HACCP & Food Safety Advisor",
+    "company": "Volunteer Service Abroad (VSA)",
+    "location": "Wellington Central, Wellington",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 0,
+    "reasons": [
+      "惠灵顿(首都,政府机构集中)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Payroll Transformation Lead",
+    "company": "ACC New Zealand",
+    "location": "Wellington",
+    "salary": "9% Superannuation",
+    "source": "ICT_2147",
+    "score": 0,
+    "reasons": [
+      "惠灵顿(首都,政府机构集中)",
+      "政府/公共部门雇主-稳定性+AEWV支持"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 9
+  },
+  {
+    "title": "Laboratory Technician - Animal Health",
+    "company": "Livestock Improvement Corporation",
+    "location": "Riverlea, Waikato",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 0,
+    "reasons": [],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Med Lab Technician",
+    "company": "NZ Blood Service",
+    "location": "Epsom, Auckland",
+    "salary": "$67,488 - $88,887",
+    "source": "ICT_2147",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 67488
+  },
+  {
+    "title": "Laboratory Technician",
+    "company": "Fulton Hogan",
+    "location": "Dunedin, Otago",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 0,
+    "reasons": [],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Science technician",
+    "company": "Papatoetoe High School",
+    "location": "Papatoetoe, Auckland",
+    "salary": "",
+    "source": "ICT_2147",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Laboratory Production Technician & Compounder",
+    "company": "Bright Teams",
+    "location": "Henderson, Auckland",
+    "salary": "$65,000 – $70,000 per year",
+    "source": "ICT_2147_missed",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 65000
+  },
+  {
+    "title": "Admin Support",
+    "company": "General Travel NZ Ltd",
+    "location": "Auckland CBD, Auckland",
+    "salary": "",
+    "source": "Admin_2358",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Office Administrator",
+    "company": "A.J. TUTILL & SONS LIMITED",
+    "location": "Penrose, Auckland",
+    "salary": "$65,000 – $70,000 per year",
+    "source": "Admin_2358",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 65000
+  },
+  {
+    "title": "Office Manager",
+    "company": "Veolia",
+    "location": "Auckland",
+    "salary": "",
+    "source": "Admin_2358",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Office Administrator",
+    "company": "Lero Innovation Limited",
+    "location": "East Tamaki, Auckland",
+    "salary": "$24 – $29 per hour",
+    "source": "Admin_2358",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 24
+  },
+  {
+    "title": "Service Engineer",
+    "company": "Spark New Zealand Trading Limited",
+    "location": "Aotea, Wellington",
+    "salary": "",
+    "source": "Admin_2358",
+    "score": 0,
+    "reasons": [
+      "惠灵顿(首都,政府机构集中)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Office Support / Administratior",
+    "company": "Summit Business Solutions Ltd",
+    "location": "Otahuhu, Auckland",
+    "salary": "",
+    "source": "Admin_2358",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Executive Assistant",
+    "company": "Enviro NZ",
+    "location": "Ellerslie, Auckland",
+    "salary": "Competitive salary & free carpark",
+    "source": "Admin_2358",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Office Manager/Team Leader",
+    "company": "Archway Recruitment",
+    "location": "Wellington Central, Wellington",
+    "salary": "$115,000-120,000 per annum",
+    "source": "Admin_2358",
+    "score": 0,
+    "reasons": [
+      "惠灵顿(首都,政府机构集中)",
+      "高薪($115,000+)有利于签证申请"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 115000
+  },
+  {
+    "title": "Office Manager",
+    "company": "Empower Electrical",
+    "location": "Port Whangarei, Northland",
+    "salary": "$30 – $40 per hour",
+    "source": "Admin_2358",
+    "score": 0,
+    "reasons": [],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 30
+  },
+  {
+    "title": "Executive Assistant",
+    "company": "Profile Group",
+    "location": "Christchurch, Canterbury",
+    "salary": "",
+    "source": "Admin_2358",
+    "score": 0,
+    "reasons": [],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  },
+  {
+    "title": "Office Administrator / Manager",
+    "company": "Simtec Therapeutic Limited",
+    "location": "Onehunga, Auckland",
+    "salary": "$65,000 – $85,000 per year",
+    "source": "Admin_2358_missed",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 65000
+  },
+  {
+    "title": "Office Co-Ordinator",
+    "company": "Flo & Frankie",
+    "location": "Parnell, Auckland",
+    "salary": "Competitive pay and great perks",
+    "source": "Admin_2358_missed",
+    "score": 0,
+    "reasons": [
+      "奥克兰(最大城市,机会多)"
+    ],
+    "skills_needed": [],
+    "visa_path": "",
+    "salary_num": 0
+  }
+]
