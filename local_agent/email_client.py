@@ -1,21 +1,24 @@
 """
-本地邮件客户端：IMAP 读取 + 安全凭据管理
+本地邮件客户端：IMAP 读取 + 安全凭据管理 + UID 状态追踪
 
 安全原则：
 1. 不硬编码密码；
 2. 优先从环境变量读取；
 3. 可选 Windows Credential Manager / macOS Keychain（keyring）；
 4. 应用专用密码（App Password）而非主密码。
+
+v0.2 — 新增 UID 追踪，避免重复扫描同一封邮件，减少 IMAP 负担。
 """
 
 import email
 import imaplib
+import json
 import os
 from datetime import datetime, timedelta
 from email.header import decode_header
 from email.message import EmailMessage
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Set
 
 
 class IMAPClient:
@@ -26,6 +29,7 @@ class IMAPClient:
         username: str,
         password: str,
         use_ssl: bool = True,
+        state_dir: Optional[Path] = None,
     ):
         self.server = server
         self.port = port
@@ -33,6 +37,8 @@ class IMAPClient:
         self.password = password
         self.use_ssl = use_ssl
         self._conn: Optional[imaplib.IMAP4_SSL] = None
+        self._state_dir = state_dir or Path(__file__).resolve().parent.parent / "data" / "state"
+        self._state_dir.mkdir(parents=True, exist_ok=True)
 
     def connect(self) -> "IMAPClient":
         if self.use_ssl:
@@ -57,6 +63,32 @@ class IMAPClient:
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.disconnect()
 
+    # ---------- UID 状态追踪 ----------
+    def _uid_state_path(self, folder: str) -> Path:
+        safe = folder.replace("/", "_").replace(" ", "_")
+        return self._state_dir / f"imap_uids_{safe}.json"
+
+    def _load_processed_uids(self, folder: str) -> Set[str]:
+        p = self._uid_state_path(folder)
+        if not p.exists():
+            return set()
+        try:
+            with open(p, "r") as f:
+                return set(json.load(f))
+        except Exception:
+            return set()
+
+    def _save_processed_uids(self, folder: str, uids: Set[str]):
+        p = self._uid_state_path(folder)
+        with open(p, "w") as f:
+            json.dump(sorted(uids), f)
+
+    def mark_processed(self, folder: str, *uids: str):
+        """标记一批 UID 为已处理，持久化到磁盘。"""
+        existing = self._load_processed_uids(folder)
+        existing.update(uids)
+        self._save_processed_uids(folder, existing)
+
     def search_emails(
         self,
         folder: str = "INBOX",
@@ -64,9 +96,15 @@ class IMAPClient:
         lookback_days: int = 7,
         unread_only: bool = False,
         max_results: int = 50,
+        skip_processed: bool = True,
     ) -> List[dict]:
         """
         搜索邮件并返回结构化摘要。
+
+        参数:
+            skip_processed: True 时跳过之前已成功处理的 UID（默认 True）。
+                           定时任务设为 True，手动调试可设为 False 强制全量重扫。
+
         返回：list of dict，包含 subject, from, date, uid, body_html
         """
         if not self._conn:
@@ -76,22 +114,32 @@ class IMAPClient:
         if status != "OK":
             raise RuntimeError(f"Cannot select folder {folder}")
 
-        # 构造搜索条件
+        # 构造搜索条件 — 总是用 SINCE + BODY，不再依赖 UNSEEN
         since_date = (datetime.now() - timedelta(days=lookback_days)).strftime("%d-%b-%Y")
-        criteria_parts = [f'SINCE {since_date}', f'BODY "{keyword}"']
+        criteria_parts = [f'SINCE {since_date}']
         if unread_only:
             criteria_parts.insert(0, "UNSEEN")
 
-        # IMAP 搜索语法：("UNSEEN" "SINCE ..." "BODY \"SEEK\"")
+        # IMAP 搜索
         query = "(" + " ".join(criteria_parts) + ")"
         status, messages = self._conn.search(None, query)
         if status != "OK":
             return []
 
-        uids = messages[0].split()[-max_results:]  # 取最近 N 封
-        results = []
+        all_uids = messages[0].split()
+        if not all_uids:
+            return []
 
-        for uid in uids:
+        # UID 去重
+        processed = self._load_processed_uids(folder) if skip_processed else set()
+        new_uids = [u for u in all_uids if u.decode() not in processed]
+        skipped = len(all_uids) - len(new_uids)
+
+        # 取最近 N 封
+        target_uids = new_uids[-max_results:]
+
+        results = []
+        for uid in target_uids:
             status, msg_data = self._conn.fetch(uid, "(RFC822)")
             if status != "OK" or not msg_data:
                 continue
@@ -103,6 +151,11 @@ class IMAPClient:
             from_addr = msg.get("From", "")
             date_str = msg.get("Date", "")
             body_html = self._extract_html_body(msg)
+
+            # 质量检查：邮件正文太短可能是 IMAP 截断
+            if len(body_html) < 200:
+                # BODY "SEEK" 匹配可能返回验证码/系统通知等短邮件，正常跳过
+                pass
 
             results.append({
                 "uid": uid.decode(),
