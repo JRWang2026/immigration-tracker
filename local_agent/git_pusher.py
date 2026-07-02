@@ -292,6 +292,12 @@ def push_to_github(
         if rel_path.startswith(".") or "/." in rel_path or rel_path.startswith("node_modules/"):
             continue
         if p.is_dir():
+            # 展开未跟踪目录，逐个推送里面的文件
+            for child in p.rglob("*"):
+                if child.is_file() and child.stat().st_size <= MAX_FILE_SIZE:
+                    rel_child = str(child.relative_to(repo_root)).replace("\\", "/")
+                    if not rel_child.startswith(".") and "/." not in rel_child:
+                        allowed.append((status, rel_child))
             continue
         if p.is_file() and p.stat().st_size > MAX_FILE_SIZE:
             logger.warning("文件过大，跳过：%s", rel_path)
