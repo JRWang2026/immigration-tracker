@@ -4,12 +4,12 @@
     "description": "每日自动扫描 SEEK NZ 邮件中的绿名单 Tier1 ICT 岗位",
     "icon": "briefcase",
     "section_id": "seek-nz",
-    "last_updated": "2026-07-01T13:29:54.203859"
+    "last_updated": "2026-07-02T08:00:05.929033"
   },
   "data": {
-    "date": "2026-07-01",
-    "email_count": 22,
-    "total_jobs": 161,
+    "date": "2026-07-02",
+    "email_count": 23,
+    "total_jobs": 166,
     "tier1_jobs": [
       {
         "title": "Database Administrator",
@@ -334,6 +334,25 @@
         "anzsco_name": ""
       },
       {
+        "title": "Business Systems Analyst",
+        "company": "Ashburton District Council",
+        "location": "Christchurch Central, Canterbury",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6ltFp-mjQV46mcUbmVQqdOtRL5WhCvowg6zmUi2EuuTwCsmxRbshFlzGyeSqaPGChsHXGESVJxglYSW1KxJd-fPtFkQRovLlnMI7L208dVtV_5jVOlEKf151qQwxHeC98/4ry/HBCBPyzpRGiHdr9BzBtWLQ/h56/h001.PMwO7taao-IGADghNjMfiP2lJA4T-qWtQSIqK8NYLcI",
+        "source": "SEEK NZ email",
+        "score": 26,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)",
+          "政府/公共部门",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
         "title": "Business Analyst - ICT",
         "company": "New Zealand Police",
         "location": "Wellington",
@@ -563,6 +582,44 @@
         "anzsco_name": ""
       },
       {
+        "title": "Analyst - Technology, Strategy & Transformation",
+        "company": "Deloitte - NZ",
+        "location": "Wellington Central, Wellington",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7izh1Pe9dOBW1Nw1WsIRdYgJg-PIG7M8sAgKpJQBsHX5vs2XBMbxsVc1YkcAMhA1JGCPrKP2P37xwdn4VA7fz77MIbH39_rU22iNkGbvS2-U7RzYVrP66mskYvodMAU64/4ry/HBCBPyzpRGiHdr9BzBtWLQ/h70/h001.eQZTn3-RQOdueRR1ogeIls9cno-QewaqnBzKBirf10g",
+        "source": "SEEK NZ email",
+        "score": 22,
+        "reasons": [
+          "非目标岗位",
+          "ICT/科技公司",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Data & Analytics Specialist",
+        "company": "Optic Digital",
+        "location": "Wellington Central, Wellington",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv78CfPsbcoy0-8chF30_5dx41QQ1OioZhVwo1Zva8HL_LA62Ne4Vw-7FJ6QnkZAhD9ax6KHYHP-DhBdzJPaRZKANDuOjqHGaD_R5wzk4_S461-Tk_IN7JG6nFeggWcJWRo/4ry/HBCBPyzpRGiHdr9BzBtWLQ/h76/h001.rpT9goouvXvdMR2qNSALP62_hoK8bxhc0b9-ZZV_w4U",
+        "source": "SEEK NZ email",
+        "score": 22,
+        "reasons": [
+          "非目标岗位",
+          "ICT/科技公司",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
         "title": "Data Analyst",
         "company": "Frog Recruitment - Auckland",
         "location": "Auckland CBD, Auckland",
@@ -668,6 +725,24 @@
           "非目标岗位",
           "政府/公共部门",
           "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Data Analyst",
+        "company": "Consult Recruitment - IT & Digital",
+        "location": "Auckland CBD, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5LKzmrwPtYSRo808DQZfAeUh0BUjcjDJPs1tM-hGZ3uCif4awQF_hwq3ECrCPCbQo07zzN89ZlQcouD-98nZsQvP3etU5eDHaAe1GDtndrDY0wFbrKBp-nqmUs8ILmYAQ/4ry/HBCBPyzpRGiHdr9BzBtWLQ/h64/h001.Pg-EYIL2GRrly8c-7KM9gP6rbxy7F3Mngljh-uUt-Mk",
+        "source": "SEEK NZ email",
+        "score": 20,
+        "reasons": [
+          "非绿名单:Data Analyst(已降级)",
+          "ICT/科技公司"
         ],
         "immigration_path": "非绿名单，移民路径弱，建议忽略",
         "suggested_skills": "非目标岗位，不建议投入精力",
@@ -2024,6 +2099,23 @@
         "salary": "",
         "posted_date": "",
         "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv69dfyUI3x0Agaj_02IAZ6wc9DTDnEqv0CrXQ7fRng7pNDDncIVGBA0iKfcQkXAYiqfl-ebiL13B9rEqAvmipooFqfBK8ddpDBRY0Y4d5gZ5fn8mzrowXesppAa2D76SFc/4rr/q7_r8MmKRIujFrlRZ-nNcg/h60/h001.yUtXeC-3yxy6wKj7YltWzhd_2a6ac4CnFiGlGnIvhLA",
+        "source": "SEEK NZ email",
+        "score": 8,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Temporary Business Analyst",
+        "company": "QUINN RECRUITMENT – FINDING GREAT PEOPLE FOR GREAT JOBS NATIONWIDE!",
+        "location": "Rodney & North Shore, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6h9AQUQzilzDN3ZqVRW5F5dNaB94OzBPfFF_OhI8cjnwkpcWufw3Jrm32_Ihsk44JbTgShqbTE9HWpNDlGJWivQec5CqGFi7MYKkbrW1bUXu-d2ms9yeOTFkHMiEevvdE/4ry/HBCBPyzpRGiHdr9BzBtWLQ/h66/h001.9sMKqJoB0r6XIpoEI4E5BnFoQqnIVhvEtAmg0DZUt7o",
         "source": "SEEK NZ email",
         "score": 8,
         "reasons": [
