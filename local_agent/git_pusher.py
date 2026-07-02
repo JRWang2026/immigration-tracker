@@ -26,6 +26,7 @@ import base64
 import json
 import logging
 import os
+import shutil
 import subprocess
 import sys
 import urllib.parse
@@ -40,6 +41,33 @@ DEFAULT_OWNER = "JRWang2026"
 DEFAULT_REPO = "immigration-tracker"
 DEFAULT_BRANCH = "main"
 MAX_FILE_SIZE = 1024 * 1024  # GitHub Contents API 限制 1MB
+
+
+def _find_git_exe() -> Optional[str]:
+    """查找 git.exe 可执行文件的完整路径。
+
+    WorkBuddy 的 Python 环境不继承 shell 的 PATH，需要手动定位。
+    """
+    # 1. shutil.which（覆盖标准 PATH）
+    found = shutil.which("git")
+    if found:
+        return found
+    # 2. WorkBuddy 内置 PortableGit
+    portable = Path.home() / ".workbuddy" / "vendor" / "PortableGit" / "mingw64" / "bin" / "git.exe"
+    if portable.exists():
+        return str(portable)
+    # 3. 常见安装路径
+    for p in (
+        r"C:\Program Files\Git\bin\git.exe",
+        r"C:\Program Files\Git\cmd\git.exe",
+        r"C:\Program Files (x86)\Git\bin\git.exe",
+    ):
+        if Path(p).exists():
+            return p
+    return None
+
+
+_GIT_EXE = _find_git_exe()
 
 
 class GitHubAPIError(Exception):
@@ -96,8 +124,11 @@ def _get_status(repo_root: Path) -> list[tuple[str, str]]:
 
     返回 [(status_code, path), ...]，status_code 遵循 `git status --porcelain` 格式。
     """
+    if not _GIT_EXE:
+        logger.error("未找到 git.exe，无法获取变更列表。")
+        return []
     result = subprocess.run(
-        ["git", "status", "--porcelain"],
+        [_GIT_EXE, "status", "--porcelain"],
         cwd=repo_root,
         capture_output=True,
         text=True,
@@ -236,10 +267,13 @@ def push_to_github(
         return False
 
     # 配置本地 git 用户信息（仅用于本地状态跟踪，不用于远程 push）
-    for key, value in [("user.email", "WJR2026@hotmail.com"), ("user.name", "Wang Private Agent")]:
-        result = subprocess.run(["git", "config", key], cwd=repo_root, capture_output=True, text=True, check=False)
-        if not result.stdout.strip():
-            subprocess.run(["git", "config", key, value], cwd=repo_root, check=True)
+    if _GIT_EXE:
+        for key, value in [("user.email", "WJR2026@hotmail.com"), ("user.name", "Wang Private Agent")]:
+            result = subprocess.run([_GIT_EXE, "config", key], cwd=repo_root, capture_output=True, text=True, check=False)
+            if not result.stdout.strip():
+                subprocess.run([_GIT_EXE, "config", key, value], cwd=repo_root, check=False)
+    else:
+        logger.warning("未找到 git.exe，跳过本地 git config。")
 
     message = commit_message or f"Auto: agent update {datetime.now().strftime('%Y-%m-%d %H:%M')}"
 
