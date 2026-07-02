@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface Job {
   title: string;
@@ -33,19 +33,31 @@ interface FeedData {
   data: SeekData;
 }
 
+// GitHub Pages 子路径下 assets 和 data 需要前缀
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const DATA_URL = `${BASE}/data/seek-nz/latest.json`;
+
+// 自动刷新间隔（毫秒）：从 10 分钟起步，成功后降到 30 分钟
+const REFRESH_INTERVAL_MS = 10 * 60 * 1000;
+const REFRESH_INTERVAL_SLOW_MS = 30 * 60 * 1000;
+
 export default function IntelligenceDashboard() {
   const [data, setData] = useState<FeedData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [lastFetch, setLastFetch] = useState<Date | null>(null);
 
-  useEffect(() => {
-    fetch("/data/seek-nz/latest.json")
+  const fetchData = useCallback((showLoading: boolean) => {
+    if (showLoading) setLoading(true);
+    setError(null);
+    fetch(DATA_URL, { cache: "no-store" })
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
       })
       .then((json: FeedData) => {
         setData(json);
+        setLastFetch(new Date());
         setLoading(false);
       })
       .catch((err) => {
@@ -53,6 +65,16 @@ export default function IntelligenceDashboard() {
         setLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    fetchData(true);
+  }, [fetchData]);
+
+  // 自动轮询：静默刷新（不显示 loading）
+  useEffect(() => {
+    const id = setInterval(() => fetchData(false), REFRESH_INTERVAL_MS);
+    return () => clearInterval(id);
+  }, [fetchData]);
 
   if (loading) return <div style={{ padding: "3rem 1.5rem", textAlign: "center" }}>正在加载情报数据…</div>;
   if (error) return <div style={{ padding: "3rem 1.5rem", textAlign: "center", color: "#dc2626" }}>加载失败: {error}</div>;
@@ -71,6 +93,27 @@ export default function IntelligenceDashboard() {
           <p style={{ color: "var(--slate-500)", fontSize: "1.05rem" }}>
             数据来源：私人本地 Agent 每日扫描 QQ Mail · 绿名单 Tier1 ICT 聚焦
           </p>
+          <div style={{ marginTop: "0.75rem", display: "flex", justifyContent: "center", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
+            <span style={{ fontSize: "0.85rem", color: "var(--slate-400)" }}>
+              {lastFetch
+                ? `上次更新：${lastFetch.toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit", second: "2-digit" })}`
+                : "加载中…"}
+            </span>
+            <button
+              onClick={() => fetchData(true)}
+              style={{
+                padding: "0.35rem 0.9rem",
+                fontSize: "0.85rem",
+                border: "1px solid var(--slate-300)",
+                borderRadius: "9999px",
+                background: "var(--white)",
+                color: "var(--slate-600)",
+                cursor: "pointer",
+              }}
+            >
+              手动刷新
+            </button>
+          </div>
         </div>
 
         <div
