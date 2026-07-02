@@ -187,6 +187,7 @@ def main():
 
     all_raw_jobs = []
     emails = []
+    processed_uids: list[str] = []
 
     try:
         with client:
@@ -197,13 +198,25 @@ def main():
                 lookback_days=seek_cfg["lookback_days"],
                 unread_only=seek_cfg.get("unread_only", False),
                 max_results=seek_cfg.get("max_emails", 50),
+                skip_processed=True,  # 新增：跳过已处理的 UID
             )
-            logger.info(f"获取 {len(emails)} 封 SEEK 邮件")
+            logger.info(f"获取 {len(emails)} 封新 SEEK 邮件（已跳过已处理的旧邮件）")
 
+            # 记录本次处理的 UID
             for em in emails:
                 jobs = extract_jobs_from_html(em["body_html"])
                 logger.info(f"邮件 '{em['subject'][:60]}...' 提取 {len(jobs)} 个岗位")
+
+                if len(jobs) == 0 and len(em["body_html"]) > 500:
+                    # 正文充足但未提取岗位 → HTML 解析可能失败，暂不标记 processed
+                    logger.warning(f"  ⚠ 邮件 uid={em['uid']} 正文 {len(em['body_html'])} 字符但提取 0 岗位，保留待下次重试")
+                    continue
+
                 all_raw_jobs.extend(jobs)
+                processed_uids.append(em["uid"])
+
+            if processed_uids:
+                client.mark_processed(seek_cfg["search_folder"], *processed_uids)
     except Exception as e:
         logger.exception("IMAP 处理失败")
         sys.exit(1)
