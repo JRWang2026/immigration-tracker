@@ -4,14 +4,11 @@ from datetime import datetime, timedelta
 
 # File paths
 files = [
-    # JSON-wrapped email bodies
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\7b53dadb-6379-4fdc-9d1d-8b69587ac77e\tool-results\DeferExecuteTool_4.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\7b53dadb-6379-4fdc-9d1d-8b69587ac77e\tool-results\DeferExecuteTool_7.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\7b53dadb-6379-4fdc-9d1d-8b69587ac77e\tool-results\DeferExecuteTool_8.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\7b53dadb-6379-4fdc-9d1d-8b69587ac77e\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1782777520821-39de6a.txt', 'json'),
-    # Direct HTML bodies
-    (r'C:\Users\Mr_Wang\WorkBuddy\2026-06-20-14-48-36\.tmp\seek_email_2026-06-29-2147.html', 'html'),
-    (r'C:\Users\Mr_Wang\WorkBuddy\2026-06-20-14-48-36\.tmp\seek_email_2026-06-29-2025.html', 'html'),
+    # 2026-07-02 unread SEEK job alert emails
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\282828d5-971d-4360-b481-4f86c9f17db9\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783036918740-c92532.txt', 'json'),
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\282828d5-971d-4360-b481-4f86c9f17db9\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783036918803-f32a33.txt', 'json'),
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\282828d5-971d-4360-b481-4f86c9f17db9\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783036918674-b9fee7.txt', 'json'),
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\282828d5-971d-4360-b481-4f86c9f17db9\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783036918584-4767c9.txt', 'json'),
 ]
 
 def load_body(path, ftype):
@@ -334,7 +331,7 @@ low = [j for j in relevant_jobs if 35 <= j['score'] < 40]
 
 report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
 
-> 📅 扫描时间：{datetime.now().strftime('%Y-%m-%d %H:%M')} | 📧 来源：QQ邮箱SEEK推送（5封邮件，6/28-6/29）
+> 📅 扫描时间：{datetime.now().strftime('%Y-%m-%d %H:%M')} | 📧 来源：QQ邮箱SEEK推送（4封邮件，7/2 ICT×2 + Admin×1 + NZ General×1）
 > 🎯 策略更新：仅关注**绿名单Tier1 ICT岗** + **大学/研究机构研究岗**；BSA/Data Analyst/行政岗已降级/过滤
 
 ---
@@ -343,7 +340,7 @@ report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
 
 | 指标 | 数值 |
 |------|------|
-| 扫描邮件数 | 5（ICT×4 + Admin×1） |
+| 扫描邮件数 | 4（ICT×2 + Admin×1 + NZ General×1） |
 | 去重岗位总数 | {len(unique_jobs)} |
 | 过滤后相关岗位 | {len(relevant_jobs)}（仅显示≥35分） |
 | 过滤掉岗位 | {filtered_out}（BSA/Data Analyst/行政等非绿名单岗） |
