@@ -4,11 +4,11 @@ from datetime import datetime, timedelta
 
 # File paths
 files = [
-    # 2026-07-02 unread SEEK job alert emails
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\282828d5-971d-4360-b481-4f86c9f17db9\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783036918740-c92532.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\282828d5-971d-4360-b481-4f86c9f17db9\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783036918803-f32a33.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\282828d5-971d-4360-b481-4f86c9f17db9\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783036918674-b9fee7.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\282828d5-971d-4360-b481-4f86c9f17db9\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783036918584-4767c9.txt', 'json'),
+    # 2026-07-04 unread SEEK job alert emails (4 emails: 7/4 Admin×1 + 7/3 ICT×2 + 7/3 NZ General×1)
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\c39e239f-f5f0-432f-bc47-eada1d381361\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783127555982-f504a7.txt', 'json'),
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\c39e239f-f5f0-432f-bc47-eada1d381361\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783127556177-2cfd57.txt', 'json'),
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\c39e239f-f5f0-432f-bc47-eada1d381361\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783127556115-364172.txt', 'json'),
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\c39e239f-f5f0-432f-bc47-eada1d381361\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783127556049-e542e9.txt', 'json'),
 ]
 
 def load_body(path, ftype):
@@ -331,7 +331,7 @@ low = [j for j in relevant_jobs if 35 <= j['score'] < 40]
 
 report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
 
-> 📅 扫描时间：{datetime.now().strftime('%Y-%m-%d %H:%M')} | 📧 来源：QQ邮箱SEEK推送（4封邮件，7/2 ICT×2 + Admin×1 + NZ General×1）
+> 📅 扫描时间：{datetime.now().strftime('%Y-%m-%d %H:%M')} | 📧 来源：QQ邮箱SEEK推送（4封邮件，7/4 Admin×1 + 7/3 ICT×2 + 7/3 NZ General×1）
 > 🎯 策略更新：仅关注**绿名单Tier1 ICT岗** + **大学/研究机构研究岗**；BSA/Data Analyst/行政岗已降级/过滤
 
 ---
@@ -340,7 +340,7 @@ report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
 
 | 指标 | 数值 |
 |------|------|
-| 扫描邮件数 | 4（ICT×2 + Admin×1 + NZ General×1） |
+| 扫描邮件数 | 4（7/4 Admin×1 + 7/3 ICT×2 + 7/3 NZ General×1） |
 | 去重岗位总数 | {len(unique_jobs)} |
 | 过滤后相关岗位 | {len(relevant_jobs)}（仅显示≥35分） |
 | 过滤掉岗位 | {filtered_out}（BSA/Data Analyst/行政等非绿名单岗） |
@@ -482,4 +482,54 @@ with open(report_path, 'w', encoding='utf-8') as f:
     f.write(report)
 
 print(f"\nReport saved: {report_path}")
+
+# --- KOS feed generation ---
+from pathlib import Path
+import sys
+
+workspace_root = Path(__file__).parent
+sys.path.insert(0, str(workspace_root))
+from local_agent.kos_bridge import write_kos_feed
+
+
+def parse_anzsco(title):
+    anzsco_str = green_list_anzsco(title)
+    if not anzsco_str:
+        return '', ''
+    # Format: "261313 (Software Engineer)"
+    code, name = anzsco_str.split(' ', 1)
+    name = name.strip('()').strip()
+    return code, name
+
+
+def build_job_record(j):
+    code, name = parse_anzsco(j['title'])
+    return {
+        'title': j['title'],
+        'company': j['company'],
+        'location': j['location'],
+        'salary': j['salary'],
+        'url': j['url'],
+        'score': j['score'],
+        'reasons': j['reasons'],
+        'immigration_path': immigration_note(j),
+        'suggested_skills': suggest_skills(j),
+        'anzsco_code': code,
+        'anzsco_name': name,
+    }
+
+
+email_count = sum(1 for path, _ in files if os.path.exists(path))
+
+kos_data = {
+    'date': today,
+    'email_count': email_count,
+    'total_jobs': len(unique_jobs),
+    'tier1_jobs': [build_job_record(j) for j in unique_jobs if is_green_list_tier1(j['title'])],
+    'all_jobs': [build_job_record(j) for j in unique_jobs],
+}
+
+kos_section_dir = Path(r'C:\Users\Mr_Wang\WorkBuddy\2026-06-03-14-49-17\kos\public\data\seek-nz')
+kos_path = write_kos_feed(kos_section_dir, 'seek-nz', kos_data, timestamp=datetime.now())
+print(f"KOS feed saved: {kos_path}")
 
