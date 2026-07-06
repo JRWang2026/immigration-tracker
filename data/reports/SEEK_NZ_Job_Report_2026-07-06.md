@@ -1,0 +1,94 @@
+# SEEK NZ 绿名单 Tier1 ICT 扫描报告 — 2026-07-06
+
+> 运行时间：2026-07-06 08:00:01
+> 扫描邮件：50 封 | 去重岗位：56 个 | 绿名单 Tier1 匹配：0 个
+
+---
+
+## 一、绿名单 Tier1 ICT 高匹配岗位（≥60分）
+
+*今日无绿名单 Tier1 ICT 高匹配岗位。*
+
+---
+
+## 二、大学/研究机构岗位（40-59分）
+
+| 匹配度 | 职位 | 公司 | 地点 | 薪资 | 移民路径 | 需补充技能 |
+|--------|------|------|------|------|----------|------------|
+| 50 | [Laser Tag ICT Support](https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6pmeK7rJY4Wl8L2Pu_dJPBaVLHbJ-pMF7ZwTdyPP81cKKFn5GAxvbxtWaDJWj9lp3cZ6XSmyhBKL0pQKoeaNL3PcZCSmWi4AApN8jwwHdJRrBbVw4tu81OrdXHnhulv9E/4s2/XmufqcD5QJWZN_cb5V_LWw/h72/h001.sWgGX9ISrWPusJDGypHN8TIJypSZwbsn1AEfgykJj3g) | Delta Strike International Ltd | Christchurch Central, Canterbury | $27 – $40 per hour | 绿名单Tier2 Work to Residence — 需工作2年转居留 | 非目标岗位，不建议投入精力 |
+
+---
+
+## 三、已过滤/降级岗位（<40分）
+
+| 匹配度 | 职位 | 公司 | 分类 | 原因 |
+|--------|------|------|------|------|
+| 31 | Business Analyst - Workday | University of Otago | 非绿名单:BSA/ERP(已降级) | 非绿名单:BSA/ERP(已降级), 大学/研究机构 |
+| 26 | Business Systems Analyst | Ashburton District Council | 非绿名单:BSA/ERP(已降级) | 非绿名单:BSA/ERP(已降级), 政府/公共部门 |
+| 25 | Senior Data Engineer | Fisher & Paykel Healthcare | 非目标岗位 | 非目标岗位, ICT/科技公司 |
+| 23 | Animal Services Officer | Tauranga City Council | 非目标岗位 | 非目标岗位, 政府/公共部门 |
+| 20 | Technology Business Analyst | ANZ Bank New Zealand Limited | 非绿名单:BSA/ERP(已降级) | 非绿名单:BSA/ERP(已降级), ICT/科技公司 |
+| 17 | Senior Data Governance & Enablement Analyst | Fisher & Paykel Healthcare | 非目标岗位 | 非目标岗位, ICT/科技公司 |
+| 15 | Librarian - Glenfield Library | Auckland Council | 非目标岗位 | 非目标岗位, 政府/公共部门 |
+| 13 | Senior Business Analyst | Presto Resourcing | 非绿名单:BSA/ERP(已降级) | 非绿名单:BSA/ERP(已降级), 惠灵顿地区 |
+| 13 | Hamilton Owner Driver | Smartways Logistics NZ Limited | 非目标岗位 | 非目标岗位, 非奥克兰地区加分 |
+| 13 | Hotel Operations Manager | Kamana Lakehouse | 非目标岗位 | 非目标岗位, 非奥克兰地区加分 |
+| 13 | Dairy Farm Assistant - Devon Dairy Farms | Trojan Holdings | 非目标岗位 | 非目标岗位, 非奥克兰地区加分 |
+| 13 | Food Technicians | Theracen Ltd | 非目标岗位 | 非目标岗位, 非奥克兰地区加分 |
+| 13 | Technician (Evaluations) | KBC | 非目标岗位 | 非目标岗位, 非奥克兰地区加分 |
+| 13 | Asbestos Assessor / Trainee Hazmat Consultant (Field Based) | ALS Life Sciences - Environmental | 非目标岗位 | 非目标岗位, 非奥克兰地区加分 |
+| 13 | Laboratory Technician | Honey New Zealand | 非目标岗位 | 非目标岗位, 非奥克兰地区加分 |
+| 13 | IT & Systems Support | Profile Group | 非目标岗位 | 非目标岗位, 非奥克兰地区加分 |
+| 13 | IT Support Team Member | 3Logix Pty Ltd | 非目标岗位 | 非目标岗位, 非奥克兰地区加分 |
+| 13 | Head of Governance & Corporate Affairs | Dairy Goat Co-op (NZ) Ltd | 非目标岗位 | 非目标岗位, 非奥克兰地区加分 |
+| 10 | Fleet Coordinator | Transport Repairs Ltd | 行政岗:忽略 | 行政岗:忽略, 非奥克兰地区加分 |
+| 10 | St Oran’s College Science Technician | St Oran's College | 非目标岗位 | 非目标岗位, 惠灵顿地区 |
+| 10 | Executive & Governance Support Lead | Central Pacific Collective | 非目标岗位 | 非目标岗位, 惠灵顿地区 |
+| 10 | Office Manager | Brannigans Consulting Limited | 行政岗:忽略 | 行政岗:忽略, 非奥克兰地区加分 |
+| 10 | Office Manager/Principal's PA (2 positions) | Christchurch East School | 行政岗:忽略 | 行政岗:忽略, 非奥克兰地区加分 |
+| 10 | Membership Advisor | McLaren Recruitment – in business since 1989 | 非目标岗位 | 非目标岗位, 惠灵顿地区 |
+| 10 | Office Coordinator | Dunes Consulting | 行政岗:忽略 | 行政岗:忽略, 非奥克兰地区加分 |
+| 8 | Senior Business Analyst | Omexom New Zealand | 非绿名单:BSA/ERP(已降级) | 非绿名单:BSA/ERP(已降级) |
+| 8 | Technical Business Analyst | Maori Television | 非绿名单:BSA/ERP(已降级) | 非绿名单:BSA/ERP(已降级) |
+| 7 | Office Coordinator | Sharesies | 行政岗:忽略 | 行政岗:忽略, 惠灵顿地区 |
+| 5 | Showroom Sales Manager | Elite Bathroomware Ltd | 非目标岗位 | 非目标岗位 |
+| 5 | Nanny & Household Manager | Private Advertiser | 非目标岗位 | 非目标岗位 |
+| 5 | Customer Fulfilment Representative | Sanitarium Health Food Company | 非目标岗位 | 非目标岗位 |
+| 5 | Orchard Manager - Riwaka Orchards | FarmRight Ltd | 非目标岗位 | 非目标岗位 |
+| 5 | Assistant | Far North Investment ltd | 非目标岗位 | 非目标岗位 |
+| 5 | Field Technician - MTC | CPS (NZ) Limited | 非目标岗位 | 非目标岗位 |
+| 5 | Property Maintenance Technician | Oakridge Property Group Ltd | 非目标岗位 | 非目标岗位 |
+| 5 | Auckland Sales Manager | Matthews Packaging & Hygiene | 非目标岗位 | 非目标岗位 |
+| 5 | Business Development Manager | Grab One Limited | 非目标岗位 | 非目标岗位 |
+| 5 | Forklift Driver | Sidekicker | 非目标岗位 | 非目标岗位 |
+| 5 | Operations Advisor - Auckland | Department of Corrections | 非目标岗位 | 非目标岗位 |
+| 5 | Administrative Assistant | Hillsborough (Parkside Village) | Metlifecare | 非目标岗位 | 非目标岗位 |
+| 5 | Service Desk Analyst - Contract and Permanent roles | Beyond Recruitment - NZ’s best career opportunities – jobs all over Aotearoa | 非目标岗位 | 非目标岗位 |
+| 5 | IT Helpdesk (Fixed-term role, 5 weeks) | Ideal Electrical Suppliers | 非目标岗位 | 非目标岗位 |
+| 5 | Office Management and creative production | Private Advertiser | 非目标岗位 | 非目标岗位 |
+| 5 | Production Engineer - Relocate to Timaru | People Inc Group Limited | 非目标岗位 | 非目标岗位 |
+| 5 | Service Desk Level 1 | Mobile Mentor Limited | 非目标岗位 | 非目标岗位 |
+| 2 | Export Coordinator | KLN Freight (Oceania) Ltd | 行政岗:忽略 | 行政岗:忽略 |
+| 2 | Experienced Export Operations Coordinator | Henning Harders (New Zealand) Limited | 行政岗:忽略 | 行政岗:忽略 |
+| 2 | People & Culture Coordinator | Enviro NZ | 行政岗:忽略 | 行政岗:忽略 |
+| 2 | Company Administrator/Business Support | GeoCivil | 行政岗:忽略 | 行政岗:忽略 |
+| 2 | Office Administrator & Online Orders - Moustache Milk & Cookie Bar | Moustache Milk And Cookie Bar | 行政岗:忽略 | 行政岗:忽略 |
+| 0 | Junior Business Systems Analyst | EBOS Group Ltd | 非绿名单:BSA/ERP(已降级) | 非绿名单:BSA/ERP(已降级), 初级岗降分 |
+| 0 | Assistant Accountant (Part-Time) | Lukbo Group Limited | 非目标岗位 | 非目标岗位, 兼职降分 |
+| 0 | Executive Assistant To CEO | +MORE Group | 行政岗:忽略 | 行政岗:忽略, 高管助理专业性强 |
+| 0 | Executive Assistant - C Suite | Hays | 行政岗:忽略 | 行政岗:忽略, 高管助理专业性强 |
+| 0 | Customer Service Representative - Service Centre - Part time | Auckland Transport | 非目标岗位 | 非目标岗位, 兼职降分 |
+
+---
+
+## 四、操作摘要
+
+- 评分阈值：35
+- 高匹配（≥60）：0
+- 中匹配（40-59）：1
+- 低匹配/忽略（<40）：55
+
+**下一步建议**：
+1. 对 Tier1 岗位，先上 INZ 官网查雇主是否在 [Accredited Employer List](https://www.immigration.govt.nz/employ-migrants/accreditation-and-job-checks/accredited-employers-list)。
+2. 准备英文简历 + Cover Letter + GitHub 作品集。
+3. 主线仍是德国岗位制博士；NZ 只作为副线机会。
