@@ -1,0 +1,335 @@
+{
+  "date": "2026-07-08",
+  "email_count": 50,
+  "total_jobs": 18,
+  "jobs": [
+    {
+      "title": "HR Systems Administrator",
+      "company": "Ministry of Foreign Affairs & Trade",
+      "location": "Wellington",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4FS20POptTSCc5nZs2WsFZDSl3LHTIE3e9IfLR8G7hemvNEOU21KghY_uMTL7zEOwX7db9yUsk3x-h2D5gm2fGME_QAR_j5MMbx-nrvDd4MlkWJGXxUepeO1jLLFxdYEI/4s4/VowobaMQR2-xSaqPa-w2tg/h71/h001.jQz5Lgxky90BPWSREOfGFaQ9gje_7t5NNnEX_2Z4Bro",
+      "source": "SEEK NZ email",
+      "score": 70,
+      "reasons": [
+        "绿名单Tier1: Systems Administrator (262113)",
+        "政府/公共部门",
+        "惠灵顿地区"
+      ],
+      "immigration_path": "绿名单Tier1 Straight to Residence | 262113 Systems Administrator — 有offer即可直申居留",
+      "suggested_skills": "1)英文简历突出具体技术栈(Python/SQL/Cloud/Security)；2)GitHub作品集；3)准备NZ本地面试题；4)NZQA IQA学历评估",
+      "anzsco_code": "262113",
+      "anzsco_name": "Systems Administrator"
+    },
+    {
+      "title": "Business Systems Analyst",
+      "company": "Ashburton District Council",
+      "location": "Christchurch Central, Canterbury",
+      "salary": "",
+      "posted_date": "1 Jul 2026",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6ltFp-mjQV46mcUbmVQqdOtRL5WhCvowg6zmUi2EuuTwCsmxRbshFlzGyeSqaPGChsHXGESVJxglYSW1KxJd-fPtFkQRovLlnMI7L208dVtScqfDRfApFYFQ3fSEn2FbM/4s4/VowobaMQR2-xSaqPa-w2tg/h86/h001.Ts9s5GxgKrp1LigzZhG9fQJ6EK8lYq82jGH6r6wcpXE",
+      "source": "SEEK NZ email",
+      "score": 26,
+      "reasons": [
+        "非绿名单:BSA/ERP(已降级)",
+        "政府/公共部门",
+        "非奥克兰地区加分"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Senior Data Engineer",
+      "company": "Fisher & Paykel Healthcare",
+      "location": "Auckland",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6pgRXcVtamAzyPL_CrFW-J_-unD-hiIxRCT84ddssJ3KD7zATDbFW29Ik5dFHidMt2l9qmnXolE_VPn0sFqxMe1oEy1EfIa0yyFG11if3gg0YYekxZEnnjpYzM0U5Ue2o/4s4/VowobaMQR2-xSaqPa-w2tg/h75/h001.pimR1LIGbZwzNKyKgW86st9Mbjfrt0NQ8yF_kr6xyyM",
+      "source": "SEEK NZ email",
+      "score": 25,
+      "reasons": [
+        "非目标岗位",
+        "ICT/科技公司",
+        "高级数据技能"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "SAP Business Analyst",
+      "company": "H2R Technology Limited",
+      "location": "Wellington Central, Wellington",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5P92Av1jn-tx8mbWDV8OiX47jkPuszP-iHsOICORJZcxHpcRFAWMGluk11WiLZ6ktxXF5hcZ4wmPxyOUoUlNlPi-IptJi87emu1L0su0ZrL9OaGI7RC2Zc01Y8cHFSaD0/4s4/VowobaMQR2-xSaqPa-w2tg/h77/h001.QT4OoU6j2M2D1P3SS_xTeLrfCjIKTuxXXdPW3EEqlh0",
+      "source": "SEEK NZ email",
+      "score": 25,
+      "reasons": [
+        "非绿名单:BSA/ERP(已降级)",
+        "ICT/科技公司",
+        "惠灵顿地区"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Senior Data Engineer",
+      "company": "Auckland Council",
+      "location": "Auckland CBD, Auckland",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6XxgwmNBf0aqq9r1jics2ifRUo8iEY6omh3vHyAhvMCqiKG8oD6zwMHj7AVUtk1CRIPII83pMuuCUf2fViGqfWfMnirN45ZJpxL1a1rKnW_SDw67zawhL7Dq_mJLW0nAw/4s4/VowobaMQR2-xSaqPa-w2tg/h69/h001.tW5lljnAIevxAEy331pqOkcZn_IDSuIGUSzxCQgX-Zw",
+      "source": "SEEK NZ email",
+      "score": 23,
+      "reasons": [
+        "非目标岗位",
+        "政府/公共部门",
+        "高级数据技能"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Senior Analyst",
+      "company": "Ministry of Justice",
+      "location": "Wellington Central, Wellington",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6M6-l3hE3WWA9k0kGrHxkyUFG6_Qi_D0r9WpWG05qqGCgtPyuyfCtL7w9gnigLf6yPCwbuXqH3umgwv_-VRRa8WtJtSWI7gpWjwUxbnFLfdFiHEXEcKiZPPAHE6womSi0/4s4/VowobaMQR2-xSaqPa-w2tg/h73/h001.cG34LggZcd4yNKCBruMMj2VR-om6lGZI1B5GBNoMEd4",
+      "source": "SEEK NZ email",
+      "score": 20,
+      "reasons": [
+        "非目标岗位",
+        "政府/公共部门",
+        "惠灵顿地区"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Senior Oracle Specialist",
+      "company": "Ministry of Social Development",
+      "location": "Wellington Central, Wellington",
+      "salary": "$139,920 - $170,089",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7YbI1etxSLkRsCxXpMYX6c4YB61lVdFDoRojgDrws7rZ_3l0G7Rp8XupEw8mxzR84wtbGGuPGsJQ4rAPCS7xau2Gzeb_b_dI3MmS-cqRGcbcmUYqklJbtlb0dRl-chxIs/4s4/VowobaMQR2-xSaqPa-w2tg/h79/h001.CbgQZUZF3TnGU25fucLxUW3cJ0e2ppgjmaucDgpaM_s",
+      "source": "SEEK NZ email",
+      "score": 20,
+      "reasons": [
+        "非目标岗位",
+        "政府/公共部门",
+        "惠灵顿地区"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Senior Data Governance & Enablement Analyst",
+      "company": "Fisher & Paykel Healthcare",
+      "location": "Auckland",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6GQhxDzILWtG6JUkEylnOb0oN7EX8xbN79noEvr5sdJ78hW4nfb_NIAgvxRXotmYwJDjly3Ts1OJUdLbMQ9RgoKp79pflE5qUOB8kaGcdEAWKJGMZV9-MYUb5eUI5599Y/4s4/VowobaMQR2-xSaqPa-w2tg/h67/h001.irXovWcuMsvLHj6GUnc9BSiIDOeNFsdHeMjwr1fJUJI",
+      "source": "SEEK NZ email",
+      "score": 17,
+      "reasons": [
+        "非目标岗位",
+        "ICT/科技公司"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Senior Business Analyst - Contract",
+      "company": "Younity",
+      "location": "Christchurch, Canterbury",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4cHUoBG0E9MfoQA5jIi_n3Tg75a4pCFjRUpqoDYBWek_xa_tM_heuXIDs-9tWUne1TU1vKzw3B0PTh6_djffOyrakyVUW5Z7ovfJaH2kj3bb9IvS0yPL7uQL0XR4xJWXA/4s4/VowobaMQR2-xSaqPa-w2tg/h53/h001.2FkrtAUSNnwV5P_4qx_TqUnmTWicl99Jis2n0A3Eizo",
+      "source": "SEEK NZ email",
+      "score": 16,
+      "reasons": [
+        "非绿名单:BSA/ERP(已降级)",
+        "非奥克兰地区加分"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Data and Reporting Coordinator - Devonport",
+      "company": "PAE (NZ) Ltd",
+      "location": "Devonport, Auckland",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv76jTGpEvR2jipTKKFqyucduRZ42vKKobGyWd2Jikr4FtpFjMhoAEOJBJiwbl8EgLZAyQcMx9PLK2yH7HMrjKtxeK3FNTpOpmiDMCbGoLjFLfnWH9MwF78iCw6sQhofPHA/4s4/VowobaMQR2-xSaqPa-w2tg/h51/h001.Dof_7f34SSzgEqlCPM8Z8aNBAtVlLij7_KoatEHZGUY",
+      "source": "SEEK NZ email",
+      "score": 14,
+      "reasons": [
+        "行政岗:忽略",
+        "ICT/科技公司"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Senior Business Analyst",
+      "company": "Younity",
+      "location": "Wellington Central, Wellington",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv62J0wCH1gFMuSAVb4nIoSQdefYJWY2YgxNlpZ5gV-m316BSWp4oc9efmHSIGhusBGQQs8Utgl4hqU-qhjVwWRSnAo0Yw_eLhRDzOv0vVQPqhnbveuf20BKZw9k_rUnjlo/4s4/VowobaMQR2-xSaqPa-w2tg/h57/h001.ovsu39bn5QHfvrNs2YhlgLuTPY-fIeig5CF26KoSB60",
+      "source": "SEEK NZ email",
+      "score": 13,
+      "reasons": [
+        "非绿名单:BSA/ERP(已降级)",
+        "惠灵顿地区"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Kaitātari Mokamoka Pakihi | Technical Business Analyst (Fixed Term)",
+      "company": "Te Puni Kōkiri",
+      "location": "Wellington Central, Wellington",
+      "salary": "$105k - $128k pro rata",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4BqE2-SoIGZdrElMKUdOkYi0iu3FdKdnP7scorXlMAzIV-34HfbqCIafKRli4Q3cTkuHOikrJvCjpbavZPjSwV8HznDAyCV9uK6SgQx01TOR7BMAPi2MgmaCpWpOLIlZU/4s4/VowobaMQR2-xSaqPa-w2tg/h61/h001.NitoiNKjEjKMRpxLBHWIF23Clk0zZ46kf7nERA3UMrE",
+      "source": "SEEK NZ email",
+      "score": 13,
+      "reasons": [
+        "非绿名单:BSA/ERP(已降级)",
+        "惠灵顿地区"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Business Performance, Analytics & Reporting Analyst",
+      "company": "ANZ Bank New Zealand Limited",
+      "location": "Wellington",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7dXVmxTKgna0KPisLaocZGyDHQAeb9V9ALRsAlYAtBaPoAqJzqg3EYxX2fv0V9DnIiPYl-GfgN0lspuiAazXcXQJVpJIiFdyf-B5in2lyXNFE4IfI242aEztH2iJOFiWw/4s4/VowobaMQR2-xSaqPa-w2tg/h63/h001.vqq1W0mPqv9zzEzGRWys9u3QcZE5pl_MMVLIK2Omk0w",
+      "source": "SEEK NZ email",
+      "score": 13,
+      "reasons": [
+        "非绿名单:Data Analyst(已降级)",
+        "惠灵顿地区"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Kaihautū Kounga ā-Pūnaha | Systems Quality Lead, Business Systems",
+      "company": "Te Puni Kōkiri",
+      "location": "Wellington Central, Wellington",
+      "salary": "$124k - $138k (pro rata)",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7I_f_GYExmgswsQuBURydGNunEtskL6rY-PiqQpnivGYQFBoSs_pNp6dIbuGPpeued0C7QjSkj5IWkfalUPiC6cot1qSL9Haht0xu-uj0volhpPkmsfOuzlxwbKNcr0as/4s4/VowobaMQR2-xSaqPa-w2tg/h55/h001.OFLu98KeDbNY4o0LEx5J7Rt9Ez5UXlVVV0qNNMupaWA",
+      "source": "SEEK NZ email",
+      "score": 10,
+      "reasons": [
+        "非目标岗位",
+        "惠灵顿地区"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Technical Business Analyst",
+      "company": "Maori Television",
+      "location": "East Tamaki, Auckland",
+      "salary": "",
+      "posted_date": "23 Jun 2026",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv69dfyUI3x0Agaj_02IAZ6wc9DTDnEqv0CrXQ7fRng7pNDDncIVGBA0iKfcQkXAYiqfl-ebiL13B9rEqAvmipooFqfBK8ddpDBRY0Y4d5gZ5Y5PpL6GyLHEkqAjkQMP5SE/4s4/VowobaMQR2-xSaqPa-w2tg/h84/h001.XaoVOtVXNUSg8mZRBOh42AOFM14sfPX-k53jYR82FTk",
+      "source": "SEEK NZ email",
+      "score": 8,
+      "reasons": [
+        "非绿名单:BSA/ERP(已降级)"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Business Applications Specialist",
+      "company": "Omexom New Zealand",
+      "location": "Albany, Auckland",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6w6kiMZ3TpAolUn2Y6wzNN7wthgXxpMkwiHHlGMp0d8t0ThXtGuDWdmEFu-cW08UVw3vyHo8SV_3nhTqGqHWf25H1k_oZmUCutE9aBL4KnIR83uEb8P92gWULwLY1UcfA/4s4/VowobaMQR2-xSaqPa-w2tg/h59/h001.yygqZvUfyliQiAtUBLwO_kqDVw9jopHDJd8Odcx7AUg",
+      "source": "SEEK NZ email",
+      "score": 5,
+      "reasons": [
+        "非目标岗位"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Health, Safety & Wellbeing Insights & Learning Manager",
+      "company": "Fonterra Co-operative Group Ltd",
+      "location": "Auckland CBD, Auckland",
+      "salary": "",
+      "posted_date": "",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv55doOJ9acCbBnfkuHtA3JseQiR57ZMYhAh_G21X2gBr9R3AywMIWX7xyTUbjp927EttpSbJajxiWg7JCXOSYpVLqQAUvtY1TPwMgiI8uFhZOqHASirmDrFF3zknl3WczU/4s4/VowobaMQR2-xSaqPa-w2tg/h65/h001.l7ob67xwXP-h9oRoNiWw4u1oDD6Xw82lscYu6OAQmtw",
+      "source": "SEEK NZ email",
+      "score": 5,
+      "reasons": [
+        "非目标岗位"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    },
+    {
+      "title": "Junior Business Systems Analyst",
+      "company": "EBOS Group Ltd",
+      "location": "Mangere, Auckland",
+      "salary": "",
+      "posted_date": "4 Jul 2026",
+      "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5i9lLiOrX7DHgZkkRvNrvbYpc-7GVyUe0czoDn4LU-3RcZE0un9n1gC6RqqoQl7Os5wKHxayWIX42H2oz8uzKUITu_G1Jl062WoFED50KDL2taLFOm7AqHyHnq8Ypy69M/4s4/VowobaMQR2-xSaqPa-w2tg/h82/h001.bHF6gdeqAO73J5bIG-N1c3g2ISoMUpNrWUyOtNCyT-4",
+      "source": "SEEK NZ email",
+      "score": 0,
+      "reasons": [
+        "非绿名单:BSA/ERP(已降级)",
+        "初级岗降分"
+      ],
+      "immigration_path": "非绿名单，移民路径弱，建议忽略",
+      "suggested_skills": "非目标岗位，不建议投入精力",
+      "anzsco_code": "",
+      "anzsco_name": ""
+    }
+  ]
+}
