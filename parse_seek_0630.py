@@ -4,11 +4,12 @@ from datetime import datetime, timedelta
 
 # File paths
 files = [
-    # 2026-07-04 unread SEEK job alert emails (4 emails: 7/4 Admin×1 + 7/3 ICT×2 + 7/3 NZ General×1)
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\c39e239f-f5f0-432f-bc47-eada1d381361\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783127555982-f504a7.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\c39e239f-f5f0-432f-bc47-eada1d381361\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783127556177-2cfd57.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\c39e239f-f5f0-432f-bc47-eada1d381361\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783127556115-364172.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\c39e239f-f5f0-432f-bc47-eada1d381361\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1783127556049-e542e9.txt', 'json'),
+    # 2026-07-27 scan: 5 unread SEEK job alert emails from 2026-07-26 (Admin×2 + ICT×2 + NZ General×1)
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\fe0b6751-f6cb-4d1a-8237-f2b0b04cc4b4\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1785110345692-5df33a.txt', 'json'),
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\fe0b6751-f6cb-4d1a-8237-f2b0b04cc4b4\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1785110346201-ea5a2e.txt', 'json'),
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\fe0b6751-f6cb-4d1a-8237-f2b0b04cc4b4\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1785110346707-867956.txt', 'json'),
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\fe0b6751-f6cb-4d1a-8237-f2b0b04cc4b4\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1785110347668-37630c.txt', 'json'),
+    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\fe0b6751-f6cb-4d1a-8237-f2b0b04cc4b4\tool-results\DeferExecuteTool_6.txt', 'json'),
 ]
 
 def load_body(path, ftype):
@@ -331,7 +332,7 @@ low = [j for j in relevant_jobs if 35 <= j['score'] < 40]
 
 report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
 
-> 📅 扫描时间：{datetime.now().strftime('%Y-%m-%d %H:%M')} | 📧 来源：QQ邮箱SEEK推送（4封邮件，7/4 Admin×1 + 7/3 ICT×2 + 7/3 NZ General×1）
+> 📅 扫描时间：{datetime.now().strftime('%Y-%m-%d %H:%M')} | 📧 来源：QQ邮箱SEEK推送（5封邮件，2026-07-26 Admin×2 + ICT×2 + NZ General×1）
 > 🎯 策略更新：仅关注**绿名单Tier1 ICT岗** + **大学/研究机构研究岗**；BSA/Data Analyst/行政岗已降级/过滤
 
 ---
@@ -340,7 +341,7 @@ report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
 
 | 指标 | 数值 |
 |------|------|
-| 扫描邮件数 | 4（7/4 Admin×1 + 7/3 ICT×2 + 7/3 NZ General×1） |
+| 扫描邮件数 | 5（2026-07-26 Admin×2 + ICT×2 + NZ General×1） |
 | 去重岗位总数 | {len(unique_jobs)} |
 | 过滤后相关岗位 | {len(relevant_jobs)}（仅显示≥35分） |
 | 过滤掉岗位 | {filtered_out}（BSA/Data Analyst/行政等非绿名单岗） |
