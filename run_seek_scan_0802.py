@@ -1,0 +1,553 @@
+import json, re, os, html as html_mod
+from collections import OrderedDict
+from datetime import datetime, timedelta
+from pathlib import Path
+
+# --- File paths for this scan session ---
+BASE = r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\2db004a5-3309-4839-b90a-23a673c688a3\tool-results'
+EMAIL_FILES = [
+    (os.path.join(BASE, 'mcp-connector-proxy-qq-mail_GetMessage-1785627333297-559b45.txt'), 'json', 'ICT 8/01 22:47'),
+    (os.path.join(BASE, 'mcp-connector-proxy-qq-mail_GetMessage-1785627333769-ad075b.txt'), 'json', 'NZ General 8/01 21:28'),
+    (os.path.join(BASE, 'mcp-connector-proxy-qq-mail_GetMessage-1785627334193-ce551c.txt'), 'json', 'ICT 8/01 21:25'),
+    (os.path.join(BASE, 'mcp-connector-proxy-qq-mail_GetMessage-1785627334630-01993d.txt'), 'json', 'Admin 8/01 00:58'),
+]
+
+WORKSPACE = r'C:\Users\Mr_Wang\WorkBuddy\2026-06-20-14-48-36'
+KOS_SEEK_DIR = Path(r'C:\Users\Mr_Wang\WorkBuddy\2026-06-03-14-49-17\kos\public\data\seek-nz')
+
+def load_body(path, ftype):
+    with open(path, 'r', encoding='utf-8') as f:
+        if ftype == 'json':
+            data = json.load(f)
+            return data['data']['data']['body']
+        else:
+            return f.read()
+
+def extract_jobs(body):
+    jobs = []
+    # Split by job card anchors (SEEK MJML template)
+    card_pattern = r'<a style="display: block"'
+    cards = body.split(card_pattern)
+
+    for card in cards[1:]:
+        title_match = re.search(r'text-decoration:underline[^>]*>([^<]+)</div>', card)
+        company_match = re.search(r'font-size:14px;line-height:21px;padding-bottom:12px[^>]*>([^<]+)</td>', card)
+        loc_matches = re.findall(r'font-size:14px[^>]*line-height:21px[^>]*text-align:left[^>]*color:#2E3849[^>]*>([^<]+)</div>', card)
+        salary_match = re.search(r'>\$[^<]+</div>', card)
+        teaser_matches = re.findall(r'font-size:14px[^>]*line-height:21px[^>]*text-align:left[^>]*color:#2E3849[^>]*>([^<]+)</div>', card)
+        date_match = re.search(r'Posted on (\d+ \w+ \d+)', card)
+        url_match = re.search(r'href="([^"]+)"', card)
+
+        title = title_match.group(1).strip() if title_match else None
+        company = company_match.group(1).strip() if company_match else None
+
+        # Skip cards without title/company or obvious non-job entries
+        if not title or not company or len(title) > 200:
+            continue
+        if any(skip in title.lower() for skip in ['missed job', 'view all', 'update preferences', 'unsubscribe', 'view job']):
+            continue
+
+        # Location: first location match with comma pattern
+        location = 'Unknown'
+        for lm in loc_matches:
+            lm = lm.strip()
+            if ',' in lm and lm not in [title, company]:
+                location = lm
+                break
+            elif lm and lm not in [title, company] and not location.replace('Unknown', ''):
+                location = lm
+
+        # Salary or teaser
+        salary = ''
+        if salary_match:
+            salary = salary_match.group(0).replace('>', '').replace('</div>', '').strip()
+        elif teaser_matches:
+            for tm in teaser_matches:
+                tm = tm.strip()
+                if tm and tm != location and tm not in [title, company] and ',' not in tm:
+                    if not re.match(r'^\d+ \w+ \d+$', tm):
+                        salary = tm
+                        break
+
+        # Try to extract "Competitive Salary + Benefits" style text if no salary
+        if not salary:
+            for tm in teaser_matches:
+                tm = tm.strip()
+                if tm and tm != location and tm not in [title, company]:
+                    if re.search(r'(competitive|benefits|insurance|super|bonus)', tm, re.I):
+                        salary = tm
+                        break
+
+        posted_date = date_match.group(1) if date_match else ''
+        url = url_match.group(1) if url_match else ''
+
+        # Clean HTML entities and trailing tag fragments
+        title = html_mod.unescape(title)
+        company = html_mod.unescape(company)
+        location = html_mod.unescape(location)
+        salary = html_mod.unescape(salary).replace('</div', '').strip()
+
+        jobs.append({
+            'title': title,
+            'company': company,
+            'location': location,
+            'salary': salary,
+            'posted_date': posted_date,
+            'url': url,
+            'source': ''
+        })
+    return jobs
+
+# Load and extract from all files
+all_jobs = []
+for path, ftype, label in EMAIL_FILES:
+    if not os.path.exists(path):
+        print(f"MISSING: {path}")
+        continue
+    body = load_body(path, ftype)
+    jobs = extract_jobs(body)
+    print(f"{label}: {len(jobs)} jobs")
+    all_jobs.extend(jobs)
+
+# Deduplicate by title+company (case-insensitive)
+seen = set()
+unique_jobs = []
+for j in all_jobs:
+    key = (j['title'].lower().strip(), j['company'].lower().strip())
+    if key not in seen:
+        seen.add(key)
+        unique_jobs.append(j)
+
+print(f"\nTotal unique jobs: {len(unique_jobs)}")
+
+# Score jobs
+def score_job(j):
+    title = j['title'].lower()
+    company = j['company'].lower()
+    location = j['location'].lower()
+    salary = j['salary'].lower()
+    score = 0
+    reasons = []
+
+    # Role matching (0-60) - STRICT: only Green List Tier 1 ICT + university/research roles
+    is_research_org = any(k in company for k in ['university', 'research institute', 'research centre', 'crown research', 'gns science', 'callaghan innovation', 'crl', 'agresearch', 'plant & food', 'scion', 'landcare', 'niwa', 'branz', 'esr'])
+
+    # Tier 1 Green List ICT (Straight to Residence)
+    if any(k in title for k in ['software engineer', 'software developer', 'full stack developer', 'backend developer', 'frontend developer']):
+        score += 55
+        reasons.append('绿名单Tier1: Software Engineer')
+    elif 'database administrator' in title or 'dba' in title:
+        score += 55
+        reasons.append('绿名单Tier1: Database Administrator')
+    elif 'systems administrator' in title or 'system administrator' in title:
+        score += 55
+        reasons.append('绿名单Tier1: Systems Administrator')
+    elif any(k in title for k in ['analyst programmer', 'programmer analyst']):
+        score += 55
+        reasons.append('绿名单Tier1: Analyst Programmer')
+    elif 'developer programmer' in title or 'application developer' in title or 'software and applications programmer' in title:
+        score += 55
+        reasons.append('绿名单Tier1: Developer Programmer')
+    elif 'multimedia specialist' in title:
+        score += 55
+        reasons.append('绿名单Tier1: Multimedia Specialist')
+    elif 'ict project manager' in title or 'it project manager' in title:
+        score += 55
+        reasons.append('绿名单Tier1: ICT Project Manager')
+    elif 'ict security' in title or 'cyber security' in title or 'information security' in title:
+        score += 55
+        reasons.append('绿名单Tier1/Tier2: ICT Security')
+    elif 'chief information officer' in title or 'chief digital officer' in title or re.match(r'\bcio\b', title) or re.match(r'\bcdo\b', title):
+        score += 55
+        reasons.append('绿名单Tier1: CIO/CDO')
+    # University/research roles (only if in research organization)
+    elif is_research_org and any(k in title for k in ['research fellow', 'postdoctoral', 'postdoc', 'doctoral candidate', 'phd candidate', 'research scientist', 'research analyst']):
+        score += 50
+        reasons.append('大学/研究机构研究岗')
+    elif is_research_org and 'data scientist' in title:
+        score += 48
+        reasons.append('大学研究型Data Scientist')
+    elif is_research_org and ('information management' in title or 'knowledge management' in title or 'research information' in title):
+        score += 45
+        reasons.append('大学信息管理研究岗')
+    # Tier 2 Green List ICT (Work to Residence) - lower priority
+    elif 'data scientist' in title or 'machine learning engineer' in title:
+        score += 35
+        reasons.append('绿名单Tier2: Data Scientist')
+    elif 'ict support' in title or 'network administrator' in title or ('systems analyst' in title and 'business systems' not in title):
+        score += 30
+        reasons.append('绿名单Tier2: ICT Support/Network/Systems Analyst')
+    # Everything else gets minimal score (BSA/Data Analyst/Admin not in Green List)
+    elif 'business systems analyst' in title or 'business analyst' in title or 'erp analyst' in title:
+        score += 8
+        reasons.append('非绿名单:BSA/ERP(已降级)')
+    elif 'data analyst' in title or 'service and data analyst' in title or 'reporting analyst' in title:
+        score += 8
+        reasons.append('非绿名单:Data Analyst(已降级)')
+    elif any(k in title for k in ['office manager', 'administrator', 'admin support', 'reception', 'executive assistant', 'coordinator']):
+        score += 2
+        reasons.append('行政岗:忽略')
+    else:
+        score += 5
+        reasons.append('非目标岗位')
+
+    # Domain bonus (0-15)
+    if any(k in company + ' ' + title for k in ['university', 'research institute', 'research centre', 'crown research', 'gns science', 'callaghan innovation']):
+        score += 15
+        reasons.append('大学/研究机构')
+    elif any(k in company + ' ' + title for k in ['government', 'ministry', 'council', 'education review']):
+        score += 10
+        reasons.append('政府/公共部门')
+    elif any(k in company + ' ' + title for k in ['ict', 'technology', 'software', 'data', 'digital', 'cloud', 'cyber']):
+        score += 12
+        reasons.append('ICT/科技公司')
+    elif any(k in company + ' ' + title for k in ['engineering', 'manufacturing', 'industrial', 'cable', 'pump']):
+        score += 5
+        reasons.append('工程制造背景(已降级)')
+
+    # Skills/keyword bonus (0-15)
+    if any(k in title for k in ['python', 'java', 'javascript', 'c#', 'sql', 'cloud', 'aws', 'azure']):
+        score += 10
+        reasons.append('编程/云计算技能')
+    if any(k in title for k in ['security', 'cyber', 'network', 'database', 'system admin']):
+        score += 10
+        reasons.append('ICT基础设施技能')
+    if 'data' in title and any(k in title for k in ['scientist', 'engineer', 'machine learning', 'ml']):
+        score += 8
+        reasons.append('高级数据技能')
+    if 'sharepoint' in title or 'information management' in title:
+        score += 5
+        reasons.append('Sharepoint/IM(非绿名单降权)')
+
+    # Location bonus (0-8)
+    non_akl_regions = ['canterbury', 'christchurch', 'waikato', 'hamilton', 'dunedin', 'bay of plenty', 'whakatane', 'hawkes bay', 'napier', 'hastings', 'palmerston north', 'manawatu', 'marlborough', 'otago']
+    if any((', ' + k in location or location.endswith(', ' + k) or location == k) for k in non_akl_regions):
+        score += 8
+        reasons.append('非奥克兰地区加分')
+    elif location.endswith(', wellington') or location == 'wellington':
+        score += 5
+        reasons.append('惠灵顿地区')
+
+    # Penalties
+    if 'part-time' in title or 'part time' in title:
+        score -= 10
+        reasons.append('兼职降分')
+    if any(k in title for k in ['junior', 'graduate', 'entry']):
+        score -= 10
+        reasons.append('初级岗降分')
+    if 'executive assistant' in title:
+        score -= 8
+        reasons.append('高管助理专业性强')
+
+    return max(0, min(100, score)), reasons
+
+for j in unique_jobs:
+    s, r = score_job(j)
+    j['score'] = s
+    j['reasons'] = r
+
+# Sort by score desc
+unique_jobs.sort(key=lambda x: x['score'], reverse=True)
+
+def is_green_list_tier1(title):
+    tier1 = [
+        'software engineer', 'software developer', 'full stack developer', 'backend developer', 'frontend developer',
+        'database administrator', 'dba',
+        'systems administrator', 'system administrator',
+        'analyst programmer', 'programmer analyst',
+        'developer programmer', 'application developer', 'software and applications programmer',
+        'multimedia specialist',
+        'ict project manager', 'it project manager',
+        'ict security specialist', 'chief information officer', 'chief digital officer', 'cio'
+    ]
+    title = title.lower()
+    return any(k in title for k in tier1)
+
+def green_list_anzsco(title):
+    title = title.lower()
+    if 'software engineer' in title or 'software developer' in title:
+        return '261313', 'Software Engineer'
+    elif 'database administrator' in title or 'dba' in title:
+        return '262111', 'Database Administrator'
+    elif 'systems administrator' in title or 'system administrator' in title:
+        return '262113', 'Systems Administrator'
+    elif 'analyst programmer' in title:
+        return '261311', 'Analyst Programmer'
+    elif 'developer programmer' in title or 'application developer' in title:
+        return '261312', 'Developer Programmer'
+    elif 'multimedia specialist' in title:
+        return '261211', 'Multimedia Specialist'
+    elif 'ict project manager' in title or 'it project manager' in title:
+        return '135112', 'ICT Project Manager'
+    elif 'ict security' in title or 'cyber security' in title:
+        return '262112', 'ICT Security Specialist'
+    elif 'chief information officer' in title:
+        return '135111', 'Chief Information Officer'
+    elif re.match(r'\bcio\b', title):
+        return '135111', 'Chief Information Officer'
+    return '', ''
+
+def suggest_skills(j):
+    title = j['title'].lower()
+    if is_green_list_tier1(title):
+        return '1)英文简历突出具体技术栈(Python/SQL/Cloud/Security)；2)GitHub作品集；3)准备NZ本地面试题；4)NZQA IQA学历评估'
+    elif 'university' in j['company'].lower() or 'research' in j['company'].lower():
+        return '1)突出研究经历和论文；2)准备Research Statement；3)联系相关导师'
+    elif 'data scientist' in title or 'machine learning' in title:
+        return '1)Python/R + ML项目作品集；2)Kaggle/GitHub展示；3)统计学基础补强'
+    else:
+        return '非目标岗位，不建议投入精力'
+
+def immigration_note(j):
+    title = j['title'].lower()
+    code, name = green_list_anzsco(title)
+    if is_green_list_tier1(title):
+        code_str = f" | {code} ({name})" if code else ""
+        return f'绿名单Tier1 Straight to Residence{code_str} — 有offer即可直申居留'
+    elif 'data scientist' in title or 'ict support' in title or 'network administrator' in title or ('systems analyst' in title and 'business systems' not in title):
+        return '绿名单Tier2 Work to Residence — 需工作2年转居留'
+    elif 'university' in j['company'].lower() or 'research' in j['company'].lower():
+        return '大学/研究机构岗位，通常可雇主担保Accredited Employer Work Visa'
+    else:
+        return '非绿名单，移民路径弱，建议忽略'
+
+# Generate report
+today = datetime.now().strftime('%Y-%m-%d')
+next_scan = (datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d')
+report_path = os.path.join(WORKSPACE, f'SEEK_NZ_Job_Report_{today}.md')
+
+# Filter to relevant jobs only (Green List ICT + university/research roles)
+relevant_jobs = [j for j in unique_jobs if j['score'] >= 35]
+filtered_out = len(unique_jobs) - len(relevant_jobs)
+
+tier1_count = sum(1 for j in relevant_jobs if is_green_list_tier1(j['title']))
+tier2_count = sum(1 for j in relevant_jobs if any(k in j['title'].lower() for k in ['data scientist', 'ict support', 'network administrator', 'systems analyst']) and not is_green_list_tier1(j['title']))
+
+high = [j for j in relevant_jobs if j['score'] >= 60]
+medium = [j for j in relevant_jobs if 40 <= j['score'] < 60]
+low = [j for j in relevant_jobs if 35 <= j['score'] < 40]
+
+email_labels = 'ICT 8/01 x2 + NZ General 8/01 + Admin 8/01'
+email_count = sum(1 for path, _, _ in EMAIL_FILES if os.path.exists(path))
+
+best = high[0] if high else (relevant_jobs[0] if relevant_jobs else None)
+
+report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
+
+> 📅 扫描时间：{datetime.now().strftime('%Y-%m-%d %H:%M')} | 📧 来源：QQ邮箱SEEK推送（{email_count}封邮件，{email_labels}）
+> 🎯 策略更新：仅关注**绿名单Tier1 ICT岗** + **大学/研究机构研究岗**；BSA/Data Analyst/行政岗已降级/过滤
+
+---
+
+## 📊 本轮概览
+
+| 指标 | 数值 |
+|------|------|
+| 扫描邮件数 | {email_count}（{email_labels}） |
+| 去重岗位总数 | {len(unique_jobs)} |
+| 过滤后相关岗位 | {len(relevant_jobs)}（仅显示≥35分） |
+| 过滤掉岗位 | {filtered_out}（BSA/Data Analyst/行政等非绿名单岗） |
+| 🏆最佳匹配 | {best['title'] if best else '无'} ({best['company'] if best else '-'}) {best['score'] if best else '-'}分 |
+| 绿名单Tier1 | {tier1_count} |
+| 绿名单Tier2 | {tier2_count} |
+| 高匹配(60+) | {len(high)} |
+| 中匹配(40-59) | {len(medium)} |
+| 低匹配(35-39) | {len(low)} |
+
+---
+
+## 🚨 策略提醒
+
+**本脚本已按你的要求调整：机械工程师岗位不再关注，BSA/Data Analyst/行政岗已降级。**
+
+当前只保留两类岗位：
+1. **新西兰绿名单Tier1 ICT岗**（Straight to Residence，有offer即可直申居留）
+2. **大学/研究机构的研究岗**（可走雇主担保工签，研究方向可衔接德国博士）
+
+> 💡 绝大多数BSA/Data Analyst岗位虽然工作内容匹配你的经验，但**不在绿名单**，移民路径弱，已被过滤到低分/忽略区。
+
+---
+
+## 🏆 高匹配岗位 (60+分) — 绿名单Tier1 / 大学研究岗
+
+"""
+
+for idx, j in enumerate(high, 1):
+    report += f"""### {idx}. {'⭐' if idx == 1 else ''} {j['title']} | {j['company']}
+| 字段 | 详情 |
+|------|------|
+| **匹配度** | **{j['score']}分** {'🔥' if idx == 1 else ''} |
+| **地点** | {j['location']} |
+| **薪资** | {j['salary'] if j['salary'] else '未公布'} |
+| **发布日期** | {j['posted_date'] if j['posted_date'] else '近期'} |
+| **匹配分析** | {'；'.join(j['reasons'])} |
+| **所需补充** | {suggest_skills(j)} |
+| **移民关联** | {immigration_note(j)} |
+
+"""
+
+report += """---
+
+## 🟡 中匹配岗位 (40-59分) — Tier2 / 研究相关
+
+| # | 职位 | 公司 | 地点 | 薪资 | 匹配度 | 核心匹配点 |
+|---|------|------|------|------|--------|-----------|
+"""
+for idx, j in enumerate(medium, start=len(high)+1):
+    sal = j['salary'] if j['salary'] else '未公布'
+    report += f"| {idx} | {j['title']} | {j['company']} | {j['location']} | {sal} | {j['score']} | {'；'.join(j['reasons'][:3])} |\n"
+
+report += """
+---
+
+## 🔵 低匹配岗位 (35-39分) — 可观望
+
+| # | 职位 | 公司 | 地点 | 薪资 | 匹配度 | 原因 |
+|---|------|------|------|------|--------|------|
+"""
+for idx, j in enumerate(low, start=len(high)+len(medium)+1):
+    sal = j['salary'] if j['salary'] else '未公布'
+    report += f"| {idx} | {j['title']} | {j['company']} | {j['location']} | {sal} | {j['score']} | {'；'.join(j['reasons'][:2])} |\n"
+
+# TOP 20 of all jobs for context
+report += """
+---
+
+## 📋 本轮扫描到的全部岗位 TOP 20
+
+| # | 职位 | 公司 | 地点 | 薪资 | 匹配度 |
+|---|------|------|------|------|--------|
+"""
+for idx, j in enumerate(unique_jobs[:20], 1):
+    sal = j['salary'] if j['salary'] else '未公布'
+    report += f"| {idx} | {j['title']} | {j['company']} | {j['location']} | {sal} | {j['score']} |\n"
+
+report += f"""
+---
+
+## 🎯 行动建议
+
+### 主线不变：德国岗位制博士（90%精力）
+- 当前SEEK推送中绿名单Tier1 ICT岗数量：{tier1_count}
+- 新西兰作为"备选出境通道"保留，但**不建议主动投递非绿名单岗位**
+
+### 新西兰副线（10%精力）
+1. **只关注绿名单Tier1 ICT岗**：Software Engineer / Database Administrator / Systems Administrator / Analyst Programmer / Developer Programmer / ICT Project Manager / ICT Security Specialist / CIO
+2. **只关注大学/研究机构的研究岗**
+3. **如出现绿名单Tier1 offer**：可作为一个出境跳板，后续再申德国博士
+
+### 简历准备（绿名单ICT方向）
+- 英文简历突出：**Python/SQL/Cloud/GitHub作品集**
+- 如投Software Engineer：准备LeetCode风格算法题 + 系统设计基础
+- 如投Database Administrator：突出SQL优化、数据建模、ERP数据库经验
+- 所有绿名单ICT岗都需要：**NZQA IQA学历评估**（4-8周，NZ$745）
+
+---
+
+## 📋 绿名单移民路径提醒
+
+| 职业 | ANZSCO | 绿名单层级 | 移民路径 | 你的匹配度 |
+|------|--------|-----------|---------|----------|
+| Software Engineer | 261313 | **Tier1** ⭐ | Straight to Residence | 低（非程序员背景） |
+| Database Administrator | 262111 | **Tier1** ⭐ | Straight to Residence | 中（有数据分析+ERP数据库经验） |
+| Systems Administrator | 262113 | **Tier1** ⭐ | Straight to Residence | 低-中 |
+| Analyst Programmer | 261311 | **Tier1** ⭐ | Straight to Residence | 低 |
+| Developer Programmer | 261312 | **Tier1** ⭐ | Straight to Residence | 低 |
+| ICT Project Manager | 135112 | **Tier1** ⭐ | Straight to Residence | 低（无PM经验） |
+| ICT Security Specialist | 262112 | **Tier1** ⭐ | Straight to Residence | 低（需安全认证） |
+| Multimedia Specialist | 261211 | **Tier1** ⭐ | Straight to Residence | 低 |
+| Data Scientist | - | Tier2 | Work to Residence（2年） | 中（Python数据分析背景） |
+| ICT Support Engineer | - | Tier2 | Work to Residence（2年） | 中 |
+
+> ⭐ Tier1 = Straight to Residence（有offer即可直申居留，无打分）
+> Tier2 = Work to Residence（需为认证雇主工作2年）
+> 所有绿名单路径都需要：**NZQA IQA学历评估** + 达到市场薪资中位数
+
+---
+
+*报告由SEEK NZ自动化扫描生成（绿名单Tier1聚焦版） | 下次扫描：{next_scan}*
+"""
+
+with open(report_path, 'w', encoding='utf-8') as f:
+    f.write(report)
+
+print(f"\nReport saved: {report_path}")
+
+# --- KOS feed generation ---
+def parse_anzsco(title):
+    code, name = green_list_anzsco(title)
+    return code, name
+
+def build_job_record(j):
+    code, name = parse_anzsco(j['title'])
+    return {
+        'title': j['title'],
+        'company': j['company'],
+        'location': j['location'],
+        'salary': j['salary'],
+        'url': j['url'],
+        'score': j['score'],
+        'reasons': j['reasons'],
+        'immigration_path': immigration_note(j),
+        'suggested_skills': suggest_skills(j),
+        'anzsco_code': code,
+        'anzsco_name': name,
+    }
+
+# Build full KOS JSON
+kos_data = {
+    'meta': {
+        'title': 'SEEK NZ 绿名单岗位追踪',
+        'description': '每日自动扫描 SEEK NZ 邮件中的绿名单 Tier1 ICT 岗位',
+        'icon': 'briefcase',
+        'section_id': 'seek-nz',
+        'last_updated': datetime.now().isoformat(),
+    },
+    'data': {
+        'date': today,
+        'email_count': email_count,
+        'total_jobs': len(unique_jobs),
+        'tier1_jobs': [build_job_record(j) for j in unique_jobs if is_green_list_tier1(j['title'])],
+        'all_jobs': [build_job_record(j) for j in unique_jobs],
+    }
+}
+
+# Write to KOS data directory
+KOS_SEEK_DIR.mkdir(parents=True, exist_ok=True)
+kos_path = KOS_SEEK_DIR / 'latest.json'
+with open(kos_path, 'w', encoding='utf-8') as f:
+    json.dump(kos_data, f, ensure_ascii=False, indent=2)
+
+# Also write a snapshot
+snapshot_path = KOS_SEEK_DIR / f'seek-nz_{today}.json'
+with open(snapshot_path, 'w', encoding='utf-8') as f:
+    json.dump(kos_data, f, ensure_ascii=False, indent=2)
+
+# Also copy to local data dir
+local_data_dir = Path(r'C:\Users\Mr_Wang\WorkBuddy\2026-06-20-14-48-36\data\seek-nz')
+local_data_dir.mkdir(parents=True, exist_ok=True)
+with open(local_data_dir / 'latest.json', 'w', encoding='utf-8') as f:
+    json.dump(kos_data, f, ensure_ascii=False, indent=2)
+
+print(f"KOS feed saved: {kos_path}")
+print(f"KOS snapshot saved: {snapshot_path}")
+print(f"Local data saved: {local_data_dir / 'latest.json'}")
+
+# Summary
+print(f"\n=== SUMMARY ===")
+print(f"Emails: {email_count}")
+print(f"Total unique jobs: {len(unique_jobs)}")
+print(f"Tier1 jobs: {tier1_count}")
+print(f"High (60+): {len(high)}")
+print(f"Medium (40-59): {len(medium)}")
+print(f"Low (35-39): {len(low)}")
+if high:
+    print(f"Best match: {high[0]['title']} ({high[0]['company']}) {high[0]['score']}pts")
+elif relevant_jobs:
+    print(f"Best match: {relevant_jobs[0]['title']} ({relevant_jobs[0]['company']}) {relevant_jobs[0]['score']}pts")
+else:
+    print("No relevant jobs found (0 >= 35pts)")
+print("\nAll jobs (sorted):")
+for j in unique_jobs:
+    tier1_mark = ' [T1]' if is_green_list_tier1(j['title']) else ''
+    print(f"  {j['score']:3d} | {j['title']} | {j['company']} | {j['location']} | {j['salary']}{tier1_mark}")
