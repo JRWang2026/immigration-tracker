@@ -1,0 +1,1190 @@
+{
+  "meta": {
+    "title": "SEEK NZ 绿名单岗位追踪",
+    "description": "每日自动扫描 SEEK NZ 邮件中的绿名单 Tier1 ICT 岗位",
+    "icon": "briefcase",
+    "section_id": "seek-nz",
+    "last_updated": "2026-08-08T09:33:18.773556"
+  },
+  "data": {
+    "date": "2026-08-08",
+    "email_count": 50,
+    "total_jobs": 66,
+    "tier1_jobs": [],
+    "all_jobs": [
+      {
+        "title": "Security Officer",
+        "company": "The University of Auckland",
+        "location": "Auckland CBD, Auckland",
+        "salary": "$60,000 to $64,000 + KiwiSaver upto 6.75%",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7TmDg_0GqrSzqV020_NoVLvh8OEjAYNotJsQs4R0TylZCABakQhv6s60zk1eBXYCZ3qMxhTApuhzSmJu6z6Qn51YCobCeVdbBf0ZPAAQQlzcajNt4iuE3obYMBPTNsgYg/4sz/HuXBCXJoS8Shc4VxfGgjsg/h64/h001.GXy4Pthl4ZR5477fGwceIII5NEX_A05iD65JaDz7Wl0",
+        "source": "SEEK NZ email",
+        "score": 30,
+        "reasons": [
+          "非目标岗位",
+          "大学/研究机构",
+          "ICT基础设施技能"
+        ],
+        "immigration_path": "大学/研究机构岗位 — 通常可雇主担保 Accredited Employer Work Visa",
+        "suggested_skills": "1)突出研究经历和论文；2)准备Research Statement；3)联系相关导师",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Business Systems Analyst",
+        "company": "Hawkes Bay Regional Council",
+        "location": "Napier Central, Hawkes Bay",
+        "salary": "$88,995 – $104,700 per year",
+        "posted_date": "31 Jul 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7b7euDEw8QZ9i4j2XXaEAclWK9l7eLKNSegNyaM0ipyGZaVxvkwMwq7IrNIt0APgecN6XgSUdCGEKDsQd9MU3Dypf56DfB45LN2tK7PImwdrw7enwW5PqvY9IZzFnvu2w/4sz/iS3JlcIxRLitA4-txRSkRQ/h61/h001.iXzRhtw_IHhaHoJLFGmmZXoW7UhbLeYrZmeMiSCHixI",
+        "source": "SEEK NZ email",
+        "score": 26,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)",
+          "政府/公共部门",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Master Data & BI Analyst",
+        "company": "Barker Fruit Processors",
+        "location": "Geraldine, Canterbury",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7aF6bavdnMLr81chqyNLEoXs6PbTDbM2I5bHAspK3y7X-ogSHkjPIbBhSWQFFbzK8vWSQcF1Dm0zjs-rWfIxjDRvknW82go9zH44zIe_e5_ENHVAmrEHy4x2-CWOkT_Lg/4sz/iS3JlcIxRLitA4-txRSkRQ/h50/h001.8qRCAMT_SdSajp8fSvfcXX8WQzfN4z5MYozAVB9Mc6Q",
+        "source": "SEEK NZ email",
+        "score": 25,
+        "reasons": [
+          "非目标岗位",
+          "ICT/科技公司",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Full-time Security Officer",
+        "company": "Port of Tauranga",
+        "location": "Mount Maunganui, Bay of Plenty",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6psEoUI-EzdX80PFpA70_vMwJsdWwvOoicOCZfGnpd9o395rvR7XKe2O4fROKI6WP7iReJfRfBX_mPsMLM77BHpuIADOqmtRNT8QV1dHxPlcspgGI6c0mxNeHCCy9y-_E/4sz/oISnA2QcSh2HojMXKqZsNA/h92/h001.ws69pINHHHFOQt3NfEfuKsDYxqfxUiiRsqq0Mbu_F5I",
+        "source": "SEEK NZ email",
+        "score": 23,
+        "reasons": [
+          "非目标岗位",
+          "ICT基础设施技能",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "City Operations Administration Assistant",
+        "company": "Napier City Council",
+        "location": "Napier Central, Hawkes Bay",
+        "salary": "Salary range $66,223 - $74,013 dependent on exp",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv58NeINfeqcrTggd-zeuLeL31DcR6D6tPJXAAvYrunM6aA2QW-W0dl6fAVUVdUuHAORKLYjx-6fJaZHsN_y_hpaOKexg0mRpC9bba2_MKZMQ81vWAho5hBshE9ZY3yyXY0/4sz/HuXBCXJoS8Shc4VxfGgjsg/h78/h001.83mQm_0pmO27eIfyPwPSdnzfdLhu9tHzi0PJWLf6lMY",
+        "source": "SEEK NZ email",
+        "score": 23,
+        "reasons": [
+          "非目标岗位",
+          "政府/公共部门",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Customer Service Representative - Hamilton Contact Centre",
+        "company": "Ministry of Social Development",
+        "location": "Te Rapa, Waikato",
+        "salary": "$61,466.00 - $73,903.00",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5i9sdRWA8d5rXRW9OF3Ew9FXAwfCvca5ZJZKy02BAQWmYU9tZmzKGUNOu8TbHH8XauWZqhfYu0amsTrxZeLq29PSHelvr8uO9r-RXw_5b156rTMjwJKXralM3lRyarr10/4sz/HuXBCXJoS8Shc4VxfGgjsg/h88/h001.j1P_Fx8oPAhLrjXj5iKMG44klrq6Obk-g5F_k6oEIBo",
+        "source": "SEEK NZ email",
+        "score": 23,
+        "reasons": [
+          "非目标岗位",
+          "政府/公共部门",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Senior Master Data Steward",
+        "company": "Department of Conservation",
+        "location": "Wellington",
+        "salary": "$80695 - $101951 p.a.",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5SLi45rE_6tp0ItHPZzBh0gZSdzr_KHegUSYd52_N6i6Gae4XHuSu0VoJyf-avFMYqmx8HLrscu0WaXxmgZYnMX1LEV3vbjqsv6gqXNNZEfpSLYhWQSKj3MIn7EKhFgFc/4sz/iS3JlcIxRLitA4-txRSkRQ/h54/h001.wsx1nN-MD89FZA8AzzrHJPDeq9UCUzF7FO1iR-NXe_0",
+        "source": "SEEK NZ email",
+        "score": 22,
+        "reasons": [
+          "非目标岗位",
+          "ICT/科技公司",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Technical Support Analyst",
+        "company": "Docuvera Software Corporation",
+        "location": "Wellington Central, Wellington",
+        "salary": "Up to $75,000 p/a + extra leave",
+        "posted_date": "3 Aug 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5qFH--t0l-dsRrkBYVifs-VNZ5rNXZT03PWFizqya5vvp87FRRId4QWqgWej0-05VCy0FFv-wbVY08XvgPNTdd4VWVN76EPocXiF7rvfF-A11JnsY_MuACT6kyKJOG3GM/4sz/HuXBCXJoS8Shc4VxfGgjsg/h101/h001.zwNczfsFH6lyGAUNZalmKCez8kVHxrSu27z4_chtNa8",
+        "source": "SEEK NZ email",
+        "score": 22,
+        "reasons": [
+          "非目标岗位",
+          "ICT/科技公司",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Business Analyst",
+        "company": "Auxo Software",
+        "location": "Penrose, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5y6_9XfpzDCxO24c-Fnw0Nc1h2XV7dX_Tmse_Xfb9kJo3MgueiUycudwa_l2OB2Em7eAHN28xDLK4hIWhMyxvAN6cDLRe9ES_aeL4Vi36rx4ED5YolDEJjHHS7SaqHU6Y/4sz/iS3JlcIxRLitA4-txRSkRQ/h38/h001.fT3oWWl8AihFTH_wHeguhCd87xOOFfegNMSkCMfoGFo",
+        "source": "SEEK NZ email",
+        "score": 20,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)",
+          "ICT/科技公司"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Senior Analyst, Digital Products",
+        "company": "Ministry for Pacific Peoples",
+        "location": "Wellington Central, Wellington",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5qQGNYZR60w9pdipCG6MVBeLa4vBJbkRTudftNnmBbh2EwtDQNXYQyRofiELty4upZ8oG0pR5pSomePv1ftrbg7qhkUR9A0iCmQmuoe05RoHf_bLBKl9Ld-9_eDU--bMY/4sz/iS3JlcIxRLitA4-txRSkRQ/h56/h001.D_yG5hg4KZhrTodmUnULRoWrrUzcx6FdOlqEsfr1fVY",
+        "source": "SEEK NZ email",
+        "score": 20,
+        "reasons": [
+          "非目标岗位",
+          "政府/公共部门",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Data Analyst (Remote)",
+        "company": "Optimal Workshop",
+        "location": "Auckland CBD, Auckland",
+        "salary": "",
+        "posted_date": "4 Aug 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv62TJ54NSfl2Mgou2vpCkt-icGbbfa44x531W9fsn_1YmMB0Rh6SOSdOzjwDize14UT5rrtqbhpfdxAncIOBZMtX1Z3pVci2jns-RJqubMWGcOQXkeIDYB4trGOky6MZ9E/4sz/iS3JlcIxRLitA4-txRSkRQ/h59/h001.v63og6PfLpzqn7p21GSGCtyn-KptfJjBKt9wXiF4xFc",
+        "source": "SEEK NZ email",
+        "score": 20,
+        "reasons": [
+          "非绿名单:Data Analyst(已降级)",
+          "ICT/科技公司"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Data & Business Analyst (2 Positions)",
+        "company": "Gisborne District Council",
+        "location": "Gisborne Central, Gisborne",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5ez-K2rAlAncedz1x8F0AX6Sja8-Fr9WYwB7lZ_H2tyR3O8hVfSmV1UHOyCWeS8bNfzhMob43Szb6eNr_gYTuui4pN_cl94HS1T3dFif8WKLdhGxzbhL7pCPZdieWF_DE/4sz/iS3JlcIxRLitA4-txRSkRQ/h48/h001.wIXGRcw6sj8vWzkRrqmpAwKyMUTpovONGJ-WroCIm0w",
+        "source": "SEEK NZ email",
+        "score": 18,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)",
+          "政府/公共部门"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Digital Forensic Technician",
+        "company": "Datalab 2011 Ltd",
+        "location": "Newmarket, Auckland",
+        "salary": "$55,000 – $75,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6emQ_kW8VIc2Dvib1Y6xOC1HrT5zZfUAVGWjfNaIGefPoP5XSyC_3un5qrd2DcJRDdZI02AOMLp7qUybfcj3HSwCh3xAHS6pdOjFtvi_YmSi86SrC5SlwnV6vcm6q9xko/4sz/HuXBCXJoS8Shc4VxfGgjsg/h56/h001.1sjKfrql6zJ-bu2l2AHbgAfpoGlZCsfAMTULGT43ZUw",
+        "source": "SEEK NZ email",
+        "score": 17,
+        "reasons": [
+          "非目标岗位",
+          "ICT/科技公司"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Business Analyst",
+        "company": "Toi Ohomai",
+        "location": "Tauranga Central, Bay of Plenty",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv55ZPIo1L7IWJxlsgprXEMXWybN0wMbdhoreI8vguzrujfzxtTXndpAY7t1DxLUa9J9_df4at9WblQ47BgAtNWPbyTTlnaijtPvIsKU-u3dNFtPLx5aQirvqXzZmRSogq4/4sz/iS3JlcIxRLitA4-txRSkRQ/h42/h001.Q_g3Znmpv8LsuUrgx7ZFQZVILi34UmmsX4N7Z9__uQM",
+        "source": "SEEK NZ email",
+        "score": 16,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Entry Level Support Engineer",
+        "company": "New Era Technology",
+        "location": "Napier Central, Hawkes Bay",
+        "salary": "$51,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv61tLVRWcn4WiQz7WUqimA-aQk_bDz3C48DT-mYShicAUGP1Lq9f2eqUBzyLvGgFzyT939PqB16TSjPhMeEk3qBaxoTS8zK1EJQ58ZuHB-5cXrVS4efbR9Wgh1kqwPlkQY/4sz/HuXBCXJoS8Shc4VxfGgjsg/h68/h001.IiIjPK2hHDzbWdI03cI-lwFymRb3S14aBqwk3e4d76s",
+        "source": "SEEK NZ email",
+        "score": 15,
+        "reasons": [
+          "非目标岗位",
+          "ICT/科技公司",
+          "非奥克兰地区加分",
+          "初级岗降分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "ICT Systems & Student Technology Coordinator",
+        "company": "CSSA INTERNATIONAL AGENCY",
+        "location": "Auckland CBD, Auckland",
+        "salary": "$78,000 – $88,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6_-552iHyAam3iIDHmC-GbDovu6gSEudUbFRn6GgutwSxg6k5EQ1wpS5Db8b9EEJW2T3ZK3DToWe63uMhqX8W1l8rGI1PL7aceDvtYcpn-29R0ioNpsnFaUObvY7sa_a0/4sz/iS3JlcIxRLitA4-txRSkRQ/h46/h001.o-MRMEYN8JoITdJ6BEUpM_geUHWkEowkIkvQwfvPfos",
+        "source": "SEEK NZ email",
+        "score": 14,
+        "reasons": [
+          "行政岗:忽略",
+          "ICT/科技公司"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Technical Business Analyst",
+        "company": "Absolute IT Limited",
+        "location": "Wellington Central, Wellington",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7W1bePLNSrxFGvDmeziYYtfRwq6cQVpd0YkgcN4pG_tzhRsLgjuedgJYYRJ4aMdtIQa8MpX7WJVDOVKwkgMTOTOdL26MVFzzuCI-vlou_gzIjnTCDs2GyJy599MQIfncI/4sz/iS3JlcIxRLitA4-txRSkRQ/h52/h001.LfV45ZqaR0L4pYRvb0w3ucUQplJu29mnpxxFn6wjaDU",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Fixed Term Christmas Shop Sales Opportunities",
+        "company": "Ballantynes Department Store",
+        "location": "Christchurch Central, Canterbury",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6iFNbJOc88Ox0HMOWasFvyGuCpR5XHY9xs_d71JHwWo6PjLUzwKos-tqyGuIuXX0P6VL6ZMaXahfIpKbSKyZSuiqHJczC9LQ6IOpogPu7QkRlK9VqqK57rhEHt1NA_-sg/4sz/oISnA2QcSh2HojMXKqZsNA/h68/h001.6MvvlLG8LVz3EIpYAaMteL8Rq7K0vSI91ZfFYx253v8",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Laboratory Assistant",
+        "company": "Ovation New Zealand Limited",
+        "location": "Waipukurau, Hawkes Bay",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4iaxDLEg2RckDn8gawDJt69IFX9ig1luh3DLXYLtFTKf4Xj14L9_pbXzXFHMWvcfz35GqsvEG8-KKhsH1Gcx-EYXrL8GFlLaKgiZ_Bjdkco-MenW96VZzAADf_g-vX8J0/4sz/aioIOO0ZTl-BaRq1r8WMJA/h56/h001.Ic6cJZiSbCxjL0lk9c0CHjilScrjtHkzMT5-c_o_ZJc",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Seasonal Sample Processing Operators - Christchurch",
+        "company": "Livestock Improvement Corporation",
+        "location": "Islington, Canterbury",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4Y-S7Qv_V1ZNUcdglBzg1U-ggb-8lsE-sj5Vrij51B-cu48et_YwwdLSvy1j2yA9yfHjGl0ZDrvzlLF1g2JOHC3SX0-j4DFRDlTMEDjOrP1lRczA5PYjuOrJx26t6rDdc/4sz/aioIOO0ZTl-BaRq1r8WMJA/h68/h001.XY7GAMlGADL1264soTMk43VSWf38j-xcGOqqeh4KmeM",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Quality Manager",
+        "company": "Ginan Biomedics NZ Ltd",
+        "location": "Christchurch Central, Canterbury",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5GcCnb4fS8_umaSgNtjPNAPKRZMQYrU6yC3kgT0KWifUjqjolLcFsAjeLUYwLyDQt7NN4eCtxjMmjGrY0_eLy_EaUNxLuSoSyFcxp87lkXeAxUJNC1c-Pg2HcqGKeXavk/4sz/aioIOO0ZTl-BaRq1r8WMJA/h72/h001.haQPW5t3rACwPl0f72lR9xayI9kbqfXL-dIX0KLJjsQ",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Production Technician",
+        "company": "OneStaff Palmerston North",
+        "location": "Palmerston North Central, Manawatu",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7f5hWP2u061E-7LX-8HRbB7dtAVK25-fHVUlOka7vzhlVR6AJtg71MFgv2nnH-n008bBXBKV03minuXVWkBn2eZJauLxo-QNJUfR6RV3L3gRZL6K_kwvlFYh8QLi0ifvk/4sz/aioIOO0ZTl-BaRq1r8WMJA/h80/h001.RCZtb52qTX589vXWdbSuatP8gjSkjinLRRqo08wM_9Y",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Coagulation Technical Lead - Haematology",
+        "company": "Awanui Group",
+        "location": "Dunedin Central, Otago",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6BjExXNSirEkUM45FEkz4bzN9f34KojqcVsUezz7gSo_T1vhcz3tRZWG0CayIHeX-4m_eZk2-C4B0eMQKAzua1cHgKHCMBbKkBzN9dq7XmtQ7xwbV7igIJuTgt3Hs1dLA/4sz/aioIOO0ZTl-BaRq1r8WMJA/h84/h001.gMvIIfvonRz0F68H47NNiR-SZuWmIDaepJL4AliOCaE",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Medical Laboratory Scientist - Donation Accreditation Laboratory, Christchurch",
+        "company": "NZ Blood Service",
+        "location": "Christchurch Central, Canterbury",
+        "salary": "$72,847 - $110,290",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5TiyBHD3rM1f9kcVqIQR8teB4y7wd2lpV52AUcQaDjul7kJ_BE_84vczKplNGUND2gwZz_DZ4YpbItQD_Dhm2Q5UbWvUL98hLGfSYZilFHhtDOmSksIr-bGyeL3SUS7Ok/4sz/aioIOO0ZTl-BaRq1r8WMJA/h86/h001.6NI7Rwip7dPrK3ZGt9XHl0PJRjGqaFlUCYxhHljSaIQ",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Sampling and Analysis Team Lead",
+        "company": "IAWAI",
+        "location": "Hamilton Central, Waikato",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5v-_ExIyRYdGvdcVRNt0iGTDl4yDi9NBBE3X6YE3g3w14rxgUjYH2PCptPYRHVZcWIQkoTh6CjJVmRjZLHChYNj4uaxnd4ioitqihvOcQ3TVIwlKfAQ8YDo2Cfp8hCLlo/4sz/aioIOO0ZTl-BaRq1r8WMJA/h88/h001.pBohKFpGScQ7qKALui3Yezlljmt_XnYWRb6V6JSczWU",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Technical I.T Support & Systems Maintenance",
+        "company": "Gun City Ltd",
+        "location": "Papanui, Canterbury",
+        "salary": "$58,000 – $70,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5kNdh7pUZK8fqETsYdowx8tjmWsqWWrh1-Wr6wQie9u7ddHn0C76cmEFx96XcRjwudGTp-cdbp9fxUa3xtvtqtjIl66x-HzbwFO7up3j4UXHxFOgzoU-TTbCFiaC-01lk/4sz/HuXBCXJoS8Shc4VxfGgjsg/h60/h001.gu3VwyhtU-6Rdg_0I1cUES7BVL45O-xFDlQ1zL8Nty0",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "IT Support Engineer",
+        "company": "CT Business Solutions",
+        "location": "Hamilton Central, Waikato",
+        "salary": "$28 – $38 per hour",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4wW-QNncuGrtb6fCGa6qCdihbOEENgAbYx5Ndxx8yVgXovAaRpIYhuxcdiRBieDH6-gnxnuL_dMSlnqt9vzAIijXLeLRsvRk4f3O17atzl6vt0Uxp0pTQTt0dJfAgcZR0/4sz/HuXBCXJoS8Shc4VxfGgjsg/h62/h001.2Jb4GikN3z6298yB5ko7a_7p0q40a6koTE-lyu0djBk",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "IT Systems and Support Engineer",
+        "company": "Lumen Limited",
+        "location": "Christchurch Central, Canterbury",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4Fsaqb0vmMfq1-i-nzicFZuPQz5QFgNTapT2MHZBw5GwTLYSd1HA_HIreTsQnfNhzhELewmaIu1UpFm7a9RZo1GmqDJdhkTbzvj0oGcSEOUNWIoi7c08lv4fPDggQwwyQ/4sz/HuXBCXJoS8Shc4VxfGgjsg/h70/h001.EuOPsXlhDy8FysXNgfPJ30Odp1-7n5wnxvJAySL2B6w",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Technical Support Analyst",
+        "company": "HR Connect Limited",
+        "location": "Hamilton Central, Waikato",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4Jdt5ckrg8Rmsbewi3uo2iPse7l2K9UQu9t4JB6v9GecHbZy2rI-YZD0NsiU5DrPyeW8HUCLGl0hay0Fx6-whh2n13Oq6HluShWe3iu4kYgt7NFBQGGluc2S17W6Lo1Go/4sz/HuXBCXJoS8Shc4VxfGgjsg/h86/h001.BwiizWCEJVLY0DALXOUUkcCTnQicMv4RCYbdXFyPFj4",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Collections Associate",
+        "company": "ACC New Zealand",
+        "location": "Thorndon, Wellington",
+        "salary": "$61,766 - $82,355 + 9% superannuation",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv65ZKFyaqSJbNcikACINZ9AKrhxyKko1MAHaBV5Oz-3IVfW-zE6Grvazq_bu4_bhg_HUfDFgGiyZoUgn-U5SrW8vQRFM9K7CJabXKEoNCuvDNdu6kcj3mGSjX53CBlhNyk/4sz/oISnA2QcSh2HojMXKqZsNA/h90/h001.6rKoN3WWLY4u2mGOR7V3oxl0ORIlieKAIlHtzLmh6oU",
+        "source": "SEEK NZ email",
+        "score": 10,
+        "reasons": [
+          "非目标岗位",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Office Manager",
+        "company": "Redpath Partners Pty Ltd",
+        "location": "Queenstown Central, Otago",
+        "salary": "$80,000 - $100,000",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5lVwFG7YH0bF2Aag752h2CQORk5WWHmqg87XXR66QDzFThieBcMv1XCAZ-RkWcYiLZRwt3OUIi2wio5L3e7BtS_Pa9vK19RAaAsie_k7M4ROC8sKtTwBEOzk7v1BADmNY/4sz/HuXBCXJoS8Shc4VxfGgjsg/h66/h001.gGhFeGje_axq2lSFihrkvm_1RW3utjBSbEow-fIWjJI",
+        "source": "SEEK NZ email",
+        "score": 10,
+        "reasons": [
+          "行政岗:忽略",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Desktop Support Engineer",
+        "company": "Tech Planet",
+        "location": "Martinborough, Wellington",
+        "salary": "$26 – $39 per hour",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4uZ6szh4ZuC3-KA0FyhDOu5gq_iff6pxPsDDqiseRzZ82tMZ48fpvY2DYws0UUKZPRUb2GbgoiAc-Axs_SsGlPuNJW_ywi2ERvkTaKbuti2E1tO-tdLSHurpoY_YWSnI4/4sz/HuXBCXJoS8Shc4VxfGgjsg/h76/h001.pf2bKZUoaf5ahYlx1aHkV4DKzo6ZKx4n3viC_ESNsZk",
+        "source": "SEEK NZ email",
+        "score": 10,
+        "reasons": [
+          "非目标岗位",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Application Support Analyst – IT (Pharma / GxP)",
+        "company": "HCL New Zealand",
+        "location": "Upper Hutt, Wellington",
+        "salary": "$85,000 – $90,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4qenMr1lANnJ9EsnVmGWP3fr2A_epVvhD68jVOW298M9p21XAt_8Ot9e76EbKhYCmCEryHYEFHecMshd6b7m5KqtUHeeR-DErk7MzlzX8fQdoehgNUJn0Ct0nCh6cd184/4sz/HuXBCXJoS8Shc4VxfGgjsg/h90/h001.KGCO6ukYyNoJvlfJ9lnztq4xNoIRp9AHmoNqQ2VEVg0",
+        "source": "SEEK NZ email",
+        "score": 10,
+        "reasons": [
+          "非目标岗位",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Business Analyst",
+        "company": "Freightways",
+        "location": "Penrose, Auckland",
+        "salary": "",
+        "posted_date": "3 Aug 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7TYdl0gkHKS4ihghutYP1fEdMAXUJ4ArW7m7Ub5NdSa_nAcElERXFRbuV7XOqshn4hT7yVQ0ytupSLjd_AS_t5qar-eRjHETzt8e6Kp8rXC064QSEZw1Y3KXvLcLWScgU/4sz/aioIOO0ZTl-BaRq1r8WMJA/h95/h001.cBKtxe2NXbvTuxz4F90GG8-1Vtm8sO1GT0NG8utXjO8",
+        "source": "SEEK NZ email",
+        "score": 8,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Programmer",
+        "company": "Outerdawn",
+        "location": "Rosedale, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4gLRvLT8WpKR0yd7MlwJVtE1RnjJEf-oKTQxfVq-0z9YZUUReQe-OlfeQYTTnVkLwtQrIGt5KOTzr5qDaiMQFyG7gjy1mz4cCfj2urEbf-j9X8IXBC_HTrzk53hx-gPYQ/4sz/iS3JlcIxRLitA4-txRSkRQ/h44/h001.Q_whKJY0pjPgIsmUPpxsGaTf6iRWUSM4N136jYOaHqo",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Process Analyst",
+        "company": "AA Insurance",
+        "location": "Auckland CBD, Auckland",
+        "salary": "",
+        "posted_date": "26 Jul 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4WcM3XIEpPMhiQ_u_8HM03NNNEZYjZsyxWYC-lQxythVgLWmdmlv0V3nA6Dr2P9GaC3A-PJqObgEA55SGHWTU1p6St0YU2Yfz3nNqQ-iYOKtHBmk-xW_ylo2wRtQeVzh0/4sz/iS3JlcIxRLitA4-txRSkRQ/h63/h001.rwQ8C-r9nWUuusbjuUrA_BtXEQo5NeR8DIgq5s9eokM",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Production Supervisor",
+        "company": "Private Advertiser",
+        "location": "Mount Wellington, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7iNedDHlfTkXdrTvYpMKQRXaoJuY1hAmY5p2qakySfe1rEwxohf9b1kBp_eur_IKqiKu7je4QCcgP3FmFX4-RaTCmDit_5_gBAYX4HwiGelKa1a-23xItMHuTLnm5Xshk/4sz/oISnA2QcSh2HojMXKqZsNA/h60/h001.3IHSwRyJnUXtGeCUm9junnHnrX_ckCb7e7BGTF-rcqg",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Production Shift Manager",
+        "company": "BTS Limited",
+        "location": "Penrose, Auckland",
+        "salary": "$100,000 – $120,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6KwPOi7VQgWEok36V7KCPfNStuzYzwDr3z9WBjTtJtdrN4tmrssLC4ZjAp6_FaN_ye97CwSvaFcxBXNZMextwq6OumZUjNMz8JpnlXSbKT6PfvW-uDHY6EaZbA_ewRyHA/4sz/oISnA2QcSh2HojMXKqZsNA/h62/h001.YAbDJm8ulqiC8BU9Qq33DRe1xtoPkElxx2AF3w7zJek",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "FULL-TIME BAR MANAGER",
+        "company": "Galbraith's Ale House",
+        "location": "Grafton, Auckland",
+        "salary": "$75,000 – $80,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5Zd5P5dXeqAfOYcDsaiurWdb4Ple1OgBnPOCTWDwMrTxpvPN8_FcnFp0F89wvAiIoBBiliFY_HRG7PCC-gAUbaFqmCGUvD1ZyT8-bTlbJ0_TpBciR6EccoO3nuAHMvPq0/4sz/oISnA2QcSh2HojMXKqZsNA/h64/h001.gWNhEKRav_YNcnfpwjNN_q6S5MiRdFe2Z1A7CKWtnvM",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Accounts Assistant",
+        "company": "The Professional Builder",
+        "location": "Auckland CBD, Auckland",
+        "salary": "$70,000 – $80,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5di4R1TWO4GGARZikP2Tk3J2p4H-akCMvkBga2GobraEnw_0Jgl6ADjzW5ZUU3QXtufPbhbmcpywJCnx9CUTVSDcbjMcqcBvkPp9LX9xs39ctAZy0uTOdwgq3Czc0AUik/4sz/oISnA2QcSh2HojMXKqZsNA/h66/h001.QN7UDOQtLDiVGQoWK4Vj1DXPBsZ_cFlMj5ftFGJIU0s",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Account Payable Officer",
+        "company": "Tonkin & Taylor Ltd",
+        "location": "Auckland CBD, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5BRhXqgohL66y7kPsiR__536P_KKByEWzC8VSVUrvmSzgfdIm_SJwLSsVGq-1TE29X56Boep5a7JlHUWKWBlqC8lHo9BQ9Gb7sJhBMYVJFpXCu1ydxUz15zaWuFiWQCas/4sz/oISnA2QcSh2HojMXKqZsNA/h70/h001.JxeZWiGuLx2mwn_iuiz_OWaHiXbPuQh2e9EeieeP2oc",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Home Lender",
+        "company": "Tyler Wren",
+        "location": "Mount Wellington, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4vVzObT1ODW8taAIvqDlyWzaSa1ekmNWDabWyx1xgLpzPSbNiHyMNXzawCYvA1sE77Olbr6FgystG7ty8BIjDsikFaR1aszMhK6wE1eovH1yt7d3-hlDVTcKCgkCKVeiA/4sz/oISnA2QcSh2HojMXKqZsNA/h72/h001.IaNcF2-3L1MT2krGvsecbeEfzfNzH7A06UfzaZuoyG8",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Export Operations Specialist (Oceanfreight)",
+        "company": "DHL Logistics",
+        "location": "Auckland Airport, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7TP_SA9NnYyAB_gUS9BNxr1Gp1q0f75rNFsaVXwtjCyBiJ8nd5EF8wg6r_Rf5HW1Fb1ZuEDxQBiVlGQLgMXXqW1yL_aoIVgq3SWHkN8Lft0bzPFKVUYR0eIhhM1-KMxvw/4sz/oISnA2QcSh2HojMXKqZsNA/h74/h001.XtZfquwf8P2zA07pCOMT87oiSk1fx_mcBg4a-XG6Af4",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Café Hospitality Operations Manager",
+        "company": "Sanderson Group Limited",
+        "location": "Pukekohe, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4_0IrHXRQA1uk3H9ukTdlbyGp8vIdMSeIAI4-Uw7o8ITdT8s25CeroeAYH0YBLAOU9CrdlqiSqOpJCG1C3Ml-Upek6EzbcgLwl5FN4UbOKU5O1SIFcI-mqRMoEW4JShmE/4sz/oISnA2QcSh2HojMXKqZsNA/h76/h001.GQ_b-H2vJNAMgGXQl10yhaGLLo7dRt2XoUUWUYxGYQY",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Accounts Receivable / Administration Assistant",
+        "company": "Gleeson and Cox Transport Ltd",
+        "location": "Wiri, Auckland",
+        "salary": "$70,000 – $80,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7ReR6uDL4QOGczKkMnvy2wS4D1e6_ZRpvZpGgiRlIUKUWvaqF6v6eAWR_XNU6O8tXWzJPLQVeALwO5vf829sYV8bH2NMZ3d_GfRohFspH009h58vK1J5xIg-Cn2t9OWr0/4sz/oISnA2QcSh2HojMXKqZsNA/h78/h001.HrZ0PcgE2WoOkbXCN5fc2y8zHUj8LaHVzlq1fCI6XYQ",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "8x Inside Sales Representative | B2B | Starting Monday 24th August!!",
+        "company": "PENINSULA",
+        "location": "Auckland CBD, Auckland",
+        "salary": "$65,000 + Commission | Year 1 OTE $100K ++",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6w6o_EGi6A8KMIg-s8PfYLoMiVOp5bJKOFdn3hBXxo_AU3y_zIXAORp75a95-o1vyYyRDk-feR_nkhiTSSp9wkgukGSLbd6Odh2g9N4y2cIhwnW6zvYsMMQLgj5kUNTMU/4sz/oISnA2QcSh2HojMXKqZsNA/h84/h001.oTvbpMnAJyVj2JM3XdLdhjbWRLJA95s1uXLfmMKkkdY",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Sales Executive",
+        "company": "Loscam Australia Pty Ltd",
+        "location": "Auckland CBD, Auckland",
+        "salary": "$75,000 – $80,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5dEY1r0MUYc8Es0ZSgRYjXIyjZlSumg4piCsGDJuiIgwLSkmQvNWk7lfwmH09OgIyCHGGzU3nkwVunXFUNVSXUONXaePRWabm7SqtmxlG2y5bOd5gQrajKK33NWuzCAMg/4sz/oISnA2QcSh2HojMXKqZsNA/h86/h001.Ir9ad36-4ORokfkQb0B3fDBMvHziJShDn5__koYK_mw",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "IT Support Specialist (Level 1-2) - Remote",
+        "company": "thePHO",
+        "location": "Auckland CBD, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5BPO-7jMOwuBHD9odG1XCAxU6uun6uOeTMvdNxMnz25TA_kbyttxxz-k9QBer1rsKtOHT0M75f6Ob091HUNr7uAakLxaRiWk7PsuR_UoMV1eOT2TK6co38IW5kTKceD7o/4sz/oISnA2QcSh2HojMXKqZsNA/h88/h001.mj9ryUzEF-TU2iUTMJPWvsa_0YLfFhguw6-lU_8wDEc",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Investment and Operations Analyst",
+        "company": "Cultivate – SEEK Medium Agency of the Year 2023 & 2024",
+        "location": "Auckland CBD, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6kb6ycyIxVVCa-lrmDOGxSM7PZdvl_aFElc6pqhi2VWm16bNnJqYzmZ7Y_MJ7tSVPFMXbqZNBpG7kyX5ajp33U2qswtKG5zWHd6k1xd_Bd3QeLjdHR28SKQTX-D8LrK-8/4sz/oISnA2QcSh2HojMXKqZsNA/h94/h001.Z-EQaszZ--i4TiqcJwwV0OOROTTMaI72eqtRXXPkUSQ",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Operations Manager",
+        "company": "Elite Dog Walking Limited",
+        "location": "Ponsonby, Auckland",
+        "salary": "$75,000 – $100,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6atyt848KGDNAkkaQE5Qbzb1qzF6hgDz_zgetV9Y3j1PsJ562tG4x6rS2nCE5u0RyzeVwXMkCYdNBNvACZRHxh2i-cDPyGeBPeOJpQUCEOaOBldRGpGHBpHbCnmbFTPzY/4sz/oISnA2QcSh2HojMXKqZsNA/h96/h001.zKRMWK3HYvoWMeXmNIDLmkmxRABLCpVNNDIqRepEi68",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Appointment Setter",
+        "company": "The Intro",
+        "location": "Auckland CBD, Auckland",
+        "salary": "$65,000 base + Commission",
+        "posted_date": "3 Aug 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7vedvxg5JsD7DuTrKtvdM-aQhepDeNdworXJJouEXxPPt2HqLUZqPkbw9riFymfesHKY__2dTeIxmNtvD2KdyR7CK4OcVEoWrGs-aH-vl8gGUaFNgv_kTUITDKWh5dqmU/4sz/oISnA2QcSh2HojMXKqZsNA/h99/h001.7glszc_llbF_gUMci9a8RjuLNIyhYw4TDtpV2ZUP6Zo",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Inbound Sales & Booking Specialist",
+        "company": "My Migration Lawyers",
+        "location": "Auckland CBD, Auckland",
+        "salary": "$54,000 – $80,000 per year",
+        "posted_date": "3 Aug 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5jiwzRJYq7zjgaNo417McmOmnArJTPc9-kqaboUvLV56EJae2IHRdDtY6rljw_eCZMvySdmzkOk-WGHXz7eD6g4oBn54pAJF9YBq9YEHC40s7sWZcgyOhGgfUJoF7dUIU/4sz/oISnA2QcSh2HojMXKqZsNA/h101/h001.QwSFl5Rxl21V1KoTLktw93t6GzWVpzZbdQIXz7dbgV8",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "*NO EXPERIENCE NEEDED* Confident + Energetic staff wanted + Immediate Start!",
+        "company": "Surge Direct",
+        "location": "Auckland CBD, Auckland",
+        "salary": "",
+        "posted_date": "27 Jul 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4IqfRwYebq7urKVyyDWsS97ljLLmEHlJizrgTggVyV0aCQHIBPntfbcoc3IBhssNZ7ghjiGzDmmkHb1M1stdAcOjtQjIuXu-h_ZhWx_-NjQTeAEZxTdsXYqcQAP18C2cU/4sz/oISnA2QcSh2HojMXKqZsNA/h103/h001.iVbB0IUfjT9z5X_nPLmFWV5nkpXwqKrNC7DH1cmWC3U",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Product Development Officer",
+        "company": "Private Advertiser",
+        "location": "East Tamaki, Auckland",
+        "salary": "$55,000 – $60,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4oIvLkJof9P9UV28JmQvz3Lhxx-UUs6SDvAWTpcPpc5sZFHVBqNxYaWkxqBtmZRt3IdOb7XRlcES0dtT_Yz_tN-HWfKMI4wnfVda2dPZzbY3Fi30Z2R27ohK08HyKX7h8/4sz/aioIOO0ZTl-BaRq1r8WMJA/h62/h001.4-YneS258JBoIPuGTA_pKxxQLHyuOKQPAFlZy90f6WQ",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Level 1 Help Desk Engineer",
+        "company": "Assess HR",
+        "location": "Henderson, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6Xk64l-T4zTc4D16sRLSOkdx7x4bt7CFzxs5ElUpXb6P_Wmb8hycDGGSjoavjpF3IJzhIE51Gpth2284Sxi9TRUU3oKKQWHZR9PFSA7ZoUQLvLgwlTl8rgQrYCf6buAf0/4sz/HuXBCXJoS8Shc4VxfGgjsg/h58/h001.-v7qOrHHczzvr5SQuZMuzlcbkiesZCOEv9pZO5B2dZM",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Part-time R&D and Lab Assistant",
+        "company": "Intelligro",
+        "location": "Rolleston, Canterbury",
+        "salary": "$24 – $34 per hour",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4YD3_xUwQ8mYlptkDcq0KjKJhJhFe25t2wmbq9ZbfwIU36i9YA9h_ybJwWn0Zt_IKpWS66Ynuub8gll1XWu1WUpUVCLxgWaI_q38_rcXRUysGAqa0wq_d4PG2o-ekYqsQ/4sz/aioIOO0ZTl-BaRq1r8WMJA/h60/h001.94rgQsmY7G-9-s4sLzDd49LVggbqTc4-TQeLBn3nhuQ",
+        "source": "SEEK NZ email",
+        "score": 3,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分",
+          "兼职降分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Quality Assurance Coordinator – Meat Processing (QA)",
+        "company": "Auckland Meat Processors",
+        "location": "Mount Wellington, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6HELl1sAFS3LO1tsoMkFQg0ElNSts-qp1w3xKE88-ICuDm9YdP0zeAyFr9ytqgp52s2v9sHnRX3Y0rhoNQW5PJaN26rukPSh9X-7dBQiMc0CaUr5jhaq6RLSpz9lz06NQ/4sz/oISnA2QcSh2HojMXKqZsNA/h58/h001.PU8NpWuFWwZ5VzP5HKgHsPj248R4spgwolTbBxjaKJ4",
+        "source": "SEEK NZ email",
+        "score": 2,
+        "reasons": [
+          "行政岗:忽略"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Donor Relations Coordinator - Auckland",
+        "company": "NZ Blood Service",
+        "location": "Epsom, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv65B5vTSL_-qCBqdQDhZ4IVM8_6I8ICvevOpi7XCQB7XgsgEfvb-CmkF-ZgVq0uzkcoUnxuC_A1sY0Yd3GiUGoeGLElaPCO7KQt5Fbd9G7c4Clq2mpIpbiHCRqj3j-tqpo/4sz/oISnA2QcSh2HojMXKqZsNA/h80/h001.eddfHWGS3Ojo9DqdHrMJW_4Fw9B5z5fey2IRCJiwUC0",
+        "source": "SEEK NZ email",
+        "score": 2,
+        "reasons": [
+          "行政岗:忽略"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Operations Administrator",
+        "company": "TOBA Projects",
+        "location": "Newmarket, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4Xq99DQua_5bQvoG9hrxU1NxuXpvMzYh_0H7nXfbKeuRKbDVGMcfn0_mYWkSIoIm3-JVlV76qoVWhTiI52v_7k5AQMYvtwLlG3wVV3ieI2vIibuRcxoe5JjSuvqIF7YmE/4sz/oISnA2QcSh2HojMXKqZsNA/h82/h001.TPh8x6HfakQLXF6NE26uw2CtetQmycv0l9uyQM9OdCY",
+        "source": "SEEK NZ email",
+        "score": 2,
+        "reasons": [
+          "行政岗:忽略"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Office Administrator",
+        "company": "Unimax Limited",
+        "location": "Avondale, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6TStgMeBKIx7jFq0fwDlSohm2OUBj0tT3jinS3IBtaz6dH9syQx72D237dqqekMHvB2qCWsXoikq6r6dl5a2CprynxdrtdxoRKQGBmKhDb41DOH7ZP7Zzt8aXwmPGS1uc/4sz/HuXBCXJoS8Shc4VxfGgjsg/h72/h001.RcnbXe-8mWKHFNFs3_0qkvrnGpVQ0-Ops13yiUYN8rE",
+        "source": "SEEK NZ email",
+        "score": 2,
+        "reasons": [
+          "行政岗:忽略"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Office Administrator / Customer Services",
+        "company": "JAE Auckland West & North Shore",
+        "location": "Avondale, Auckland",
+        "salary": "$28 – $31 per hour",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4_aOrZUDGpDQ5niL7cE0QKdbajeCIyZ1Z8KH9ayUc6LV-dvqNqSmn1KAKtXBwLItOYfc00BuVZc4iULNSeqOHs6CuakFOJMi2jxtaSs_A7_lDvQVpQttPHRgV4_fodKHc/4sz/HuXBCXJoS8Shc4VxfGgjsg/h74/h001.PhkrnPieBPcBCei37T2g0Y2A-feM9SQnH_QLXoGLHtM",
+        "source": "SEEK NZ email",
+        "score": 2,
+        "reasons": [
+          "行政岗:忽略"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Team Administrator",
+        "company": "Laser Electrical Ltd",
+        "location": "Avondale, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7r9amKlgqBOuOBIwX2Y8NSjLcPTZiJXreyz20pfOZuN8aMFn5th-OMMUBqqt05kNxotsyEXnZV8TI8uu-OWkPRuMqIUPSmrJXwwaGfZsnbzC_B9P2yiZYPIT-RNIJqytE/4sz/HuXBCXJoS8Shc4VxfGgjsg/h94/h001.7Dkj2NGKkwRQt16YtCvM5CfFI1yXdTnmXqmn4WaOC7c",
+        "source": "SEEK NZ email",
+        "score": 2,
+        "reasons": [
+          "行政岗:忽略"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "IT Operations Junior",
+        "company": "Hawkins Watts",
+        "location": "Penrose, Auckland",
+        "salary": "$60K–$80K + discretionary annual bonus + Medical",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5d4q9sNifU68be4jd2841s360u0ppp19b6gZyIEnpmlqYjwOt01FJj2iyQYnLDqOlQ2Q1b_gBdOxRMmaZBWHbpicufnK8nRBqMEoRJBg_pnP1cKSOTR1PJC2PXB8emhz0/4sz/iS3JlcIxRLitA4-txRSkRQ/h40/h001.eRfjKDGx_46j9YF7hCPowcwECYQUEVImt_td61-AF9w",
+        "source": "SEEK NZ email",
+        "score": 0,
+        "reasons": [
+          "非目标岗位",
+          "初级岗降分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Executive Assistant/Office Manager",
+        "company": "Archway Recruitment",
+        "location": "Wellington Central, Wellington",
+        "salary": "$90,000-105,000 per annum (base)",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4ydXIuMaxEQccFleqcZcYesR5wv0sN_opvnuLd18d5AE-eL85d-GpXsHTsb3vGRdKcvwuKwp8xyMnMTWmM_8xJ9hVqmdzu14aIWNy5nXEZGZ9N7PdgOIuBTCS3TKBtugI/4sz/HuXBCXJoS8Shc4VxfGgjsg/h84/h001.z5MQBhnf6Acc82JMlKCaYZ8DmLUhYHWpYtZklyFPKgk",
+        "source": "SEEK NZ email",
+        "score": 0,
+        "reasons": [
+          "行政岗:忽略",
+          "惠灵顿地区",
+          "高管助理专业性强"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Customer Service Representative - Part time",
+        "company": "Auckland Transport",
+        "location": "Takapuna, Auckland",
+        "salary": "",
+        "posted_date": "3 Aug 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4Wg0BaJHEb49rfZiO3Grl0TFUJH4Cq58El2JdWFl8N45xv0sskG_qm9ug-BbPLs6-w1q9KKiGiWBXV-8x_K4XHRAodQ39duff5UZNpRf7J9a3ElOGrk9z4aZ3Q9JqvokA/4sz/HuXBCXJoS8Shc4VxfGgjsg/h97/h001.vfe_si1ePWL8ZNzcRgUZ-b53wI5IqSH1qIOu789VT3w",
+        "source": "SEEK NZ email",
+        "score": 0,
+        "reasons": [
+          "非目标岗位",
+          "兼职降分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Executive Assistant to Founder and Managing Director",
+        "company": "PJM Project Management Limited",
+        "location": "Newmarket, Auckland",
+        "salary": "$90,000 – $120,000 per year",
+        "posted_date": "4 Aug 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7t289oQ5S3ynHuPvLMKODmQvg-VXz7QeZ6q4hZT8qT5sLvuc8CYdum-BnZcHCREScRM4l1du_emA6sCHukI_niOLtuOuVlnA4qjcjKhLnmhtcpyMmbciCZq2BV-WVge3Q/4sz/HuXBCXJoS8Shc4VxfGgjsg/h99/h001.i9zjfmlbSMr-Mtg6QFETJfyHwNxwkwyEm8vS_EQMZjg",
+        "source": "SEEK NZ email",
+        "score": 0,
+        "reasons": [
+          "行政岗:忽略",
+          "高管助理专业性强"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      }
+    ]
+  }
+}
