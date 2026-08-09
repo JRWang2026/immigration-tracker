@@ -1,0 +1,16 @@
+{
+  "emails": [
+    {
+      "message_id": "msg_mEgcFJlfydgolWOQNOqtlbpaR1ci0la9rE22gm5dPD_Wvw",
+      "subject": "10 new jobs for Information & Communication Technology in New Zealand",
+      "created_at": "2026-08-07T21:25:32Z",
+      "type": "10_jobs_ict_aug7"
+    },
+    {
+      "message_id": "msg_KV3ZQo-j4TDct9-6blhtwA5PC16rQEPd0dyqgRsTU_jtzw",
+      "subject": "13 new jobs for Information & Communication Technology in New Zealand",
+      "created_at": "2026-08-06T20:25:33Z",
+      "type": "13_jobs_ict_aug6"
+    }
+  ]
+}
