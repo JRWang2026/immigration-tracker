@@ -1,18 +1,139 @@
-import json, re, os
+"""
+SEEK NZ 岗位扫描脚本 (parse_seek_0630.py 升级版)
+====================================================
+1. IMAP 拉取 QQ Mail 中最近3天的 SEEK 邮件
+2. 从 HTML 正文提取岗位卡片（兼容两种 MJML title 格式）
+3. 去重 + 评分（绿名单Tier1聚焦版）
+4. 生成结构化 Markdown 报告 + KOS JSON feed
+
+历史：原脚本依赖硬编码的 MCP 工具结果文件路径，已改为 IMAP 直接拉取。
+"""
+
+import json
+import os
+import re
+import sys
 from collections import OrderedDict
 from datetime import datetime, timedelta
+from pathlib import Path
 
-# File paths
-files = [
-    # 2026-07-27 scan: 5 unread SEEK job alert emails from 2026-07-26 (Admin×2 + ICT×2 + NZ General×1)
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\fe0b6751-f6cb-4d1a-8237-f2b0b04cc4b4\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1785110345692-5df33a.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\fe0b6751-f6cb-4d1a-8237-f2b0b04cc4b4\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1785110346201-ea5a2e.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\fe0b6751-f6cb-4d1a-8237-f2b0b04cc4b4\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1785110346707-867956.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\fe0b6751-f6cb-4d1a-8237-f2b0b04cc4b4\tool-results\mcp-connector-proxy-qq-mail_GetMessage-1785110347668-37630c.txt', 'json'),
-    (r'C:\Users\Mr_Wang\.workbuddy\projects\c-Users-Mr_Wang-WorkBuddy-2026-06-20-14-48-36\fe0b6751-f6cb-4d1a-8237-f2b0b04cc4b4\tool-results\DeferExecuteTool_6.txt', 'json'),
-]
+# ---- Paths ----
+WORKSPACE = Path(r"C:\Users\Mr_Wang\WorkBuddy\2026-06-20-14-48-36")
+CACHE_DIR = WORKSPACE / "email_cache_seek_0809"
+KOS_PUBLIC_DATA = Path(r"C:\Users\Mr_Wang\WorkBuddy\2026-06-03-14-49-17\kos\public\data\seek-nz")
 
-def load_body(path, ftype):
+sys.path.insert(0, str(WORKSPACE))
+from local_agent.kos_bridge import write_kos_feed
+
+
+def fetch_seek_emails():
+    """通过 IMAP 直接搜索 SUBJECT 'SEEK' 的 SEEK Job Alert 邮件，并保存 body 到本地缓存"""
+    import imaplib
+    import email as _email
+    from email.header import decode_header as _dh
+
+    username = os.environ.get("QQ_MAIL_USER", "349376374@qq.com")
+    password = os.environ.get("QQ_MAIL_APP_PASSWORD", "")
+
+    if not password:
+        print("ERROR: QQ_MAIL_APP_PASSWORD 环境变量未设置！")
+        return []
+
+    conn = imaplib.IMAP4_SSL("imap.qq.com", 993)
+    conn.login(username, password)
+    conn.select("INBOX")
+
+    since = (datetime.now() - timedelta(days=3)).strftime("%d-%b-%Y")
+
+    # 直接 IMAP 搜索：FROM "jobmail" (SEEK Job Alerts 的发件人是 jobmail@s.seek.co.nz)
+    status, msgs = conn.search(None, f'(FROM "jobmail" SINCE {since})')
+    all_uids = msgs[0].split()
+    print(f"   IMAP FROM 'jobmail' + SINCE {since}: {len(all_uids)} 封")
+
+    # 取最近最多10封
+    target_uids = all_uids[-10:]
+
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+    emails = []
+    for idx, uid in enumerate(target_uids, start=1):
+        status, msg_data = conn.fetch(uid, "(RFC822)")
+        if status != "OK" or not msg_data or msg_data[0] is None:
+            continue
+
+        raw_bytes = msg_data[0][1]
+        if raw_bytes is None:
+            continue
+
+        msg = _email.message_from_bytes(raw_bytes)
+        subj_raw = msg.get("Subject", "")
+        from_addr = msg.get("From", "")
+
+        # decode subject
+        parts = _dh(subj_raw)
+        subj = ""
+        for content, charset in parts:
+            if isinstance(content, bytes):
+                subj += content.decode(charset or "utf-8", errors="replace")
+            else:
+                subj += content
+
+        # filter: must be job alert emails from jobmail@s.seek.co.nz
+        if "jobmail" not in from_addr.lower():
+            continue
+
+        # extract HTML body
+        body_html = ""
+        if msg.is_multipart():
+            for part in msg.walk():
+                ctype = part.get_content_type()
+                if ctype == "text/html":
+                    payload = part.get_payload(decode=True)
+                    if payload:
+                        body_html = payload.decode(part.get_content_charset() or "utf-8", errors="replace")
+                        break
+        else:
+            payload = msg.get_payload(decode=True)
+            if payload:
+                body_html = payload.decode(msg.get_content_charset() or "utf-8", errors="replace")
+
+        if not body_html:
+            continue
+
+        # 保存到本地缓存（MCP 工具结果格式兼容）
+        safe_subj = re.sub(r'[^\w\-]+', '_', subj)[:80]
+        cache_path = CACHE_DIR / f"email_{uid.decode()}_{safe_subj}.json"
+        cache_payload = {
+            "data": {
+                "data": {
+                    "message_id": uid.decode(),
+                    "subject": subj,
+                    "from": from_addr,
+                    "date": msg.get("Date", ""),
+                    "body": body_html,
+                    "body_format": 2,
+                }
+            }
+        }
+        with open(cache_path, 'w', encoding='utf-8') as f:
+            json.dump(cache_payload, f, ensure_ascii=False)
+
+        emails.append({
+            "uid": uid.decode(),
+            "subject": subj,
+            "from": from_addr,
+            "date": msg.get("Date", ""),
+            "body_html": body_html,
+            "cache_path": str(cache_path),
+        })
+        print(f"  ✅ {subj[:80]:80s} | {len(body_html):6d} chars | 缓存: {cache_path.name}")
+
+    conn.close()
+    conn.logout()
+    return emails
+
+
+def load_body(path, ftype='json'):
     with open(path, 'r', encoding='utf-8') as f:
         if ftype == 'json':
             data = json.load(f)
@@ -20,20 +141,29 @@ def load_body(path, ftype):
         else:
             return f.read()
 
+
 def clean_text(html):
     # Replace tags with spaces to avoid concatenation, then strip
     txt = re.sub(r'<[^>]+>', ' ', html)
     txt = re.sub(r'\s+', ' ', txt)
     return txt.strip()
 
+
 def extract_jobs(body):
+    """从 SEEK 邮件 HTML 提取岗位信息 (MJML 新模板 2026-07/08)"""
     jobs = []
     # Split by job card anchors
     card_pattern = r'<a style="display: block"'
     cards = body.split(card_pattern)
 
     for card in cards[1:]:
-        title_match = re.search(r'text-decoration:underline[^>]*>([^<]+)</div>', card)
+        # Title: 兼容两种 MJML 格式
+        # 格式A（带IE条件注释）: <div style="text-decoration:underline"><!--[if mso]><a...><![endif]-->TITLE<!--[if mso]></a><![endif]--></div>
+        # 格式B（纯下划线）: <div style="text-decoration:underline">TITLE</div>
+        title_match = re.search(r'text-decoration:underline[^>]*>.*?<!\[endif\]-->\s*([^<]+?)\s*<!--', card, re.DOTALL)
+        if not title_match:
+            title_match = re.search(r'text-decoration:underline[^>]*>([^<]+)</div>', card)
+
         company_match = re.search(r'font-size:14px;line-height:21px;padding-bottom:12px[^>]*>([^<]+)</td>', card)
         loc_matches = re.findall(r'font-size:14px[^>]*line-height:21px[^>]*text-align:left[^>]*color:#2E3849[^>]*>([^<]+)</div>', card)
         salary_match = re.search(r'>\$[^<]+</div>', card)
@@ -47,8 +177,11 @@ def extract_jobs(body):
         # Skip cards without title/company or obvious non-job entries
         if not title or not company or len(title) > 200:
             continue
+        # Skip non-job content like navigation text
+        if title.lower() in ['nz.seek.com', 'view all matching jobs', 'how to make your saved search', 'edit this alert', 'unsubscribe from this alert']:
+            continue
 
-        # Location: first location match with comma pattern
+        # Location: first info block that looks like a location (contains comma)
         location = 'Unknown'
         for lm in loc_matches:
             lm = lm.strip()
@@ -101,31 +234,7 @@ def extract_jobs(body):
         })
     return jobs
 
-# Load and extract from all files
-all_jobs = []
-for path, ftype in files:
-    if not os.path.exists(path):
-        print(f"MISSING: {path}")
-        continue
-    body = load_body(path, ftype)
-    jobs = extract_jobs(body)
-    print(f"{os.path.basename(path)}: {len(jobs)} jobs")
-    all_jobs.extend(jobs)
 
-# Deduplicate by title+company (case-insensitive)
-seen = set()
-unique_jobs = []
-for j in all_jobs:
-    key = (j['title'].lower().strip(), j['company'].lower().strip())
-    if key not in seen:
-        seen.add(key)
-        unique_jobs.append(j)
-
-print(f"\nTotal unique jobs: {len(unique_jobs)}")
-for j in unique_jobs:
-    print(f"  {j['title']} | {j['company']} | {j['location']} | {j['salary']} | {j['posted_date']}")
-
-# Score jobs
 def score_job(j):
     title = j['title'].lower()
     company = j['company'].lower()
@@ -135,7 +244,11 @@ def score_job(j):
     reasons = []
 
     # Role matching (0-60) - STRICT: only Green List Tier 1 ICT + university/research roles
-    is_research_org = any(k in company for k in ['university', 'research institute', 'research centre', 'crown research', 'gns science', 'callaghan innovation', 'crl', 'agresearch', 'plant & food', 'scion', 'landcare', 'niwa', 'branz', 'esr'])
+    is_research_org = any(k in company for k in [
+        'university', 'research institute', 'research centre', 'crown research',
+        'gns science', 'callaghan innovation', 'crl', 'agresearch',
+        'plant & food', 'scion', 'landcare', 'niwa', 'branz', 'esr'
+    ])
 
     # Tier 1 Green List ICT (Straight to Residence)
     if any(k in title for k in ['software engineer', 'software developer', 'full stack developer', 'backend developer', 'frontend developer']):
@@ -246,13 +359,6 @@ def score_job(j):
 
     return max(0, min(100, score)), reasons
 
-for j in unique_jobs:
-    s, r = score_job(j)
-    j['score'] = s
-    j['reasons'] = r
-
-# Sort by score desc
-unique_jobs.sort(key=lambda x: x['score'], reverse=True)
 
 def is_green_list_tier1(title):
     tier1 = [
@@ -267,6 +373,7 @@ def is_green_list_tier1(title):
     ]
     title = title.lower()
     return any(k in title for k in tier1)
+
 
 def green_list_anzsco(title):
     title = title.lower()
@@ -290,6 +397,7 @@ def green_list_anzsco(title):
         return '135111 (Chief Information Officer)'
     return ''
 
+
 def suggest_skills(j):
     title = j['title'].lower()
     if is_green_list_tier1(title):
@@ -301,9 +409,9 @@ def suggest_skills(j):
     else:
         return '非目标岗位，不建议投入精力'
 
+
 def immigration_note(j):
     title = j['title'].lower()
-    location = j['location'].lower()
     anzsco = green_list_anzsco(title)
     if is_green_list_tier1(title):
         return f'绿名单Tier1 Straight to Residence{anzsco and " | " + anzsco} — 有offer即可直申居留'
@@ -314,25 +422,98 @@ def immigration_note(j):
     else:
         return '非绿名单，移民路径弱，建议忽略'
 
-# Generate report
-today = datetime.now().strftime('%Y-%m-%d')
-next_scan = (datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d')
-report_path = f'SEEK_NZ_Job_Report_{today}.md'
 
-# Filter to relevant jobs only (Green List ICT + university/research roles)
-relevant_jobs = [j for j in unique_jobs if j['score'] >= 35]
-filtered_out = len(unique_jobs) - len(relevant_jobs)
+def parse_anzsco(title):
+    anzsco_str = green_list_anzsco(title)
+    if not anzsco_str:
+        return '', ''
+    # Format: "261313 (Software Engineer)"
+    code, name = anzsco_str.split(' ', 1)
+    name = name.strip('()').strip()
+    return code, name
 
-tier1_count = sum(1 for j in relevant_jobs if is_green_list_tier1(j['title']))
-tier2_count = sum(1 for j in relevant_jobs if any(k in j['title'].lower() for k in ['data scientist', 'ict support', 'network administrator', 'systems analyst']))
 
-high = [j for j in relevant_jobs if j['score'] >= 60]
-medium = [j for j in relevant_jobs if 40 <= j['score'] < 60]
-low = [j for j in relevant_jobs if 35 <= j['score'] < 40]
+def build_job_record(j):
+    code, name = parse_anzsco(j['title'])
+    return {
+        'title': j['title'],
+        'company': j['company'],
+        'location': j['location'],
+        'salary': j['salary'],
+        'url': j['url'],
+        'score': j['score'],
+        'reasons': j['reasons'],
+        'immigration_path': immigration_note(j),
+        'suggested_skills': suggest_skills(j),
+        'anzsco_code': code,
+        'anzsco_name': name,
+    }
 
-report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
 
-> 📅 扫描时间：{datetime.now().strftime('%Y-%m-%d %H:%M')} | 📧 来源：QQ邮箱SEEK推送（5封邮件，2026-07-26 Admin×2 + ICT×2 + NZ General×1）
+# ======================
+# MAIN
+# ======================
+if __name__ == "__main__":
+    today = datetime.now().strftime('%Y-%m-%d')
+    next_scan = (datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d')
+
+    # 1. Fetch emails
+    print("=" * 60)
+    print("📧 步骤 1: 拉取 SEEK 邮件...")
+    emails = fetch_seek_emails()
+
+    if not emails:
+        print("⚠️ 未找到 SEEK 邮件，将以0封邮件生成空报告。")
+
+    email_count = len(emails)
+    print(f"   共拉取 {email_count} 封 SEEK 邮件")
+
+    # 2. Extract jobs
+    print("\n📋 步骤 2: 提取岗位...")
+    all_jobs = []
+    for e in emails:
+        body = e.get("body_html", "")
+        jobs = extract_jobs(body)
+        print(f"   {e['subject'][:60]:60s} → {len(jobs):3d} jobs")
+        all_jobs.extend(jobs)
+
+    # 3. Deduplicate
+    seen = set()
+    unique_jobs = []
+    for j in all_jobs:
+        key = (j['title'].lower().strip(), j['company'].lower().strip())
+        if key not in seen:
+            seen.add(key)
+            unique_jobs.append(j)
+    print(f"   去重后: {len(unique_jobs)} 个岗位")
+
+    # 4. Score
+    print("\n📊 步骤 3: 评分...")
+    for j in unique_jobs:
+        s, r = score_job(j)
+        j['score'] = s
+        j['reasons'] = r
+
+    unique_jobs.sort(key=lambda x: x['score'], reverse=True)
+
+    # 5. Filter
+    relevant_jobs = [j for j in unique_jobs if j['score'] >= 35]
+    filtered_out = len(unique_jobs) - len(relevant_jobs)
+
+    tier1_count = sum(1 for j in relevant_jobs if is_green_list_tier1(j['title']))
+    tier2_count = sum(1 for j in relevant_jobs if any(k in j['title'].lower() for k in ['data scientist', 'ict support', 'network administrator', 'systems analyst']))
+
+    high = [j for j in relevant_jobs if j['score'] >= 60]
+    medium = [j for j in relevant_jobs if 40 <= j['score'] < 60]
+    low = [j for j in relevant_jobs if 35 <= j['score'] < 40]
+
+    # 6. Generate report
+    print("\n📝 步骤 4: 生成报告...")
+    best = high[0] if high else (relevant_jobs[0] if relevant_jobs else None)
+
+    report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
+
+> 📅 扫描时间：{datetime.now().strftime('%Y-%m-%d %H:%M')} | 📧 来源：QQ邮箱SEEK推送（{email_count}封邮件，最近3天）
 > 🎯 策略更新：仅关注**绿名单Tier1 ICT岗** + **大学/研究机构研究岗**；BSA/Data Analyst/行政岗已降级/过滤
 
 ---
@@ -341,11 +522,11 @@ report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
 
 | 指标 | 数值 |
 |------|------|
-| 扫描邮件数 | 5（2026-07-26 Admin×2 + ICT×2 + NZ General×1） |
+| 扫描邮件数 | {email_count}（最近3天 SEEK Job Alerts） |
 | 去重岗位总数 | {len(unique_jobs)} |
 | 过滤后相关岗位 | {len(relevant_jobs)}（仅显示≥35分） |
 | 过滤掉岗位 | {filtered_out}（BSA/Data Analyst/行政等非绿名单岗） |
-| 🏆最佳匹配 | {high[0]['title'] if high else (relevant_jobs[0]['title'] if relevant_jobs else '无')} ({high[0]['company'] if high else (relevant_jobs[0]['company'] if relevant_jobs else '-')}) {high[0]['score'] if high else (relevant_jobs[0]['score'] if relevant_jobs else '-')}分 |
+| 🏆最佳匹配 | {best['title'] if best else '无'} ({best['company'] if best else '-'}) {best['score'] if best else '-'}分 |
 | 绿名单Tier1 | {tier1_count} |
 | 绿名单Tier2 | {tier2_count} |
 | 高匹配(60+) | {len(high)} |
@@ -370,8 +551,9 @@ report = f"""# SEEK NZ 岗位扫描报告 - {today} (绿名单Tier1聚焦版)
 
 """
 
-for idx, j in enumerate(high, 1):
-    report += f"""### {idx}. {'⭐' if idx == 1 else ''} {j['title']} | {j['company']}
+    if high:
+        for idx, j in enumerate(high, 1):
+            report += f"""### {idx}. {'⭐' if idx == 1 else ''} {j['title']} | {j['company']}
 | 字段 | 详情 |
 |------|------|
 | **匹配度** | **{j['score']}分** {'🔥' if idx == 1 else ''} |
@@ -383,19 +565,24 @@ for idx, j in enumerate(high, 1):
 | **移民关联** | {immigration_note(j)} |
 
 """
+    else:
+        report += "**本轮无高匹配岗位（≥60分）** 🚨\n\n"
 
-report += """---
+    report += """---
 
 ## 🟡 中匹配岗位 (40-59分) — Tier2 / 研究相关
 
 | # | 职位 | 公司 | 地点 | 薪资 | 匹配度 | 核心匹配点 |
 |---|------|------|------|------|--------|-----------|
 """
-for idx, j in enumerate(medium, start=len(high)+1):
-    sal = j['salary'] if j['salary'] else '未公布'
-    report += f"| {idx} | {j['title']} | {j['company']} | {j['location']} | {sal} | {j['score']} | {'；'.join(j['reasons'][:3])} |\n"
+    if medium:
+        for idx, j in enumerate(medium, start=len(high)+1):
+            sal = j['salary'] if j['salary'] else '未公布'
+            report += f"| {idx} | {j['title']} | {j['company']} | {j['location']} | {sal} | {j['score']} | {'；'.join(j['reasons'][:3])} |\n"
+    else:
+        report += "| - | 本轮无中匹配岗位 | - | - | - | - | - |\n"
 
-report += """
+    report += """
 ---
 
 ## 🔵 低匹配岗位 (35-39分) — 可观望
@@ -403,37 +590,14 @@ report += """
 | # | 职位 | 公司 | 地点 | 薪资 | 匹配度 | 原因 |
 |---|------|------|------|------|--------|------|
 """
-for idx, j in enumerate(low, start=len(high)+len(medium)+1):
-    sal = j['salary'] if j['salary'] else '未公布'
-    report += f"| {idx} | {j['title']} | {j['company']} | {j['location']} | {sal} | {j['score']} | {'；'.join(j['reasons'][:2])} |\n"
+    if low:
+        for idx, j in enumerate(low, start=len(high)+len(medium)+1):
+            sal = j['salary'] if j['salary'] else '未公布'
+            report += f"| {idx} | {j['title']} | {j['company']} | {j['location']} | {sal} | {j['score']} | {'；'.join(j['reasons'][:2])} |\n"
+    else:
+        report += "| - | 本轮无低匹配岗位 | - | - | - | - | - |\n"
 
-# Continuous tracking - focus on Green List + research roles
-report += """
----
-
-## 📈 持续开放岗位跟踪（绿名单/研究岗）
-
-| 职位 | 公司 | 首次出现 | 已开放天数 | 本轮匹配度 | 状态 |
-|------|------|----------|-----------|-----------|------|
-"""
-# Look up current scores for tracked jobs
-def current_score(title_substr, company_substr):
-    for j in unique_jobs:
-        if title_substr.lower() in j['title'].lower() and company_substr.lower() in j['company'].lower():
-            return j['score']
-    return '-'
-
-# Track only Green List + university/research roles from memory
-tracking = [
-    ('Database Administrator', 'BOEI Solutions Ltd', '28 Jun 2026', '2天', current_score('Database Administrator', 'BOEI'), '🆕绿名单Tier1'),
-    ('Senior Data Analyst', 'Silver Fern Farms Ltd', '29 Jun 2026', '1天', current_score('Senior Data Analyst', 'Silver Fern'), '非绿名单(已降级)'),
-    ('Service and Data Analyst', 'University of Canterbury', '29 Jun 2026', '1天', current_score('Service and Data Analyst', 'University of Canterbury'), '大学岗(已降级)'),
-]
-for t in tracking:
-    score_val = t[4] if isinstance(t[4], str) else f"{t[4]}"
-    report += f"| {t[0]} | {t[1]} | {t[2]} | {t[3]} | {score_val} | {t[5]} |\n"
-
-report += f"""
+    report += f"""
 ---
 
 ## 🎯 行动建议
@@ -479,58 +643,35 @@ report += f"""
 *报告由SEEK NZ自动化扫描生成（绿名单Tier1聚焦版） | 下次扫描：{next_scan}*
 """
 
-with open(report_path, 'w', encoding='utf-8') as f:
-    f.write(report)
+    report_path = WORKSPACE / f"SEEK_NZ_Job_Report_{today}.md"
+    with open(report_path, 'w', encoding='utf-8') as f:
+        f.write(report)
+    print(f"   报告已保存: {report_path}")
 
-print(f"\nReport saved: {report_path}")
-
-# --- KOS feed generation ---
-from pathlib import Path
-import sys
-
-workspace_root = Path(__file__).parent
-sys.path.insert(0, str(workspace_root))
-from local_agent.kos_bridge import write_kos_feed
-
-
-def parse_anzsco(title):
-    anzsco_str = green_list_anzsco(title)
-    if not anzsco_str:
-        return '', ''
-    # Format: "261313 (Software Engineer)"
-    code, name = anzsco_str.split(' ', 1)
-    name = name.strip('()').strip()
-    return code, name
-
-
-def build_job_record(j):
-    code, name = parse_anzsco(j['title'])
-    return {
-        'title': j['title'],
-        'company': j['company'],
-        'location': j['location'],
-        'salary': j['salary'],
-        'url': j['url'],
-        'score': j['score'],
-        'reasons': j['reasons'],
-        'immigration_path': immigration_note(j),
-        'suggested_skills': suggest_skills(j),
-        'anzsco_code': code,
-        'anzsco_name': name,
+    # 7. Write KOS feed
+    print("\n🌐 步骤 5: 写入 KOS JSON feed...")
+    kos_data = {
+        'date': today,
+        'email_count': email_count,
+        'total_jobs': len(unique_jobs),
+        'tier1_jobs': [build_job_record(j) for j in unique_jobs if is_green_list_tier1(j['title'])],
+        'all_jobs': [build_job_record(j) for j in unique_jobs],
     }
 
+    kos_path = write_kos_feed(KOS_PUBLIC_DATA, 'seek-nz', kos_data, timestamp=datetime.now())
+    print(f"   KOS feed 已保存: {kos_path}")
 
-email_count = sum(1 for path, _ in files if os.path.exists(path))
-
-kos_data = {
-    'date': today,
-    'email_count': email_count,
-    'total_jobs': len(unique_jobs),
-    'tier1_jobs': [build_job_record(j) for j in unique_jobs if is_green_list_tier1(j['title'])],
-    'all_jobs': [build_job_record(j) for j in unique_jobs],
-}
-
-kos_section_dir = Path(r'C:\Users\Mr_Wang\WorkBuddy\2026-06-03-14-49-17\kos\public\data\seek-nz')
-kos_path = write_kos_feed(kos_section_dir, 'seek-nz', kos_data, timestamp=datetime.now())
-print(f"KOS feed saved: {kos_path}")
-
+    # 8. Summary
+    print("\n" + "=" * 60)
+    print(f"✅ SEEK NZ 扫描完成!")
+    print(f"   扫描邮件: {email_count} 封")
+    print(f"   去重岗位: {len(unique_jobs)} 个")
+    print(f"   绿名单Tier1: {tier1_count} 个")
+    print(f"   高/中/低匹配: {len(high)}/{len(medium)}/{len(low)}")
+    if high:
+        print(f"   🏆 最佳: {high[0]['title']} ({high[0]['score']}分)")
+    elif relevant_jobs:
+        print(f"   ⚠️ 无高匹配，最高: {relevant_jobs[0]['title']} ({relevant_jobs[0]['score']}分)")
+    else:
+        print(f"   🚨 无相关岗位（全被过滤）")
+    print("=" * 60)
