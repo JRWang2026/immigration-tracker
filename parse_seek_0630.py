@@ -19,7 +19,7 @@ from pathlib import Path
 
 # ---- Paths ----
 WORKSPACE = Path(r"C:\Users\Mr_Wang\WorkBuddy\2026-06-20-14-48-36")
-CACHE_DIR = WORKSPACE / "email_cache_seek_0809"
+CACHE_DIR = WORKSPACE / "email_cache_seek_0812"
 KOS_PUBLIC_DATA = Path(r"C:\Users\Mr_Wang\WorkBuddy\2026-06-03-14-49-17\kos\public\data\seek-nz")
 
 sys.path.insert(0, str(WORKSPACE))
@@ -275,9 +275,12 @@ def score_job(j):
     elif 'ict security' in title or 'cyber security' in title or 'information security' in title:
         score += 55
         reasons.append('绿名单Tier1/Tier2: ICT Security')
-    elif 'chief information officer' in title or 'chief digital officer' in title:
+    elif 'chief information officer' in title or 'chief digital officer' in title or re.match(r'\bcio\b', title):
         score += 55
         reasons.append('绿名单Tier1: CIO/CDO')
+    elif any(k in title for k in ['devops engineer', 'sre', 'site reliability', 'platform engineer']):
+        score += 55
+        reasons.append('绿名单Tier1: DevOps/SRE (ANZSCO 261313)')
     # University/research roles (only if in research organization)
     elif is_research_org and any(k in title for k in ['research fellow', 'postdoctoral', 'postdoc', 'doctoral candidate', 'phd candidate', 'research scientist', 'research analyst']):
         score += 50
@@ -369,7 +372,8 @@ def is_green_list_tier1(title):
         'developer programmer', 'application developer', 'software and applications programmer',
         'multimedia specialist',
         'ict project manager', 'it project manager',
-        'ict security specialist', 'chief information officer', 'chief digital officer'
+        'ict security specialist', 'chief information officer', 'chief digital officer', 'cio',
+        'devops engineer', 'sre', 'site reliability', 'platform engineer'
     ]
     title = title.lower()
     return any(k in title for k in tier1)
@@ -393,8 +397,10 @@ def green_list_anzsco(title):
         return '135112 (ICT Project Manager)'
     elif 'ict security' in title or 'cyber security' in title:
         return '262112 (ICT Security Specialist)'
-    elif 'chief information officer' in title:
+    elif 'chief information officer' in title or re.match(r'\bcio\b', title):
         return '135111 (Chief Information Officer)'
+    elif any(k in title for k in ['devops engineer', 'sre', 'site reliability', 'platform engineer']):
+        return '261313 (Software Engineer - DevOps/SRE)'
     return ''
 
 
