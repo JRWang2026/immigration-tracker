@@ -1,0 +1,98 @@
+# 德国博士岗位扫描报告 - 2026-08-17
+
+> 📅 扫描时间：2026-08-17 08:18
+> 🔍 来源：EURAXESS + academics.de
+> 🎯 关键词：information science, patent analysis, competitive intelligence, bibliometrics, scientometrics...
+> 🎓 目标：德国岗位制博士（信息科学/专利分析/竞争情报方向）
+
+---
+
+## 📊 本轮概览
+
+| 指标 | 数值 |
+|------|------|
+| 扫描关键词数 | 11 |
+| 来源平台 | EURAXESS, academics.de |
+| 去重岗位总数 | 105 |
+| 🏆最佳匹配 | Wissenschaftliche/r Mitarbeiter/in (m/w/d) Machine Learning / Medical Data Science (Justus-Liebig-Universität Gießen) 51分 |
+| 高匹配(60+) | 0 |
+| 中匹配(40-59) | 2 |
+| 低匹配(25-39) | 22 |
+
+---
+
+## 🏆 高匹配岗位 (60+分) — 强烈建议查看
+
+---
+
+## 🟡 中匹配岗位 (40-59分) — 值得一看
+
+| # | 职位 | 机构 | 地点 | 来源 | 匹配度 | 核心匹配点 |
+|---|------|------|------|------|--------|-----------|
+| 1 | Wissenschaftliche/r Mitarbeiter/in (m/w/d) Machine Learning / Medical Data Science | Justus-Liebig-Universität Gießen | Gießen | academics.de | 51 | 博士岗位；数据科学/ML/NLP相关；R语言相关 |
+| 2 | Wissenschaftliche/r Mitarbeiter/in (w/m/d) – Data Analytics & Optimierung für Nachhaltige Wertschöpfungsnetzwerke | RWTH Aachen University | Aachen | academics.de | 41 | 博士岗位；弱相关；顶级研究机构 |
+
+---
+
+## 🔵 低匹配岗位 (25-39分) — 可快速浏览
+
+| # | 职位 | 机构 | 地点 | 来源 | 匹配度 | 原因 |
+|---|------|------|------|------|--------|------|
+| 3 | PhD/Junior Researcher oder PostDoc/Senior Researcher (m/w/d) | FIZ Karlsruhe - Leibniz-Institut für Informationsinfrastruktur (FIZ KA) | Eggenstein-Leopoldshafen | academics.de | 38 | 博士岗位；弱相关 |
+| 4 | Tenure Track Assistant Professor in  Technology Management (f/m/d) | Technische Universität München (TUM) | München | academics.de | 35 | 博士后/教职岗(暂不适合)；创新/技术管理对口 |
+| 5 | Wissenschaftliche*r Mitarbeiter*in (m/w/d) e-Finance Data Science | efl - The Data Science Institute / Goethe Universität Frankfurt | Frankfurt | academics.de | 33 | 数据科学/ML/NLP相关；R语言相关 |
+| 6 | Doctoral student in Organic Chemistry | Lund University via MyNetwork | Lunds universitet, Lund | EURAXESS | 30 | 博士岗位；弱相关 |
+| 7 | Postdoctoral Researcher in Cell-Based Immunotherapy | Lund University via MyNetwork | Lunds universitet, Lund | EURAXESS | 30 | 博士岗位；弱相关 |
+| 8 | PhD Position Biomaterial Sciences Transcutaneous, Needle-Free Vascular Access for Hemodialysis | Delft University of Technology via AcademicTransfer | TU Delft, Delft, 2628CD | EURAXESS | 30 | 博士岗位；弱相关 |
+| 9 | PhD in Global Talent Mobility and Europe’s Strategic Autonomy | Utrecht University via AcademicTransfer | Universiteit Utrecht, Utrecht, 3584CB | EURAXESS | 30 | 博士岗位；弱相关 |
+| 10 | PhD position on Modelling of turbidity current fluxes in submarine canyons | Utrecht University via AcademicTransfer | Universiteit Utrecht, Utrecht, 3584CB | EURAXESS | 30 | 博士岗位；弱相关 |
+| 11 | PhD: Mixing in turbidity currents in experiments and submarine canyons | Utrecht University via AcademicTransfer | Universiteit Utrecht, Utrecht, 3584CB | EURAXESS | 30 | 博士岗位；弱相关 |
+| 12 | PhD in Computational Imaging for High-Throughput Applications (1.0 fte) | Leiden University via AcademicTransfer | Universiteit Leiden, Leiden, 2333CC | EURAXESS | 30 | 博士岗位；弱相关 |
+| 13 | Programmleitung ProFiL bei der Berlin Leadership Academy (d/m/w), Entgeltgruppe 13 TV-L, Vollzeit, befristet bis 31.12.2033 | Kooperationsplattform der Berlin University Alliance | Berlin | academics.de | 28 | 弱相关；顶级研究机构 |
+| 14 | Doktorand*in (m/w/d) der Fachrichtung Mathematik, Technomathematik, Scientific Computing, Physik oder einer Ingenieurwissenschaft mit nachweislich starker Ausrichtung auf numerische Methoden | Bundesanstalt für Materialforschung und -prüfung (BAM) | Berlin | academics.de | 26 | 博士岗位；弱相关 |
+| 15 | Postdoctoral Researcher — Biomedical Semantics, Ontologies, and Large Language Model Integration | Deutsches Krebsforschungszentrum (DKFZ) | Heidelberg | academics.de | 26 | 博士岗位；弱相关 |
+| 16 | für den Arbeitsbereich Mathematik Sek I | Humboldt-Universität zu Berlin - Institut zur Qualitätsentwicklung im Bildungswesen (IQB) e.V. | Berlin | academics.de | 25 | 弱相关；顶级研究机构 |
+| 17 | Kaufmännische Geschäftsführung (m/w/d) | Leibniz-Institut zur Analyse des Biodiversitäts­wandels (LIB) über Below Tippmann & Compagnie Personalberatung GmbH | Top Job | academics.de | 25 | 弱相关；顶级研究机构 |
+| 18 | Chordirektor*in / Managing Director (m/w/d) | Rundfunk-Orchester und -Chöre gGmbH Berlin | Berlin | academics.de | 25 | 弱相关；顶级研究机构 |
+| 19 | Gruppenleitung Personalmanagement | ZBW – Leibniz-Informationszentrum Wirtschaft - Kiel | Kiel | academics.de | 25 | 弱相关；顶级研究机构 |
+| 20 | IT-affines Organisationstalent gesucht: Werkstudent*in Wissens- und Infomanagement (m/w/d) | Fraunhofer-Verbund IUK-Technologie | Berlin | academics.de | 25 | 弱相关；顶级研究机构 |
+| 21 | Leitung Beschaffung (d/m/w) | Helmholtz-Zentrum für Umweltforschung GmbH - UFZ | Leipzig | academics.de | 25 | 弱相关；顶级研究机构 |
+| 22 | Werkstudent*in: KI-gestützte Geländeanalyse für den Stellungswahlassistenten | Fraunhofer-Institut für Optronik, Systemtechnik und Bildauswertung (IOSB) | Karlsruhe | academics.de | 25 | 弱相关；顶级研究机构 |
+| 23 | Projektassistenz (m/w/d) | Technische Universität München (TUM) | Garching bei München | academics.de | 25 | 弱相关；顶级研究机构 |
+| 24 | Senior Scientist & AI Solutions Lead – Hybrid AI (all genders) | Fraunhofer-Institut für Arbeitswirtschaft und Organisation IAO | Stuttgart | academics.de | 25 | 弱相关；顶级研究机构 |
+
+---
+
+## 🎯 下一步行动建议
+
+### 立即做
+1. **查看高匹配岗位**：点击链接，确认申请截止日期和具体要求
+2. **准备陶瓷信模板**：针对专利分析/竞争情报方向，写一封通用陶瓷信
+3. **准备学术三件套**：CV + Research Statement + Writing Sample（论文草稿）
+
+### 短期（1-2个月）
+4. **锁定3-5个目标教授**：Fraunhofer ISI、KIT、GESIS、TUM、RWTH
+5. **发送第一封陶瓷信**：附上硕士成绩单、论文草稿、KOS网站链接
+6. **德语学习启动**：A1起步，博士期间需达到B1（永居要求）
+
+### 中期（到2028年硕士毕业）
+7. **发表至少1篇CSSCI/SSCI论文** — 这是申请德国博士的硬通货
+8. **完善KOS学术网站**：展示研究成果、项目代码、学术身份
+9. **GitHub项目整理**：潜油电缆数据项目、专利文本挖掘代码
+
+---
+
+## 💡 德国博士申请关键要点
+
+| 项目 | 说明 |
+|------|------|
+| 学位要求 | 必须硕士毕业（2028年） |
+| 资金 | 岗位制博士带薪（TV-L E13，约€3,500-4,500/月） |
+| 语言 | 博士可用英语；永居需德语B1 |
+| 签证 | §18d博士签证，毕业后18个月找工作签 |
+| 永居 | 博士3-4年 + 工作4年 ≈ 7-8年 |
+| 关键材料 | 研究计划 + 硕士论文 + 推荐信 + 发表记录 |
+
+---
+
+*报告由德国博士岗位扫描脚本自动生成 | 数据来源：EURAXESS, academics.de*
