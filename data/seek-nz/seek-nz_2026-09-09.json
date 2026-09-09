@@ -1,0 +1,377 @@
+{
+  "meta": {
+    "title": "SEEK NZ 绿名单岗位追踪",
+    "description": "每日自动扫描 SEEK NZ 邮件中的绿名单 Tier1 ICT 岗位",
+    "icon": "briefcase",
+    "section_id": "seek-nz",
+    "last_updated": "2026-09-09T08:00:10.294872"
+  },
+  "data": {
+    "date": "2026-09-09",
+    "email_count": 50,
+    "total_jobs": 20,
+    "tier1_jobs": [],
+    "all_jobs": [
+      {
+        "title": "Senior Data Engineer - Fixed Term",
+        "company": "Contact Energy",
+        "location": "Wellington Central, Wellington",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5fkzzcXNBOgnbyfW7hy3wGagd-Rw_QP7lXQVaJPExhGC8yza3ikjrLGwVAe10Ou1bNgndJEqD5l1UxG-xxD-DwwVWOQCCPx8--cksG-qO0bxDldeI_v1mHtyAVevlHnrk/4tv/n_511UiFT1K68ZXvipjXmQ/h73/h001.-WJUaF6Z19JmXnIyFX0toZkvzrzIcAKXcRzuOWk8EBE",
+        "source": "SEEK NZ email",
+        "score": 30,
+        "reasons": [
+          "非目标岗位",
+          "ICT/科技公司",
+          "高级数据技能",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Senior Technician - Botany",
+        "company": "University of Otago",
+        "location": "North Dunedin, Otago",
+        "salary": "$80,749 to $85,649 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5vmr3P09y2xkv9vVz1gPi63esPMQzpHwnHamosHAdrXq3U4TUm6atfRmLxZ75QIuFBQVCIisVYDrxxV14pdmQYrAGT-6-f00XtbCynkTCpHT3zG9jVz0RAnQ-wTEUkzo0/4tv/n_511UiFT1K68ZXvipjXmQ/h83/h001.mMIgcl1FCuwCEiwHmp6qwXBjwIyi6poU_RjgoYcZh7c",
+        "source": "SEEK NZ email",
+        "score": 28,
+        "reasons": [
+          "非目标岗位",
+          "大学/研究机构",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "大学/研究机构岗位 — 通常可雇主担保 Accredited Employer Work Visa",
+        "suggested_skills": "1)突出研究经历和论文；2)准备Research Statement；3)联系相关导师",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Senior Analyst Test and Performance",
+        "company": "University of Otago",
+        "location": "North Dunedin, Otago",
+        "salary": "$99,364 to $107,888 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5Nxope-bKHg9SNbczBfdvGf7uB7B-nq9wmSg3yHvm4H-jLHceJRM2FNOte9ZgwKgTuMVLFyrehsNQX3YcVNX2AcU3xFYqbXWqW9gMi8qpDYZdfXmx2npk9wkCMyQtydFw/4tv/n_511UiFT1K68ZXvipjXmQ/h85/h001.raL465Tuiz41qTy2GafV4SIL5H_Byi4r69Xfv7oW7JE",
+        "source": "SEEK NZ email",
+        "score": 28,
+        "reasons": [
+          "非目标岗位",
+          "大学/研究机构",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "大学/研究机构岗位 — 通常可雇主担保 Accredited Employer Work Visa",
+        "suggested_skills": "1)突出研究经历和论文；2)准备Research Statement；3)联系相关导师",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Business Systems & Reporting Analyst",
+        "company": "Jade Software Corporation Ltd",
+        "location": "Christchurch Central, Canterbury",
+        "salary": "",
+        "posted_date": "31 Aug 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5XxnOMDxCCvnPPnJMqD8bBLQqQJXEfj3hQvv1Y3mPCnG7KtzNWsTbKrASuAhr3zl1Gw1xPHkLeWYRgaBV3SYGwY3IALFpPYhSHRVfzze-yRZkpmmYrtBhbuTFAc-QzRV4/4tv/n_511UiFT1K68ZXvipjXmQ/h94/h001.RGF7UPxrI8ybgaHBuCk__JhQF2NyJpN33wmc-KE1epM",
+        "source": "SEEK NZ email",
+        "score": 28,
+        "reasons": [
+          "非绿名单:Data Analyst(已降级)",
+          "ICT/科技公司",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Business Analyst - Fixed Term",
+        "company": "Napier City Council",
+        "location": "Napier Central, Hawkes Bay",
+        "salary": "Salary range $93,514 - $104,516 dependent on exp",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv64OJBvF85IMPSGN8vKHV577X34RHELiXgToE63jziweExjS6eNZAFYgpLLUfStQYfvZyL3ABtKIcQ4dGP_zo90rS1dXE46RXR_Vk5COF8p6eEBXWjYZLg-aLIQjbaPoMg/4tv/n_511UiFT1K68ZXvipjXmQ/h55/h001.r5iW7f04oEI8S7KKExZO_J0oshR08BFA6Eo5X9hSOSs",
+        "source": "SEEK NZ email",
+        "score": 26,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)",
+          "政府/公共部门",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Senior Consultant - Data",
+        "company": "Datacom",
+        "location": "Hamilton Central, Waikato",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv5NYCoPE8F_RxWYwZcv6AJQte8yMDMBWk7qyxCASqJOwqtUSVbUOohuRejznIyANkOnN4CFtuybheN8cfAEDHrSY0F5aEfDvOKZHHo9zlPbqetT-COEWx_mfAiCix0tRwE/4tv/n_511UiFT1K68ZXvipjXmQ/h81/h001.KD7rpN7ENP2D-UiI8rGx9vXq8ekvsE4Sdi28ZxGBEiY",
+        "source": "SEEK NZ email",
+        "score": 25,
+        "reasons": [
+          "非目标岗位",
+          "ICT/科技公司",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Data Analyst",
+        "company": "Outerdawn",
+        "location": "Rosedale, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4UTx_MyCzhBuQOzmh7YGRbIif6BNcoeZPCQFMUDqRvBsWRR_HpGt8ty8pisr8d-S24CwVbazkUngxrjc4wyUO2EORkZVA-qh_iV1nOES0udvOArCS00cVjckROc3ulIco/4tv/n_511UiFT1K68ZXvipjXmQ/h57/h001.fyEKXOhk4uIcWDQMEP_CkjkLu4_DXLgzk_yEuyfmF1A",
+        "source": "SEEK NZ email",
+        "score": 20,
+        "reasons": [
+          "非绿名单:Data Analyst(已降级)",
+          "ICT/科技公司"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Business Analyst - Software / AI / Integration",
+        "company": "Digital Diligence Limited",
+        "location": "Nelson Central, Tasman",
+        "salary": "$90,000 – $110,000 per year",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7HOHguiWMx841eFgPCyMswmnT2MDbxmPId65hb9ZFMArD-hCpU2VK0SLnE83kxi0DRxGDJs8sqhuDto_z6TTvmiqvCY8sntngDTMITw0yJKQVQUsh3Zz71aiFhCyTSH-s/4tv/n_511UiFT1K68ZXvipjXmQ/h59/h001.eZRpuCZN9kviKlDK871blDycvRnp13NOEVx6FmtetmI",
+        "source": "SEEK NZ email",
+        "score": 20,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)",
+          "ICT/科技公司"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Laboratory Technician - Animal Health",
+        "company": "Livestock Improvement Corporation",
+        "location": "Riverlea, Waikato",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv66lIjUokp14UmBm4mQzXNbTVpbIINmtRFYmpU-FDicGqMg--ZSG3-WwhKL4_8fzNEPMVWY_Q8L6eQMwOIsN9XuSLvoWCN5OsKtOp_06SMyped7EXL8kqiAeMgu-UK6qgI/4tv/n_511UiFT1K68ZXvipjXmQ/h65/h001.-N7MJWg7CzTDLY1O0vx4D_-LrpX7Oar48dyc-d71GpU",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Vintage Laboratory Technician",
+        "company": "Indevin Ltd",
+        "location": "Flaxmere, Hawkes Bay",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4NrrLh4n0OhW4y1QvV4LSYVZpkvLt4YfK9M9U0OFpClnReYaqFwvMw9VpD_nkPVxLFLJm-HjK_x5iXsRsXiXrGbatyDnvzhjdZQiED9jqKiVhbpsNiBkrWML-FcYXMHYc/4tv/n_511UiFT1K68ZXvipjXmQ/h69/h001.0fXFfvUCi8pZNuZjeQIBSRKJ7oQpuxl91T1eg8WbFoE",
+        "source": "SEEK NZ email",
+        "score": 13,
+        "reasons": [
+          "非目标岗位",
+          "非奥克兰地区加分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Analyst - Planning, Funding and Outcomes",
+        "company": "Health New Zealand - Te Whatu Ora",
+        "location": "Wellington Central, Wellington",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7tVBtJwUTNdaUlesslOyDlNWfOVUZRzjet7HVgl0XdThE26OGx-3PRqYUHF43HsslBMvJ50S0aCpbAv-J6XnXGUk8Z1MRXVdnEOxdBz5rzLuJZ2O_2rxfZVC1X8ZwdDqk/4tv/n_511UiFT1K68ZXvipjXmQ/h79/h001.6kBkH40fm48HRaYgsLRN7x2HtXRuP1nBYS6BCHfGLhE",
+        "source": "SEEK NZ email",
+        "score": 10,
+        "reasons": [
+          "非目标岗位",
+          "惠灵顿地区"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Strategic Delivery Analyst",
+        "company": "Watercare Services Limited",
+        "location": "Newmarket, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7tLaif31bJ31P3aBnFP2GgXjoMFL89mZpa0hjlpa-DK7F-hFjo5t7V7aL8jVnrjYSUb62UPgpBnwq23lcHht6aTNsglroEuOXgubGT5Z-aHC0p81UAR8PrGHAPZHiGeTc/4tv/n_511UiFT1K68ZXvipjXmQ/h61/h001.FJ5leeG4rgrjMDQhlJOsPJNeuZvDWioojfB2aU4sdcw",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Application Specialist - TrakCare",
+        "company": "Allevia Hospitals",
+        "location": "Epsom, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7CYFq-hzx9OU5cpjMLC5nz_4vEVb3sxvX4V__8AXLgNbS-82WcxTwUK1Wu5ZV9rdnGQEzr2y7P7MRqsMcvqIdl3nygCYINo5bY4ONqCVXw_4kAvIYxHxhSz0lScvWTTKo/4tv/n_511UiFT1K68ZXvipjXmQ/h63/h001.nAQrdbRcpQGkz5B2kOc0huGLj-chYZc8qU-aIGGJUEk",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Analytics Engineer",
+        "company": "Petdirect",
+        "location": "Avondale, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7QZn0hEim9LNnJNTfG9y98w6ffzYvifN2P9Sffworo3RD_V-F3LhayKcepqE9K7cMshPApWB2Jrs-RN8A7ox72Mk4yHhgRT7tOUeV3tIvXioOef3XG4lmUhDiQD6YUiDE/4tv/n_511UiFT1K68ZXvipjXmQ/h67/h001.CcME-UpG5pzdtrPXOCs1oSfdsXf-jc-Nczjg00kCAX0",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Business Intelligence (BI) Analyst",
+        "company": "Younity",
+        "location": "Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv4I_jzBkMVui7KLmi1TDMR0U4lQifi-jK3Kd6h0lvPiAx02MdUAnEKcpT3Lzu4qIfOrh-irspOa_fj5OG1jT3j-PeO5pYte13fTp3nrAPiwtN2kTfv1xOGhjt2VRjWlqD0/4tv/n_511UiFT1K68ZXvipjXmQ/h75/h001.oY3bknOW7JB83u-drlWdaDDlRCMjSHPtLUmNi9X2HlI",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Product Enablement Lead",
+        "company": "Solution Dynamics Ltd",
+        "location": "Rosedale, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7_TaRikfjo-lekqTo1wtcFUox42b0xjdRIuwF3SLP8nWXa5yp7-y3uQ8xwoJKi4DxJ9CddsqSyW21oVVw633Zd7PsJ7k8ZDo5uS_Gorg4YAi81L5J4Y0SiDkblwSxs0n4/4tv/n_511UiFT1K68ZXvipjXmQ/h77/h001.KnNClQFG__HKf4Vg-iTzgx53Ws4EGgrQ5HtxDA3xZ7M",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Validation Team Leader",
+        "company": "Douglas",
+        "location": "Henderson, Auckland",
+        "salary": "",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7TaYfYl-DTbSyipuA2i_hjOTV1ugl1iePLT9ffdN85Kk0Q3vujy1cu-NBm7oYwkD-QBarsr5EpK9HamOR7752lyyrE3F2Di5TXu6odwp73Cnjx1dAbYSsy2z8sy_xgsNI/4tv/n_511UiFT1K68ZXvipjXmQ/h87/h001.ygvPz8Pr0rdV8q9wT-lOGeBPWi-ZaMFArtDRv3zQXMQ",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Intern Lab Assistant",
+        "company": "Neocrete Limited",
+        "location": "Parnell, Auckland",
+        "salary": "$29 per hour",
+        "posted_date": "1 Sep 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv7d65BU_-SkcG1Par8BrqE331Er4dTEdI86mz-MLZniSBMYSiQtXjVRFRReXFNkbNYUCTweNCK782ZD8KE5QYwUz6pZ0HVip3QlbOoWpWtpTL8plFNcnI0PR92Oa5u6N0g/4tv/n_511UiFT1K68ZXvipjXmQ/h92/h001.3DQWPhHPzKH4Uoxee7-QRi20GwgsbirCWBcud6hoNRE",
+        "source": "SEEK NZ email",
+        "score": 5,
+        "reasons": [
+          "非目标岗位"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "Junior Solution PM / Business Analyst",
+        "company": "Atom Intelligence",
+        "location": "Takapuna, Auckland",
+        "salary": "$25 – $30 per hour",
+        "posted_date": "",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv6P6AwD0YcrEcww5eCW7Vx1uA0erovk2Ig4reYXe1-aUAGbL2e7n88moK3iXPt7qHDHpZCsxbdqW7Ae9UbAuXTWwGhfrhEILin2aETYNTKPV8yf7vb3zadTAcScxEMihMo/4tv/n_511UiFT1K68ZXvipjXmQ/h53/h001.M98q4_MN4N5tgL55EMO9Xor2vuoEXEzdjd6kIu12Shc",
+        "source": "SEEK NZ email",
+        "score": 0,
+        "reasons": [
+          "非绿名单:BSA/ERP(已降级)",
+          "初级岗降分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      },
+      {
+        "title": "AI Business Transformation Analyst (Graduate)",
+        "company": "Shriro and Monaco",
+        "location": "Albany, Auckland",
+        "salary": "",
+        "posted_date": "2 Sep 2026",
+        "url": "https://email.s.seek.co.nz/uni/ss/c/u001.l5tc4iXB2-Bk7UR8KdEfXVqCAR5PUSSiJ59vaNz9vv47SSUxXW8Tov51DS1LI-Ype1U-bVqHE1gdl9BN-LDheIX4SurE2EHkYZ00TfIMyVA-OiX0q29XpyPyOye1Cav7UOlY6lgK4zrVpFILDDY6rmqRz6cbbXAa8xubnu4V_HM/4tv/n_511UiFT1K68ZXvipjXmQ/h90/h001.PHboJwI6hKZZSBYcvPDMy8iv5beSocjkooQ_gkhzPxQ",
+        "source": "SEEK NZ email",
+        "score": 0,
+        "reasons": [
+          "非目标岗位",
+          "初级岗降分"
+        ],
+        "immigration_path": "非绿名单，移民路径弱，建议忽略",
+        "suggested_skills": "非目标岗位，不建议投入精力",
+        "anzsco_code": "",
+        "anzsco_name": ""
+      }
+    ]
+  }
+}
