@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "SEEK NZ 绿名单岗位追踪",
+    "description": "每日自动扫描 SEEK NZ 邮件中的绿名单 Tier1 ICT 岗位",
+    "icon": "briefcase",
+    "section_id": "seek-nz",
+    "last_updated": "2026-09-16T08:00:35.336662"
+  },
+  "data": {
+    "date": "2026-09-16",
+    "email_count": 50,
+    "total_jobs": 0,
+    "tier1_jobs": [],
+    "all_jobs": []
+  }
+}
